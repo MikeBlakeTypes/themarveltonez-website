@@ -27,3 +27,47 @@
   .writer-card p{display:block;font-size:15px;line-height:1.55;}
   .writer-card .role{font-size:13px;}
 }
+
+/* Version 5 widescreen refinements */
+@media (min-width: 1500px){
+  .hero{
+    min-height: clamp(660px, 38vw, 760px);
+  }
+  .hero-bg{
+    background-position: right 28%;
+  }
+  .works-grid,
+  .row-heading,
+  .writers-grid,
+  .photo-strip,
+  .credits-grid{
+    max-width: 1780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work-card img{
+    height: clamp(210px, 12vw, 250px);
+  }
+  .play{
+    top: clamp(90px, 5.8vw, 112px);
+  }
+}
+
+@media (min-width: 1900px){
+  .hero{
+    min-height: 780px;
+  }
+  .hero-bg{
+    background-size: cover;
+    background-position: right 24%;
+  }
+  .section{
+    padding-left: max(4vw, calc((100vw - 1880px) / 2));
+    padding-right: max(4vw, calc((100vw - 1880px) / 2));
+  }
+  .contact-cta{
+    max-width: 1780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

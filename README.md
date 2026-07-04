@@ -1,11 +1,5 @@
-# The Marveltonez Website Draft
+The Marveltonez Website Draft
 
 Static website for GitHub and Cloudflare Pages.
 
-Files:
-- index.html
-- style.css
-- script.js
-- assets/images/
-
-Open `index.html` with Live Server in VS Code to preview.
+Version 5: widescreen hero and thumbnail aspect-ratio refinements.
