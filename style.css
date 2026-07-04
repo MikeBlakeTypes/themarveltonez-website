@@ -71,3 +71,28 @@
     margin-right: auto;
   }
 }
+
+/* Version 6 play icon consistency fix
+   Avoids iOS rendering the play symbol as a blue emoji-style glyph. */
+.play{
+  font-size:0;
+  line-height:0;
+  color:transparent;
+}
+.play::before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-top:9px solid transparent;
+  border-bottom:9px solid transparent;
+  border-left:14px solid #fff;
+  margin-left:3px;
+}
+@media(max-width:620px){
+  .play::before{
+    border-top-width:10px;
+    border-bottom-width:10px;
+    border-left-width:16px;
+  }
+}
