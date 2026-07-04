@@ -96,3 +96,14 @@
     border-left-width:16px;
   }
 }
+
+/* Version 7 play icon optical alignment
+   Lowers the CSS triangle very slightly so it appears centred inside the red circle. */
+.play::before{
+  transform: translateY(2px);
+}
+@media(max-width:620px){
+  .play::before{
+    transform: translateY(3px);
+  }
+}
