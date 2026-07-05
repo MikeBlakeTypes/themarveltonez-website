@@ -12,3 +12,6 @@ Files:
 - assets/images/
 
 Open `index.html` with Live Server in VS Code to preview.
+
+
+Version 9.1 Final: play icon micro-alignment, smoother card hover border, softer hover red, and extra section-heading spacing.
