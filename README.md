@@ -1,17 +1,7 @@
-# The Marveltonez Website - Version 9 Premium
+# The Marveltonez Website — Version 9.2
 
-Static website for GitHub and Cloudflare Pages.
+Premium Edition with cinematic video viewer.
 
-Upload the contents of this folder to the GitHub repository root.
+Upload the contents of this folder to the GitHub repository root. Cloudflare Pages should redeploy automatically.
 
-Files:
-
-- index.html
-- style.css
-- script.js
-- assets/images/
-
-Open `index.html` with Live Server in VS Code to preview.
-
-
-Version 9.1 Final: play icon micro-alignment, smoother card hover border, softer hover red, and extra section-heading spacing.
+Video thumbnails now open in an on-site lightbox rather than sending visitors away from the website.
