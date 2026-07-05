@@ -1,5 +1,14 @@
-# The Marveltonez Website Draft - Version 8
+# The Marveltonez Website - Version 9 Premium
 
 Static website for GitHub and Cloudflare Pages.
 
-Version 8 includes refined play buttons, footer YouTube icon fix, Meet The Writers button removal, Behind The Songs menu link, Our Story copy update, and a Studio Collection mockup section.
+Upload the contents of this folder to the GitHub repository root.
+
+Files:
+
+- index.html
+- style.css
+- script.js
+- assets/images/
+
+Open `index.html` with Live Server in VS Code to preview.
