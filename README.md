@@ -1,7 +1,5 @@
-# The Marveltonez Website — Version 9.2
+# The Marveltonez Website V10
 
-Premium Edition with cinematic video viewer.
+Static website for GitHub and Cloudflare Pages.
 
-Upload the contents of this folder to the GitHub repository root. Cloudflare Pages should redeploy automatically.
-
-Video thumbnails now open in an on-site lightbox rather than sending visitors away from the website.
+V10 includes final mobile/hero/footer refinements and the updated On The Beach thumbnail.

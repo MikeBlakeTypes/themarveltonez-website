@@ -315,3 +315,68 @@ body{background:radial-gradient(circle at 0 18%,rgba(215,25,32,.115),transparent
 .youtube-link{display:inline-block;margin-top:14px;color:#dcdcdc;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:.08em}.youtube-link:hover{color:#fff}
 body.video-open{overflow:hidden}
 @media(max-width:620px){.video-lightbox{padding:14px}.video-dialog{padding:16px;border-radius:14px}.video-meta{padding:0 42px 12px 0}.video-meta h2{font-size:28px}.video-meta p{font-size:13px}.video-close{right:12px;top:12px}.video-frame-wrap.short{max-height:70vh;max-width:82vw}}
+
+/* Version 10 final refinements */
+/* Keep the page at the top on first mobile load instead of restoring a previous footer position. */
+html{overflow-anchor:none;}
+
+/* Hero mobile framing: keep both Mikes in view, slightly right of centre behind the left text. */
+@media(max-width:620px){
+  .hero-bg{
+    background:linear-gradient(90deg,rgba(0,0,0,.64) 0%,rgba(0,0,0,.38) 42%,rgba(0,0,0,.12) 72%,rgba(0,0,0,.24) 100%),url('assets/images/hero.jpg') 61% center/cover no-repeat;
+  }
+}
+
+/* Footer icons: official-style white marks, consistent red button family. */
+.socials a{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:0;
+}
+.socials a svg{
+  width:24px;
+  height:24px;
+  display:block;
+  color:#fff;
+}
+.socials a.social-youtube span{
+  width:0;
+  height:0;
+  border-top:9px solid transparent;
+  border-bottom:9px solid transparent;
+  border-left:14px solid currentColor;
+  transform:translate(2px,0);
+}
+
+/* Touch devices: no sticky raised hover positions. Use a subtle highlight instead. */
+@media(hover:none){
+  .btn:hover,
+  .btn:active,
+  .btn:focus,
+  .contact-card:hover,
+  .contact-card:active,
+  .socials a:hover,
+  .socials a:active,
+  .socials a.social-youtube:hover,
+  .socials a.social-youtube:active{
+    transform:none !important;
+  }
+  .btn:active,
+  .btn:focus-visible{
+    border-color:rgba(255,255,255,.9);
+    box-shadow:0 0 0 2px rgba(255,255,255,.18),0 0 0 5px rgba(215,25,32,.22);
+  }
+  .socials a:active,
+  .socials a:focus-visible{
+    border-color:rgba(255,255,255,.86);
+    box-shadow:0 0 0 3px rgba(255,255,255,.16), inset 0 1px 0 rgba(255,255,255,.24);
+    filter:brightness(1.08);
+  }
+}
+
+/* Final play triangle position after testing: visually centred across desktop and iPhone. */
+.play::before{transform:translateY(4px)}
+@media(max-width:620px){.play::before{transform:translateY(5px)}}
