@@ -1,12 +1,18 @@
-// Version 10: prevent mobile browsers reopening the page at an old scroll position.
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-window.addEventListener('pageshow', () => {
-  if (!window.location.hash) {
-    window.scrollTo(0, 0);
+// Version 10.1: stronger Safari/iPad/iPhone scroll reset on fresh opens.
+(function forceInitialTop(){
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
-});
+  if (window.location.hash) return;
+  const reset = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  reset();
+  window.addEventListener('DOMContentLoaded', reset, { once: true });
+  window.addEventListener('load', reset, { once: true });
+  window.addEventListener('pageshow', reset);
+  setTimeout(reset, 0);
+  setTimeout(reset, 120);
+  setTimeout(reset, 450);
+})();
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

@@ -1,5 +1,5 @@
-# The Marveltonez Website V10
+The Marveltonez Website v10.1
 
 Static website for GitHub and Cloudflare Pages.
 
-V10 includes final mobile/hero/footer refinements and the updated On The Beach thumbnail.
+Changes: iPad Selected Works aspect ratio fix, stronger mobile top-of-page load reset, footer punctuation update.

@@ -380,3 +380,31 @@ html{overflow-anchor:none;}
 /* Final play triangle position after testing: visually centred across desktop and iPhone. */
 .play::before{transform:translateY(4px)}
 @media(max-width:620px){.play::before{transform:translateY(5px)}}
+
+
+/* Version 10.1 tablet/iPad refinement */
+/* Prevent iPad-sized viewports from showing the Selected Works cards as very wide letterboxes. */
+@media (min-width: 621px) and (max-width: 1180px){
+  .works-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .work-card img{
+    height: clamp(250px, 34vw, 340px);
+    object-fit: cover;
+    object-position: center center;
+  }
+  .work-card:first-child img,
+  .work-card:nth-child(5) img,
+  .work-card:nth-child(6) img{
+    object-position: center center;
+  }
+  .play{
+    top: clamp(105px, 15.5vw, 148px);
+  }
+}
+
+/* Keep iPad portrait from restoring to Selected Works or footer on a fresh open. */
+html, body{
+  scroll-padding-top: 92px;
+}
