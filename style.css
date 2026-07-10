@@ -585,3 +585,106 @@ html, body{
   .product-copy{min-height:0}
   .collection-footer-line{display:grid;gap:6px}
 }
+
+
+/* Version 10.3 — Writer's Collection proportion refinements */
+.writers-collection{
+  padding-top:46px;
+  padding-bottom:46px;
+}
+.collection-heading{
+  align-items:center;
+  gap:36px;
+  margin-bottom:28px;
+}
+.collection-heading h2{
+  font-size:36px;
+  line-height:1;
+  letter-spacing:.04em;
+}
+.collection-lead{
+  max-width:680px;
+  margin-top:14px;
+  font-size:16px;
+}
+.collection-quote{
+  padding:12px 0 12px 24px;
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.35;
+  letter-spacing:0;
+  text-transform:none;
+}
+.collection-quote span{
+  color:#c3c3c3;
+  font-weight:400;
+}
+.collection-quote strong{
+  display:inline-block;
+  margin-top:3px;
+  color:var(--logoGrey);
+  font-family:var(--font-head);
+  font-size:21px;
+  font-weight:700;
+  letter-spacing:.035em;
+}
+.product-grid{
+  max-width:1420px;
+  gap:16px;
+}
+.product-image-wrap{
+  aspect-ratio:4/3;
+  max-height:285px;
+}
+.product-image-wrap img{
+  object-fit:contain;
+  padding:10px;
+}
+.product-image-dark img{
+  padding:5%;
+}
+.product-copy{
+  min-height:158px;
+  padding:19px 20px 22px;
+}
+.product-copy h3{
+  font-size:25px;
+}
+.product-copy p:last-child{
+  font-size:13px;
+}
+.product-number{
+  font-size:36px;
+}
+.collection-footer-line{
+  max-width:1420px;
+  margin-top:20px;
+}
+
+@media(max-width:1180px){
+  .collection-heading h2{font-size:36px}
+  .product-grid{max-width:980px}
+  .product-image-wrap{
+    max-height:320px;
+  }
+}
+@media(max-width:620px){
+  .writers-collection{
+    padding-top:38px;
+    padding-bottom:38px;
+  }
+  .collection-heading h2{
+    font-size:36px;
+  }
+  .collection-quote{
+    padding-left:16px;
+    font-size:16px;
+  }
+  .collection-quote strong{
+    font-size:20px;
+  }
+  .product-image-wrap{
+    aspect-ratio:4/3;
+    max-height:300px;
+  }
+}
