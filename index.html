@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalogue.css" />
 </head>
 <body>
   <header class="site-header">
@@ -16,7 +17,8 @@
     <button class="menu-toggle" aria-label="Open menu">☰</button>
     <nav class="nav-links">
       <a href="#home">Home</a>
-      <a href="#songs">Songs</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#selected-releases">Videos</a>
       <a href="#story">Our Story</a>
       <a href="#writers">The Writers</a>
       <a href="#behind">Behind The Songs</a>
@@ -38,16 +40,56 @@
         <div class="red-line"></div>
         <p class="tagline">Songs with hooks.<br>Built for artists.</p>
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#songs">Hear the Songs</a>
+          <a class="btn btn-primary" href="#catalogue">Explore the Catalogue</a>
           <a class="btn btn-secondary" href="mailto:mikeblake@themarveltonez.com">Contact Us</a>
         </div>
       </div>
     </section>
 
-    <section id="songs" class="section selected-works">
+
+    <section id="catalogue" class="section catalogue-home">
+      <div class="catalogue-home-intro">
+        <div class="section-heading">
+          <h2>Song Catalogue</h2>
+          <span></span>
+        </div>
+        <p>Explore unreleased demos, selected releases and a private publisher catalogue from Mike Blake and Mike Shannon.</p>
+      </div>
+
+      <div class="catalogue-panel-grid">
+        <a class="catalogue-panel" href="unreleased.html">
+          <span class="catalogue-panel-kicker">01 · Listen</span>
+          <div>
+            <h3>Unreleased Demos</h3>
+            <p>Songs currently available for artists, labels, publishers and collaborators.</p>
+          </div>
+          <span class="catalogue-panel-cta">Open catalogue →</span>
+        </a>
+
+        <a class="catalogue-panel" href="#selected-releases">
+          <span class="catalogue-panel-kicker">02 · Watch</span>
+          <div>
+            <h3>Song Catalogue</h3>
+            <p>Selected releases, videos and established Marveltonez songs.</p>
+          </div>
+          <span class="catalogue-panel-cta">View selected releases ↓</span>
+        </a>
+
+        <a class="catalogue-panel catalogue-panel-private" href="publisher.html">
+          <span class="catalogue-panel-kicker">03 · Private</span>
+          <div>
+            <h3>Publisher Catalogue</h3>
+            <p>Password-protected access for approved music-industry contacts.</p>
+          </div>
+          <span class="catalogue-panel-cta">Request access →</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="selected-releases" class="section selected-works">
       <div class="section-heading row-heading">
         <div>
-          <h2>Selected Works</h2>
+          <h2>Selected Releases &amp; Videos</h2>
           <span></span>
         </div>
       </div>

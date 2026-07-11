@@ -1,0 +1,342 @@
+/* Marveltonez Catalogue Module v1.1 */
+
+.catalogue-home {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(215, 25, 32, .18), transparent 29%),
+    linear-gradient(140deg, #070707 0%, #130707 48%, #060606 100%);
+}
+
+.catalogue-home-intro {
+  max-width: 860px;
+  margin-bottom: 32px;
+}
+
+.catalogue-home-intro p {
+  margin: 0;
+  color: #cecece;
+  font-size: 17px;
+}
+
+.catalogue-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.catalogue-panel {
+  min-height: 270px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, .13);
+  background: linear-gradient(180deg, rgba(27, 27, 27, .97), rgba(7, 7, 7, .99));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .34);
+  color: #fff;
+  text-decoration: none;
+  transition:
+    transform .45s cubic-bezier(.2, .7, .2, 1),
+    border-color .35s ease,
+    box-shadow .45s ease;
+}
+
+.catalogue-panel:hover,
+.catalogue-panel:focus-visible {
+  transform: translateY(-5px);
+  border-color: rgba(215, 25, 32, .78);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, .5);
+}
+
+.catalogue-panel-kicker {
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.catalogue-panel h3 {
+  margin: 10px 0;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: clamp(34px, 3.3vw, 48px);
+  line-height: .93;
+  text-transform: uppercase;
+}
+
+.catalogue-panel p {
+  margin: 0;
+  color: #c5c5c5;
+}
+
+.catalogue-panel-cta {
+  margin-top: 24px;
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.catalogue-panel-private {
+  cursor: default;
+}
+
+.catalogue-panel-private:hover {
+  transform: none;
+}
+
+.catalogue-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 4% 10%, rgba(215, 25, 32, .14), transparent 26%),
+    linear-gradient(180deg, #0c0c0c, #060606);
+}
+
+.catalogue-page-main {
+  padding-top: 126px;
+}
+
+.catalogue-page-hero {
+  padding: 70px 4vw 38px;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.catalogue-page-hero-inner,
+.catalogue-page-content {
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.catalogue-page-eyebrow {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.catalogue-page-hero h1 {
+  margin: 0;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: clamp(56px, 7vw, 104px);
+  line-height: .86;
+  text-transform: uppercase;
+}
+
+.catalogue-page-lead {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: #d0d0d0;
+  font-size: 18px;
+}
+
+.catalogue-page-content {
+  padding: 44px 4vw 80px;
+}
+
+.catalogue-page-toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.catalogue-page-toolbar p {
+  margin: 0;
+  color: #aaa;
+}
+
+.catalogue-song-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.catalogue-song-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #303030;
+  background: linear-gradient(180deg, #171717, #0a0a0a);
+  box-shadow: 0 17px 42px rgba(0, 0, 0, .32);
+}
+
+.catalogue-song-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.catalogue-song-status {
+  padding: 4px 9px;
+  border: 1px solid rgba(215, 25, 32, .68);
+  color: #f2bec0;
+  font-size: 11px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.catalogue-song-index {
+  overflow: hidden;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.catalogue-song-card h3 {
+  margin: 18px 0 3px;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: 34px;
+  line-height: .96;
+  text-transform: uppercase;
+}
+
+.catalogue-song-writers {
+  margin: 0;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalogue-song-description {
+  min-height: 54px;
+  margin: 16px 0 10px;
+  color: #c7c7c7;
+  font-size: 14px;
+}
+
+.catalogue-song-meta {
+  margin: 0 0 10px;
+  color: #8e8e8e;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.catalogue-audio {
+  width: 100%;
+  margin: 12px 0 16px;
+}
+
+.catalogue-song-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #2b2b2b;
+}
+
+.catalogue-action {
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.catalogue-action:hover,
+.catalogue-action:focus-visible {
+  color: var(--red);
+}
+
+.catalogue-action-disabled {
+  color: #666;
+}
+
+.catalogue-load-error {
+  grid-column: 1 / -1;
+  padding: 26px;
+  border: 1px solid rgba(215, 25, 32, .48);
+  color: #ddd;
+}
+
+.publisher-gate {
+  max-width: 720px;
+  margin: 70px auto;
+  padding: 38px;
+  border: 1px solid rgba(215, 25, 32, .65);
+  background: linear-gradient(145deg, #171717, #080808);
+  text-align: center;
+}
+
+.publisher-lock {
+  margin: 0 0 12px;
+  color: var(--red);
+  font-size: 42px;
+}
+
+.publisher-gate h2 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.publisher-gate p {
+  color: #c7c7c7;
+}
+
+.publisher-gate .btn {
+  margin-top: 14px;
+}
+
+@media (max-width: 1080px) {
+  .catalogue-panel-grid,
+  .catalogue-song-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalogue-panel-private {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .catalogue-panel-grid,
+  .catalogue-song-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogue-panel-private {
+    grid-column: auto;
+  }
+
+  .catalogue-page-main {
+    padding-top: 94px;
+  }
+
+  .catalogue-page-hero {
+    padding-top: 46px;
+  }
+
+  .catalogue-page-toolbar {
+    display: block;
+  }
+
+  .catalogue-page-toolbar p {
+    margin-top: 10px;
+  }
+}
+
+@media (hover: none) {
+  .catalogue-panel:hover,
+  .catalogue-panel:active {
+    transform: none;
+  }
+}
+
