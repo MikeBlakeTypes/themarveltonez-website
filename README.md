@@ -1,4 +1,4 @@
-The Marveltonez Website v10.3
+The Marveltonez Website v10.4
 
 Static website for GitHub and Cloudflare Pages.
 
@@ -10,3 +10,6 @@ Changes:
   Songs begin with ideas
   HITS BEGIN WITH WRITERS
 - Existing v10.2 product mockups and all v10.1 responsive fixes retained.
+
+
+v10.4 adds approved catalogue copy and expandable public song profiles for all nine demos.

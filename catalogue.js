@@ -1,6 +1,6 @@
 /**
- * Marveltonez Catalogue Module v1.1
- * Reads metadata/songs.json and creates reusable song cards.
+ * Marveltonez Catalogue Module v1.2
+ * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
   "use strict";
@@ -21,10 +21,19 @@
 
   const enquiryAddress = "mikeblake@themarveltonez.com";
 
+  function compactMood(mood = "") {
+    return String(mood)
+      .split("•")
+      .map((item) => item.trim())
+      .filter(Boolean)
+      .slice(0, 3)
+      .join(" · ");
+  }
+
   function renderMetadata(song) {
     const details = [
       song.genre,
-      song.mood,
+      compactMood(song.mood),
       song.vocal,
       song.bpm ? `${song.bpm} BPM` : "",
       song.key
@@ -33,6 +42,34 @@
     return details.length
       ? `<p class="catalogue-song-meta">${details.map(escapeHTML).join(" · ")}</p>`
       : "";
+  }
+
+  function renderProfileField(label, value) {
+    if (!value) return "";
+    return `
+      <div class="catalogue-profile-field">
+        <h4>${escapeHTML(label)}</h4>
+        <p>${escapeHTML(value)}</p>
+      </div>`;
+  }
+
+  function renderProfile(song) {
+    const profile = song.profile || {};
+    const hasProfile = Object.values(profile).some(Boolean);
+    if (!hasProfile) return "";
+
+    return `
+      <details class="catalogue-profile">
+        <summary>View song profile</summary>
+        <div class="catalogue-profile-body">
+          ${renderProfileField("Overview", profile.overview)}
+          ${renderProfileField("Themes", profile.themes)}
+          ${renderProfileField("Musical style", profile.musicalStyle)}
+          ${renderProfileField("For listeners who enjoy", profile.artistComparisons)}
+          ${renderProfileField("Perfect for", profile.perfectFor)}
+          ${renderProfileField("Sync potential", profile.syncPotential)}
+        </div>
+      </details>`;
   }
 
   function renderActions(song) {
@@ -53,10 +90,12 @@
       ? song.writers.join(" · ")
       : (song.writers || "");
 
+    const badge = song.priority || song.status || "Demo";
+
     return `
       <article class="catalogue-song-card" data-song-id="${escapeHTML(song.id)}">
         <div class="catalogue-song-card-head">
-          <span class="catalogue-song-status">${escapeHTML(song.status || "Demo")}</span>
+          <span class="catalogue-song-status">${escapeHTML(badge)}</span>
           <span class="catalogue-song-index">${escapeHTML(song.id.replaceAll("-", " "))}</span>
         </div>
 
@@ -73,6 +112,7 @@
           Your browser does not support audio playback.
         </audio>
 
+        ${renderProfile(song)}
         ${renderActions(song)}
       </article>`;
   }
