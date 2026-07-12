@@ -340,3 +340,35 @@
   }
 }
 
+
+/* Website v10.3 — launch-candidate structural refinements
+   Tighten the standalone catalogue pages on desktop while retaining the
+   established mobile layout and the approved spacing on the home page. */
+@media (min-width: 701px) {
+  .catalogue-page-main {
+    padding-top: 22px;
+  }
+
+  .catalogue-page-hero {
+    padding-top: 30px;
+    padding-bottom: 26px;
+  }
+
+  .catalogue-page-lead {
+    margin-top: 16px;
+  }
+
+  .catalogue-page-content {
+    padding-top: 26px;
+    padding-bottom: 48px;
+  }
+
+  .catalogue-page-toolbar {
+    margin-bottom: 22px;
+  }
+
+  .publisher-gate {
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+}
