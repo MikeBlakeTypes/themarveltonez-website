@@ -688,3 +688,46 @@ html, body{
     max-height:300px;
   }
 }
+
+
+/* Version 11.0 — Public Launch refinements */
+.product-link{display:block;color:inherit;text-decoration:none}
+.product-link:visited{color:inherit}
+.product-view{display:inline-block;margin:0 22px 24px;color:#fff;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--red)}
+.product-link:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.back-to-top-wrap{padding:22px 4vw 10px;text-align:center;background:#050505}
+.back-to-top{display:inline-block;color:#aaa;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;transition:color .25s ease}
+.back-to-top:hover,.back-to-top:focus-visible{color:#fff}
+@media(max-width:620px){
+  /* Desktop section rhythm remains unchanged; only the iPhone experience is tightened. */
+  .section{padding-top:36px;padding-bottom:36px}
+  .section-heading,.row-heading{margin-bottom:18px}
+  .writers-collection{padding-top:34px;padding-bottom:36px}
+  .collection-heading{margin-bottom:20px}
+  .product-copy{padding-top:17px;padding-bottom:18px}
+  .product-copy h3{font-size:25px;margin-bottom:7px}
+  .product-copy p:last-child{line-height:1.42}
+  .product-view{margin-bottom:20px}
+  .back-to-top-wrap{padding-top:18px}
+}
+
+/* Writer's Collection product preview pages */
+.product-page{min-height:100vh;background:radial-gradient(circle at 10% 12%,rgba(215,25,32,.14),transparent 28%),#070707}
+.product-page-main{padding:42px 4vw 56px}
+.product-page-inner{max-width:1280px;margin:0 auto}
+.product-page-kicker{margin:0 0 9px;color:var(--red);font-family:var(--font-head);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.product-page h1{margin:0;color:#ddd;font-family:var(--font-head);font-size:clamp(48px,7vw,92px);line-height:.9;text-transform:uppercase}
+.product-page-lead{max-width:720px;margin:18px 0 30px;color:#c7c7c7;font-size:17px}
+.product-gallery{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.6fr);gap:24px;align-items:start}
+.product-gallery-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.product-gallery-image{margin:0;overflow:hidden;border:1px solid #303030;background:#0b0b0b}
+.product-gallery-image--featured{grid-column:1/-1}
+.product-gallery-image img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .25s ease}
+.product-gallery-image:hover img{transform:scale(1.015)}
+.product-page-copy{padding:28px;border:1px solid #303030;background:linear-gradient(180deg,#171717,#0b0b0b)}
+.product-page-copy h2{margin:0 0 12px;font-family:var(--font-head);font-size:34px;text-transform:uppercase}
+.product-page-copy p{color:#c7c7c7}
+.product-page-status{color:var(--red)!important;font-family:var(--font-head);font-size:18px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.product-page-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.product-page-actions .btn{margin:0}
+@media(max-width:720px){.product-page-main{padding-top:26px}.product-gallery{grid-template-columns:1fr}.product-gallery-showcase{gap:8px}.product-page-copy{padding:22px}.product-page h1{font-size:52px}}

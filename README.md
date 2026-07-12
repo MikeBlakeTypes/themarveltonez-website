@@ -1,15 +1,7 @@
-The Marveltonez Website v10.4
+# The Marveltonez Website v11.0 — Public Launch
 
-Static website for GitHub and Cloudflare Pages.
+Public-launch build for GitHub Pages / Cloudflare Pages.
 
-Changes:
-- Writer's Collection heading reduced to match the scale of the other website section headings.
-- Product preview images constrained to a smaller 4:3 presentation to reduce the section depth.
-- Collection grid width tightened for a more elegant desktop layout.
-- Slogan restyled to match the Writer's Mug:
-  Songs begin with ideas
-  HITS BEGIN WITH WRITERS
-- Existing v10.2 product mockups and all v10.1 responsive fixes retained.
+Key updates include responsive spacing refinements, tighter catalogue pages, improved song-profile closing behaviour, Maycke credit, discreet Back to Top links, and four Writer’s Collection product preview pages.
 
-
-v10.4 adds approved catalogue copy and expandable public song profiles for all nine demos.
+The package references the existing `assets/images` directory from the website repository.

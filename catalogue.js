@@ -68,6 +68,7 @@
           ${renderProfileField("For listeners who enjoy", profile.artistComparisons)}
           ${renderProfileField("Perfect for", profile.perfectFor)}
           ${renderProfileField("Sync potential", profile.syncPotential)}
+          <button class="catalogue-profile-close" type="button">Close song profile ↑</button>
         </div>
       </details>`;
   }
@@ -155,6 +156,17 @@
         );
 
         grid.innerHTML = visibleSongs.map(renderSongCard).join("");
+
+        grid.querySelectorAll(".catalogue-profile-close").forEach((button) => {
+          button.addEventListener("click", () => {
+            const details = button.closest("details");
+            const card = button.closest(".catalogue-song-card");
+            if (details) details.open = false;
+            requestAnimationFrame(() => {
+              if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+          });
+        });
 
         countElements.forEach((element) => {
           if ((element.dataset.catalogueCategory || "unreleased") === category) {

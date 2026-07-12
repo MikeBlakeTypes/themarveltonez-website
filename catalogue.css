@@ -432,3 +432,19 @@
   font-size: 13px;
   line-height: 1.55;
 }
+
+
+/* Version 11.0 — tighter catalogue pages and profile closing behaviour */
+.catalogue-profile-close{margin-top:18px;padding:9px 0;border:0;border-bottom:1px solid var(--red);background:transparent;color:#fff;font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.catalogue-profile-close:hover,.catalogue-profile-close:focus-visible{color:var(--red)}
+.catalogue-page-hero{padding-top:42px;padding-bottom:30px}
+.catalogue-page-content{padding-top:24px;padding-bottom:38px}
+.catalogue-page-toolbar{margin-bottom:22px}
+.publisher-gate{margin-top:0;margin-bottom:0}
+@media(max-width:620px){
+  .catalogue-page-hero{padding-top:26px;padding-bottom:18px}
+  .catalogue-page-content{padding-top:14px;padding-bottom:24px}
+  .catalogue-page-toolbar{margin-bottom:16px}
+  .catalogue-page-toolbar .section-heading h2{margin-bottom:6px}
+  .publisher-gate{padding-top:28px;padding-bottom:28px}
+}
