@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.3
+ * Marveltonez Catalogue Module v1.3.1
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -20,6 +20,56 @@
     })[character]);
 
   const enquiryAddress = "mikeblake@themarveltonez.com";
+
+  function closeProfile(details, card) {
+    if (details) details.open = false;
+    requestAnimationFrame(() => {
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  /*
+   * These listeners live on the document rather than on individual cards.
+   * The cards are inserted after the catalogue JSON loads, so delegation keeps
+   * the controls reliable even if the grid is re-rendered or loads from the
+   * remote fallback source.
+   */
+  function installCatalogueInteractions() {
+    document.addEventListener("play", (event) => {
+      const audio = event.target;
+      if (!(audio instanceof HTMLMediaElement) || !audio.matches(".catalogue-audio")) return;
+
+      document.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
+        if (otherAudio !== audio) otherAudio.pause();
+      });
+    }, true);
+
+    document.addEventListener("click", (event) => {
+      const target = event.target instanceof Element ? event.target : null;
+      if (!target) return;
+
+      const closeButton = target.closest(".catalogue-profile-close");
+      if (closeButton) {
+        event.preventDefault();
+        closeProfile(
+          closeButton.closest("details.catalogue-profile"),
+          closeButton.closest(".catalogue-song-card")
+        );
+        return;
+      }
+
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+      const profileBody = target.closest(".catalogue-profile-body");
+      if (!profileBody) return;
+      if (target.closest("a, button, audio, input, textarea, select, label")) return;
+
+      closeProfile(
+        profileBody.closest("details.catalogue-profile"),
+        profileBody.closest(".catalogue-song-card")
+      );
+    });
+  }
 
   function compactMood(mood = "") {
     return String(mood)
@@ -158,38 +208,6 @@
 
         grid.innerHTML = visibleSongs.map(renderSongCard).join("");
 
-        grid.querySelectorAll(".catalogue-audio").forEach((audio) => {
-          audio.addEventListener("play", () => {
-            document.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
-              if (otherAudio !== audio && !otherAudio.paused) otherAudio.pause();
-            });
-          });
-        });
-
-        const closeProfile = (details, card) => {
-          if (details) details.open = false;
-          requestAnimationFrame(() => {
-            if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-        };
-
-        grid.querySelectorAll(".catalogue-profile-close").forEach((button) => {
-          button.addEventListener("click", () => {
-            const details = button.closest("details");
-            const card = button.closest(".catalogue-song-card");
-            closeProfile(details, card);
-          });
-        });
-
-        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-          grid.querySelectorAll(".catalogue-profile-body").forEach((body) => {
-            body.addEventListener("click", (event) => {
-              if (event.target.closest("a, button, audio, input, textarea, select, label")) return;
-              closeProfile(body.closest("details"), body.closest(".catalogue-song-card"));
-            });
-          });
-        }
-
         countElements.forEach((element) => {
           if ((element.dataset.catalogueCategory || "unreleased") === category) {
             element.textContent = `${visibleSongs.length} demos`;
@@ -210,5 +228,6 @@
     }
   }
 
+  installCatalogueInteractions();
   document.addEventListener("DOMContentLoaded", initialiseCatalogue);
 })();

@@ -1,5 +1,11 @@
 # Changelog
 
+## v11.1.1 — Catalogue Interaction Hotfix — 13 July 2026
+- Made one-song-at-a-time playback reliable through a document-level media listener.
+- Made the top and bottom Close Song Profile buttons reliable through delegated event handling.
+- Retained desktop click-anywhere-to-close behaviour for expanded song profiles.
+- Added a versioned catalogue script reference so browsers and Cloudflare do not reuse the older cached interaction code.
+
 ## v11.1 — Catalogue Master Sync — 13 July 2026
 - Updated all nine song cards and expanded profiles from Marveltonez Catalogue Master v2.1.
 - Added clear Close Song Profile controls at both the top and bottom of every expanded profile.
