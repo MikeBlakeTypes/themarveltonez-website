@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.2
+ * Marveltonez Catalogue Module v1.3
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -62,13 +62,14 @@
       <details class="catalogue-profile">
         <summary>View song profile</summary>
         <div class="catalogue-profile-body">
+          <button class="catalogue-profile-close catalogue-profile-close-top" type="button" aria-label="Close song profile">Close song profile ↑</button>
           ${renderProfileField("Overview", profile.overview)}
           ${renderProfileField("Themes", profile.themes)}
           ${renderProfileField("Musical style", profile.musicalStyle)}
           ${renderProfileField("For listeners who enjoy", profile.artistComparisons)}
           ${renderProfileField("Perfect for", profile.perfectFor)}
           ${renderProfileField("Sync potential", profile.syncPotential)}
-          <button class="catalogue-profile-close" type="button">Close song profile ↑</button>
+          <button class="catalogue-profile-close catalogue-profile-close-bottom" type="button" aria-label="Close song profile">Close song profile ↑</button>
         </div>
       </details>`;
   }
@@ -157,16 +158,37 @@
 
         grid.innerHTML = visibleSongs.map(renderSongCard).join("");
 
+        grid.querySelectorAll(".catalogue-audio").forEach((audio) => {
+          audio.addEventListener("play", () => {
+            document.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
+              if (otherAudio !== audio && !otherAudio.paused) otherAudio.pause();
+            });
+          });
+        });
+
+        const closeProfile = (details, card) => {
+          if (details) details.open = false;
+          requestAnimationFrame(() => {
+            if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        };
+
         grid.querySelectorAll(".catalogue-profile-close").forEach((button) => {
           button.addEventListener("click", () => {
             const details = button.closest("details");
             const card = button.closest(".catalogue-song-card");
-            if (details) details.open = false;
-            requestAnimationFrame(() => {
-              if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
+            closeProfile(details, card);
           });
         });
+
+        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+          grid.querySelectorAll(".catalogue-profile-body").forEach((body) => {
+            body.addEventListener("click", (event) => {
+              if (event.target.closest("a, button, audio, input, textarea, select, label")) return;
+              closeProfile(body.closest("details"), body.closest(".catalogue-song-card"));
+            });
+          });
+        }
 
         countElements.forEach((element) => {
           if ((element.dataset.catalogueCategory || "unreleased") === category) {

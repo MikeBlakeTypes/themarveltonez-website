@@ -1,6 +1,6 @@
 {
-  "catalogueVersion": "1.2",
-  "updated": "2026-07-12",
+  "catalogueVersion": "2.1",
+  "updated": "2026-07-13",
   "audioBaseUrl": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/",
   "songs": [
     {
@@ -50,10 +50,10 @@
       "commercialPotential": "★★★★★ — Strong contemporary concept with immediate commercial appeal and an instantly memorable title.",
       "publisherNotes": "One of the strongest concept-driven songs in the current catalogue. Excellent candidate for publisher presentations and one of the first songs to introduce to new visitors. The lyric demonstrates a distinctive Marveltonez strength: taking an everyday modern experience and turning it into an engaging pop narrative.",
       "hidden": false,
-      "priority": "Hero Song",
+      "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "Relationships don’t always end with dramatic confrontations—sometimes they end with a tap on a screen. Blocked and Deleted captures that moment with humour, confidence and a contemporary edge, transforming a familiar digital-age experience into an instantly relatable pop concept. Rather than dwelling on heartbreak, the song celebrates taking control, drawing a line under the past and embracing a fresh start. Its conversational lyric and memorable central phrase make it immediately accessible while giving the song a distinctive identity within today’s pop landscape.",
+        "overview": "Relationships don’t always end with dramatic confrontations—sometimes they end with a tap on a screen. Blocked and Deleted captures that moment with humour, confidence and a contemporary edge, transforming a familiar digital-age experience into an instantly relatable pop concept. Rather than dwelling on heartbreak, the song celebrates taking control, drawing a line under the past and embracing a fresh start. Its conversational lyric and memorable central phrase make it immediately accessible, while giving the song a distinctive identity within today’s pop landscape.",
         "themes": "Modern relationships • Break-ups • Self-respect • Digital communication • Moving on • Emotional independence",
         "musicalStyle": "A contemporary commercial pop song built around a memorable lyrical hook and a conversational storytelling style. The emphasis is on personality, relatable situations and a modern perspective rather than melodrama, making it suitable for artists looking for confident, character-driven material.",
         "artistComparisons": "Dua Lipa • Anne-Marie • Maisie Peters • Sabrina Carpenter • Olivia Rodrigo",
@@ -72,7 +72,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/put-your-shirt-back-on.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A sharp, chaotic morning-after pop story in which one spectacularly bad decision turns into an urgent race for the door.",
+      "description": "A sharp, chaotic, panic-the-morning-after pop story in which one spectacularly bad decision turns into an urgent race for the door.",
       "genre": "Contemporary Pop / Comedy Pop",
       "mood": "Chaotic • Cheeky • Frantic • Mischievous • Regretful • Bold",
       "vocal": "",
@@ -113,9 +113,9 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "Put Your Shirt Back On drops the listener straight into the panic of a drunken mistake as its narrator scrambles to find her clothes, her keys and a convincing escape route before someone comes home. The song turns embarrassment, temptation and instant regret into a fast-moving comic scene, driven by an unmistakable title hook and vividly conversational detail. Beneath the humour sits a clear sense of consequence: the narrator knows the situation is reckless and wants out before it becomes an even bigger disaster. Bold, visual and unapologetically adult, it brings a mischievous edge to the Marveltonez catalogue.",
+        "overview": "Put Your Shirt Back On drops the listener straight into the panic of a drunken mistake as the singer panics and scrambles to find her clothes, her keys and any convincing escape route. The song turns embarrassment, temptation and instant regret into a fast-moving scene, driven by an unmistakable title hook “Put your shirt back on”. Beneath the chaos sits a clear sense of consequence: the singer knows the situation is reckless and wants to get out of there before it becomes an even bigger disaster. Bold, visual and unapologetically adult, it brings a mischievous edge to the Marveltonez catalogue.",
         "themes": "Drunken mistakes • Infidelity • Panic and escape • Consequences • Temptation • Morning-after regret",
-        "musicalStyle": "A concept-led contemporary pop song built around rapid-fire conversational storytelling, comic escalation and a highly repeatable title refrain. Its appeal lies in character, timing and a scene that unfolds almost like a short film, making it especially suited to an artist comfortable with humour, attitude and adult subject matter.",
+        "musicalStyle": "A concept-led contemporary pop song built around rapid-fire conversational storytelling, comic escalation and a highly repeatable title hook “Put your shirt back on”. Its appeal lies in character, timing and a scene that unfolds almost like a short film, making it especially suited to an artist comfortable with humour, attitude and adult subject matter.",
         "artistComparisons": "Lily Allen • Sabrina Carpenter • Anne-Marie • Chappell Roan • Katy Perry",
         "perfectFor": "Girls’ night playlists • Cheeky pop playlists • Adult pop playlists • Party aftermath playlists • Comedy and character-driven pop • Explicit pop playlists",
         "syncPotential": "Adult romantic comedy • Streaming dramedy • Nightlife or party montage • Comedy series • Dating-show promo • Fashion or beauty content with a mischievous tone"
@@ -132,7 +132,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/so-youre-dating-my-ex.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A sharp, tongue-in-cheek pop anthem that flips jealousy on its head with confidence, humour and the last laugh.",
+      "description": "A sharp, tongue-in-cheek pop anthem that flips jealousy on its head with confidence, humour.. and the last laugh.",
       "genre": "Contemporary Pop / Commercial Pop / Attitude Pop",
       "mood": "Playful • Confident • Witty • Defiant • Empowering",
       "vocal": "",
@@ -168,10 +168,10 @@
       "commercialPotential": "★★★★★ — A memorable title, instantly understandable concept and fresh emotional perspective combine to create strong commercial potential.",
       "publisherNotes": "One of the strongest examples of the Marveltonez writing style. The lyric balances humour, confidence and emotional maturity without becoming bitter. Excellent publisher showcase material.",
       "hidden": false,
-      "priority": "Hero Song",
+      "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "So You’re Dating My Ex takes a situation that usually fuels drama and turns it into a witty display of confidence and emotional independence. Rather than dwelling on resentment, the narrator refuses to play the expected role, meeting rivalry with sarcasm, humour and complete indifference. Packed with memorable one-liners and a strong conversational style, the song captures the confidence of someone who has already moved on, making it both relatable and entertaining. Its bold title, playful attitude and contemporary language give it immediate commercial appeal while reinforcing the Marveltonez catalogue’s knack for turning everyday relationship situations into distinctive pop concepts.",
+        "overview": "So You’re Dating My Ex takes a situation that usually fuels drama and turns it into a witty display of confidence and emotional independence. Rather than dwelling on resentment, the singer refuses to play the expected role, and meets rivalry with sarcasm, humour and complete indifference. Packed with memorable one-liners and a strong conversational style, the song captures the confidence of a girl who has already moved on, making it both relatable and entertaining. Its bold title, playful attitude and contemporary language give it immediate commercial appeal while reinforcing the Marveltonez catalogue’s knack for turning everyday relationship situations into distinctive pop concepts.",
         "themes": "Moving on • Modern relationships • Emotional confidence • Rivalry • Self-worth • Humour after heartbreak",
         "musicalStyle": "A contemporary pop song driven by conversational storytelling, memorable lyrical hooks and a confident vocal attitude. Rather than relying on emotional drama, it builds its appeal through wit, personality and a fresh perspective on a familiar relationship scenario.",
         "artistComparisons": "Sabrina Carpenter • Olivia Rodrigo • Maisie Peters • Anne-Marie • Lily Allen",
@@ -190,7 +190,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/just-sayin.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A barbed, comic pop takedown of polished perfection, delivered with eye-rolls, attitude and plausible deniability.",
+      "description": "A barbed, comic-pop takedown of polished perfection, delivered with eye-rolls and attitude.",
       "genre": "Contemporary Pop / Satirical Pop / Attitude Pop",
       "mood": "Sarcastic • Cheeky • Confrontational • Comic • Energetic",
       "vocal": "",
@@ -228,9 +228,9 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "Just Sayin’ gives its narrator free rein to puncture the image of carefully cultivated “bubble gum girls,” prima-donna egos and high-maintenance perfection. The lyric is knowingly contradictory: she insists she could never be jealous while cataloguing everything that irritates her, and that self-awareness is part of the joke. Packed with vivid put-downs, conversational profanity and the endlessly reusable title phrase, the song creates a bold character rather than a neutral observer. Its satirical edge and repeatable hook make it a distinctive, mischievous entry in the Marveltonez catalogue.",
+        "overview": "Just Sayin’ gives the singer a free rein to puncture the image of those carefully cultivated “bubble-gum girls,” prima-donna egos and high-maintenance perfection. The lyric is knowingly contradictory: she insists she could never be jealous, while cataloguing everything that irritates her, and that self-awareness is part of the joke. Packed with vivid put-downs, conversational profanity and the endlessly reusable title phrase, the song creates a bold character rather than a neutral observer. Its satirical edge and repeatable hook make it a distinctive, mischievous entry in the Marveltonez catalogue.",
         "themes": "Jealousy • Image and vanity • Social rivalry • Self-awareness • Female competition • Attitude",
-        "musicalStyle": "A character-driven contemporary pop song built around rhythmic verbal hooks, comic exaggeration and an unapologetically sharp point of view. The title refrain acts as both punchline and escape clause, giving the lyric a strong identity.",
+        "musicalStyle": "A character-driven contemporary pop song built around rhythmic verbal hooks, comic exaggeration and an unapologetically sarcastic point of view. The title “Just Sayin’” acts as both punchline and escape clause, giving the lyric a strong identity.",
         "artistComparisons": "Lily Allen • Sabrina Carpenter • Chappell Roan • Anne-Marie • Meghan Trainor",
         "perfectFor": "Attitude-pop playlists • Girls’ night playlists • Satirical pop • Workout playlists • Character-driven pop • Explicit pop playlists",
         "syncPotential": "Comedy series • Reality television • Fashion satire • Social-media campaigns • Teen/young-adult dramedy • Character-introduction montage"
@@ -244,10 +244,10 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/i-didnt-mean-to-turn-out-bad.mp3",
+      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/i-didn%27t-mean-to-turn-out-bad.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A rebellious yet vulnerable pop confession from a young woman refusing to fit back inside the box her family imagined for her.",
+      "description": "A rebellious yet vulnerable pop confession, from a girl refusing to fit back inside the box her family imagined for her.",
       "genre": "Contemporary Pop / Pop-Rock / Coming-of-Age Pop",
       "mood": "Defiant • Vulnerable • Rebellious • Hurt • Energetic",
       "vocal": "",
@@ -282,12 +282,12 @@
       "commercialPotential": "★★★★★ — The title is memorable, the family address is immediate and the central conflict is widely relatable. Strong artist-pitch potential, provided the production supports both its bite and vulnerability.",
       "publisherNotes": "One of the catalogue’s strongest emotional concepts. The “candy in a box” image and direct appeal to Mum and Dad provide a clear identity. Worth prioritising for an artist who can sell both rebellion and hurt.",
       "hidden": false,
-      "priority": "Hero Song",
+      "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "I Didn’t Mean to Turn Out Bad addresses Mum and Dad directly, blending apology, anger and self-defence as the narrator tries to explain the person she has become. The recurring image of “candy in a box” captures the pressure to remain sweet, compliant and easy to consume, while the verses reveal a messier life of bad choices, judgment and limited options. The title refrain is emotionally potent because it can sound defiant and wounded at the same time. Contemporary language and flashes of humour keep the song from becoming self-pitying, giving it the feel of a coming-of-age anthem with genuine character.",
+        "overview": "I Didn’t Mean to Turn Out Bad blends apology, anger and self-defence as the singer tries to explain the person she has become. The recurring image of “candy in a box” captures the pressure to remain sweet, compliant and easy to consume, while the verses reveal a messier life of bad choices, judgment and limited options. The title “I Didn’t Mean to Turn Out Bad” is emotionally potent because it can sound both defiant and wounded at the same time. Contemporary language and flashes of humour keep the song from becoming self-pitying, giving it the feel of a coming-of-age anthem with genuine character.",
         "themes": "Family expectations • Identity • Rebellion • Judgment • Growing up • Self-acceptance",
-        "musicalStyle": "A dramatic contemporary pop song built around a direct address, a strong title refrain and the contrast between sweetness expected and chaos lived. It suits an artist able to combine attitude with emotional exposure.",
+        "musicalStyle": "A dramatic contemporary pop song built around a strong title and the contrast between sweetness expected and chaos lived. It suits an artist able to combine attitude with emotional exposure.",
         "artistComparisons": "Olivia Rodrigo • Gayle • Anne-Marie • Maisie Peters • Avril Lavigne",
         "perfectFor": "Coming-of-age playlists • Rebellion playlists • Emotional pop-rock • Youth anthems • Empowerment playlists • Cathartic listening",
         "syncPotential": "Teen drama • Coming-of-age film • Family-conflict montage • Youth campaign • Character-breakthrough scene • Streaming drama"
@@ -304,7 +304,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/happy-breakup.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A buoyant break-up anthem that swaps tears for make-up, freedom and the pleasure of rediscovering yourself.",
+      "description": "A stomping break-up anthem that swaps tears for make-up, relationships for freedom and the pleasure of rediscovering yourself.",
       "genre": "Contemporary Pop / Feel-Good Pop / Break-Up Pop",
       "mood": "Uplifting • Liberated • Playful • Confident • Celebratory",
       "vocal": "",
@@ -337,12 +337,12 @@
       "commercialPotential": "★★★★★ — The title communicates the concept instantly, the chorus is highly marketable and the positive viewpoint creates strong streaming and sync possibilities.",
       "publisherNotes": "A particularly clear publisher pitch because the idea is understood from the title alone. Strong candidate for upbeat artist pitching and celebratory sync. The lyric offers specific character details that help it feel more than a generic empowerment song.",
       "hidden": false,
-      "priority": "Hero Song",
+      "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "It’s a Happy Break-Up overturns the expected sadness of separation by presenting its narrator as relieved, energised and newly curious about her own life. She remembers neglected interests, reconnects with friends and enjoys the freedom to dance, drink, read and go out without being overlooked. The chorus is built on a simple, memorable rhyme—“happy break-up / putting on my make-up”—and the repeated list of everything now out of her life gives the song a celebratory release. A brief moment of wondering whether the ex misses her adds emotional texture without disturbing the song’s upbeat centre.",
+        "overview": "It’s a Happy Break-Up overturns the expected sadness of separation by presenting its singer as relieved, energised and newly curious about her own life. She remembers neglected interests, reconnects with friends and enjoys the freedom to dance, drink and party. The chorus is built on a simple, memorable rhyme—“It’s a happy break-up / putting on my make-up”—and the repeated list of everything now out of her life gives the song a celebratory release. A brief moment of wondering whether her ex misses her or not adds an emotional texture without disturbing the song’s upbeat centre.",
         "themes": "Freedom • Rediscovery • Moving on • Friendship • Neglect within relationships • New beginnings",
-        "musicalStyle": "A feel-good contemporary pop song with a clear singalong chorus, conversational verses and an optimistic reversal of the traditional break-up narrative. Its strength lies in the contrast between what others expect her to feel and the freedom she actually experiences.",
+        "musicalStyle": "A feel-good contemporary pop song with a clear singalong chorus, conversational verses and an optimistic reversal of the traditional break-up narrative. Its strength lies in the contrast between what others expect her to feel and the freedom she actually experiences in her break-up.",
         "artistComparisons": "Dua Lipa • Anne-Marie • Meghan Trainor • Katy Perry • Jess Glynne",
         "perfectFor": "Break-up recovery • Girls’ night playlists • Feel-good pop • Fresh-start playlists • Getting-ready playlists • Driving playlists",
         "syncPotential": "Romantic comedy • Makeover or getting-ready montage • Lifestyle advertising • Reality TV • Travel or nightlife content • Fresh-start campaign"
@@ -359,7 +359,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/doorstep.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A sweetly awkward pop story about the moment a perfect date reaches the front door—and the kiss never comes.",
+      "description": "A sweetly awkward pop story about the moment a perfect date reaches the front door—but the expected kiss never comes.",
       "genre": "Contemporary Pop / Romantic Pop / Story Pop",
       "mood": "Anticipatory • Awkward • Hopeful • Frustrated • Playful",
       "vocal": "",
@@ -395,9 +395,9 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "Doorstep captures the tension of two people who clearly get along but repeatedly fail to cross the final romantic threshold. Each drive home raises the narrator’s hopes, only for silence, politeness and another disappearing car to leave her wondering what she said, what she missed and whether this was supposed to be the moment they kissed. The humour comes from her outward coolness colliding with the increasingly frustrated thoughts in her head. Built around a familiar, highly visual situation, the song turns romantic uncertainty into a concise and relatable pop narrative.",
+        "overview": "Doorstep captures the tension of two people who clearly get along, but repeatedly fail to cross the final romantic threshold. Each drive home raises the singer’s hopes, only for silence, politeness and another disappearing car to leave her wondering what she said, what she missed and whether or not this was supposed to be the moment they kissed. The humour comes from her outward coolness colliding with the increasingly frustrated thoughts in her head. Built around a familiar, highly visual situation, the song turns romantic uncertainty into a concise and relatable pop narrative.",
         "themes": "Dating uncertainty • Missed signals • Romantic anticipation • Shyness • Miscommunication • Unrequited momentum",
-        "musicalStyle": "A narrative contemporary pop song driven by escalating anticipation and a chorus that freezes the action at the doorstep. Its appeal lies in recognisable detail, emotional restraint and the comic gap between what the narrator expects and what actually happens.",
+        "musicalStyle": "A narrative contemporary pop song driven by escalating anticipation and a chorus that freezes the action at the doorstep. Its appeal lies in recognisable detail, emotional restraint and the comic gap between what the singer expects, and what actually happens.",
         "artistComparisons": "Maisie Peters • Carly Rae Jepsen • Sabrina Carpenter • Gabrielle Aplin • Anne-Marie",
         "perfectFor": "Dating playlists • Romantic-pop playlists • Crush playlists • Road-trip pop • Lighthearted relationship playlists • Story-song collections",
         "syncPotential": "Romantic comedy • First-date montage • Teen/young-adult drama • Dating-show sequence • Sitcom end scene • Awkward-romance advertisement"
@@ -414,7 +414,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/a-girl-like-me.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A warm, melody-led love song about hearing someone’s music and realising its words seem written for you.",
+      "description": "A warm, melody-led love song about hearing a song and realising its words seem written for you.",
       "genre": "Contemporary Pop / Retro-Influenced Pop / Romantic Pop",
       "mood": "Warm • Romantic • Dreamy • Hopeful • Sweet",
       "vocal": "",
@@ -450,9 +450,9 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "A Girl Like Me begins with a song drifting into the street and pulling the narrator into its melody. As she listens, she hears something personal in the words—as though the singer is speaking directly to a woman like her. The lyric moves from fascination to love, using recurring “sha-la-la” and “oh-oh” refrains to frame a simple romantic idea: she does not need diamonds or grand displays, only the “nothing but everything” he has to give. Gentle, affectionate and knowingly classic in its language, the song adds a melodic, timeless side to the Marveltonez catalogue.",
+        "overview": "A Girl Like Me begins with a song drifting into the street as it pulls the narrator into its melody. As she listens, she hears something personal in the words—as if the singer of the song she is hearing is singing directly to her. The lyric moves from fascination to love, using recurring “sha-la-la” and “oh-oh” refrains to frame a simple romantic idea: she does not need diamonds or grand displays, only the “nothing but everything” in the song he has to give. Gentle, affectionate and knowingly classic in its language, the song adds a melodic, timeless side to the Marveltonez catalogue.",
         "themes": "Music as connection • Falling in love • Simplicity over materialism • Recognition • Melody • Emotional openness",
-        "musicalStyle": "A melodic pop song with classic singalong syllables, repeated title phrases and a romantic narrative centred on the emotional power of hearing a song. Its language suggests a light retro-pop sensibility while remaining accessible to a contemporary audience.",
+        "musicalStyle": "A melodic pop song with classic, repeated title phrases and a romantic narrative centred on the emotional power of hearing a song and feeling it could have been written for you. Its language suggests a light retro-pop vibe while remaining accessible to a contemporary audience.",
         "artistComparisons": "Carly Rae Jepsen • Kylie Minogue • Meghan Trainor • Jess Glynne • Paloma Faith",
         "perfectFor": "Feel-good romance playlists • Easy listening • Summer playlists • Retro-pop playlists • Love-song collections • Daytime listening",
         "syncPotential": "Romantic comedy • Music-themed film or series • Street-scene montage • Lifestyle advertising • Feel-good drama • Artist-performance sequence"
@@ -469,7 +469,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/youre-my-boy.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A bright, open-hearted pop celebration of new love so exciting it has to be shared with the whole world.",
+      "description": "A bright, open-hearted pop celebration of a new love so exciting that it has to be shared with the whole world.",
       "genre": "Contemporary Pop / Feel-Good Pop / Romantic Pop",
       "mood": "Joyful • Excited • Romantic • Energetic • Sincere",
       "vocal": "",
@@ -505,13 +505,14 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "You’re My Boy captures the uncomplicated rush of falling in love and wanting everyone to know. The narrator feels the connection physically and emotionally, tells friends on the phone and repeatedly throws the title into the air like a public declaration. The lyric’s directness is its defining quality: this is not a complicated relationship story but a burst of happiness, reassurance and anticipation. Repeated “love, love, love” phrases and the central “whole wide world” image make it naturally suited to a big, communal chorus and give the song an upbeat, affectionate place within the catalogue.",
+        "overview": "You’re My Boy captures the uncomplicated rush of falling in love, and wanting everyone to know. The singer feels the rush of love so physically and emotionally that she can’t help but phone her friends and throw her hands into the air as a public declaration. The lyric’s directness is its defining quality: this is not a complicated relationship story, but a burst of joy, happiness and anticipation. Repeated “love, love, love” phrases and the central “whole wide world” images make it naturally suited to a big chorus and give the song an upbeat and affectionate place in the catalogue.",
         "themes": "New love • Public celebration • Attraction • Emotional security • Excitement • Togetherness",
-        "musicalStyle": "An upbeat contemporary pop song built around repetition, direct emotional language and a chorus designed as a joyful public announcement. Its simplicity leaves space for a strong melody, energetic arrangement and audience participation.",
+        "musicalStyle": "An upbeat contemporary pop song built around direct emotional language and an uplifting chorus designed as a joyful public announcement. Its simplicity leaves space for a strong melody, with an energetic arrangement.",
         "artistComparisons": "Carly Rae Jepsen • Jess Glynne • Kylie Minogue • Meghan Trainor • Katy Perry",
         "perfectFor": "New-love playlists • Feel-good pop • Celebration playlists • Summer driving • Wedding-party playlists • Upbeat romance",
         "syncPotential": "Romantic comedy • New-couple montage • Wedding or engagement content • Family/lifestyle advertising • Feel-good television • Celebration campaign"
       }
     }
-  ]
+  ],
+  "sourceCatalogue": "Marveltonez Catalogue Master v2.1"
 }
