@@ -1,7 +1,7 @@
-# The Marveltonez Website v11.1.1 — Catalogue Interaction Hotfix
+# The Marveltonez Website v11.2 — Website Quality Pass
 
-Public-launch build for GitHub Pages / Cloudflare Pages.
+Deployment-ready static website for GitHub Pages / Cloudflare.
 
-Built from v11.1. All nine public song cards and expanded profiles remain synchronised from Marveltonez Catalogue Master v2.1. This hotfix strengthens the one-song-at-a-time playback and expanded-profile closing controls, and forces browsers to load the corrected catalogue interaction script. Embedded YouTube videos start with captions off, Writer’s Collection return navigation preserves context, and the v11.0 structure, styling and product galleries remain intact.
+This release focuses on user experience, mobile presentation, copy, merchandise pages, enquiry flow, visual consistency, baseline SEO/accessibility and remaining post-launch observations.
 
-The package references the existing `assets/images` directory from the website repository.
+Deploy by uploading the **contents** of this folder to the repository root, preserving the `assets` and `metadata` directories.

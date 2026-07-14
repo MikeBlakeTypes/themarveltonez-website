@@ -1,18 +1,14 @@
-// Version 11.1: reset genuine fresh opens while preserving browser-back position.
+// Version 10.1: stronger Safari/iPad/iPhone scroll reset on fresh opens.
 (function forceInitialTop(){
   if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'auto';
+    history.scrollRestoration = 'manual';
   }
-  const navigation = performance.getEntriesByType?.('navigation')?.[0];
-  if (navigation?.type === 'back_forward') return;
   if (window.location.hash) return;
   const reset = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   reset();
   window.addEventListener('DOMContentLoaded', reset, { once: true });
   window.addEventListener('load', reset, { once: true });
-  window.addEventListener('pageshow', (event) => {
-    if (!event.persisted) reset();
-  });
+  window.addEventListener('pageshow', reset);
   setTimeout(reset, 0);
   setTimeout(reset, 120);
   setTimeout(reset, 450);
@@ -58,9 +54,9 @@ function openVideo(card) {
 
   videoTitle.textContent = title;
   videoArtist.textContent = [artist, type].filter(Boolean).join(' · ');
-  youtubeLink.href = `https://www.youtube.com/watch?v=${id}&cc_load_policy=0`;
+  youtubeLink.href = `https://www.youtube.com/watch?v=${id}`;
   frameWrap.classList.toggle('short', orientation === 'short');
-  videoFrame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&cc_load_policy=0&cc_lang_pref=en&iv_load_policy=3`;
+  videoFrame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
 
   lightbox.classList.add('active');
   lightbox.setAttribute('aria-hidden', 'false');
