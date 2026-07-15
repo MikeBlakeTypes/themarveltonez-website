@@ -44,6 +44,29 @@ const videoArtist = document.getElementById('videoArtist');
 const youtubeLink = document.getElementById('youtubeLink');
 const frameWrap = document.querySelector('.video-frame-wrap');
 const workCards = document.querySelectorAll('.work-card[data-video-id]');
+const videoConsentPlaceholder = document.getElementById('videoConsentPlaceholder');
+const enableVideoButton = document.getElementById('enableVideoButton');
+let pendingVideoId = '';
+
+function mediaConsentGranted() {
+  return Boolean(window.MarveltonezConsent && window.MarveltonezConsent.allows('media'));
+}
+
+function loadConsentedVideo(id) {
+  pendingVideoId = id;
+  videoConsentPlaceholder.hidden = true;
+  frameWrap.classList.remove('consent-required');
+  videoFrame.hidden = false;
+  videoFrame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+}
+
+function showVideoConsentMessage(id) {
+  pendingVideoId = id;
+  videoFrame.src = '';
+  videoFrame.hidden = true;
+  videoConsentPlaceholder.hidden = false;
+  frameWrap.classList.add('consent-required');
+}
 
 function openVideo(card) {
   const id = card.dataset.videoId;
@@ -56,7 +79,8 @@ function openVideo(card) {
   videoArtist.textContent = [artist, type].filter(Boolean).join(' · ');
   youtubeLink.href = `https://www.youtube.com/watch?v=${id}`;
   frameWrap.classList.toggle('short', orientation === 'short');
-  videoFrame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+  if (mediaConsentGranted()) loadConsentedVideo(id);
+  else showVideoConsentMessage(id);
 
   lightbox.classList.add('active');
   lightbox.setAttribute('aria-hidden', 'false');
@@ -70,7 +94,23 @@ function closeVideo() {
   lightbox.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('video-open');
   videoFrame.src = '';
+  pendingVideoId = '';
 }
+
+if (enableVideoButton) {
+  enableVideoButton.addEventListener('click', () => {
+    if (window.MarveltonezConsent) window.MarveltonezConsent.grantMedia();
+  });
+}
+
+window.addEventListener('marveltonez:consent', (event) => {
+  if (event.detail.media && pendingVideoId && lightbox.classList.contains('active')) {
+    loadConsentedVideo(pendingVideoId);
+  }
+  if (!event.detail.media && lightbox.classList.contains('active') && pendingVideoId) {
+    showVideoConsentMessage(pendingVideoId);
+  }
+});
 
 workCards.forEach(card => {
   card.addEventListener('click', () => openVideo(card));

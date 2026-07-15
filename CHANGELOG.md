@@ -1,5 +1,18 @@
 # Changelog
 
+## v11.3 — Compliance & Corrections
+
+- Added a bilingual English/German Privacy & Datenschutz page covering hosting, Cloudflare R2 audio, optional YouTube content, local storage, email enquiries, external links, data-subject rights and the Austrian Data Protection Authority.
+- Added an equal-choice privacy banner with Accept videos, Reject optional and Preferences controls.
+- Added persistent Cookie Preferences access in every footer and on the privacy page.
+- Blocked YouTube connections by default; embedded videos load only after consent and use YouTube’s privacy-enhanced domain.
+- Self-hosted Barlow Condensed and Inter to remove automatic Google Fonts requests.
+- Confirmed the corrected Blocked & Deleted R2 master and added a dated cache-busting query to its catalogue URL.
+- Replaced the former sweatshirt/hoodie presentation with the approved Marveltonez Studio Hoodie and all five supplied mock-ups.
+- Used the male-and-female model image as the homepage and featured hoodie image.
+- Restored the T-shirt and hoodie homepage thumbnails to clean light-background imagery.
+- Preserved the v11.2 catalogue, navigation, profile-closing, playback, responsive and accessibility behavior.
+
 ## v11.2 — Website Quality Pass
 
 - Standardised click-through page spacing using the Writer’s Mug page as the reference.
