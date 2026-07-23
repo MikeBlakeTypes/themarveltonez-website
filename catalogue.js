@@ -78,8 +78,8 @@
       ? `<a class="catalogue-action" href="${escapeHTML(song.lyrics)}">Lyrics</a>`
       : `<span class="catalogue-action catalogue-action-disabled" aria-disabled="true">Lyrics soon</span>`;
 
-    const subject = encodeURIComponent(`Song enquiry: ${song.title}`);
-    const body = encodeURIComponent(`Hello Mike and Mike,\n\nI am interested in the song “${song.title}”.\n\nName:\nCompany / role:\nHow I would like to discuss or use the song:\n\nBest regards,`);
+    const subject = encodeURIComponent(`Enquiry about “${song.title}”`);
+    const body = encodeURIComponent(`Hi Mike and Mike,\n\nI am interested in your song “${song.title}”.\n\nName:\nCompany / role:\n\nMy enquiry is:\n\nBest regards,`);
     return `
       <div class="catalogue-song-actions">
         ${lyricsAction}

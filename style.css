@@ -918,3 +918,10 @@ body.consent-open{overflow:hidden}
   .collection-reviews{grid-template-columns:1fr;gap:12px;padding:20px}
   .collection-shop-button{display:inline-block}
 }
+
+
+/* v11.4.1 correction pass */
+.product-badge--bottom {
+  top: auto;
+  bottom: 14px;
+}

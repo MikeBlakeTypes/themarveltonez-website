@@ -2,9 +2,9 @@
 
 ## Current release
 
-**v11.4 — Website Quality Pass**
+**v11.4.1 — Website Quality Corrections**
 
-This release connects the live Writer’s Collection to Etsy, updates post-launch merchandise wording, adds direct product links, preserves the Studio Hoodie as sample evaluation pending, strengthens the Publisher Catalogue presentation, adds the J-Dash collaboration, and installs the approved Production Master logo export throughout the website.
+This correction release removes duplicated merchandise gallery images, repositions the T-shirt availability badge, clarifies the Studio Hoodie preview action, updates song-enquiry and Publisher Catalogue email templates, and ensures the word “THE” uses the official Marveltonez Grey.
 
 ## Deployment
 

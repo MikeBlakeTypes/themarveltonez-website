@@ -1,5 +1,16 @@
 # Changelog
 
+## v11.4.1 — Website Quality Corrections
+
+- Removed the duplicate front three-quarter Premium Cap gallery image.
+- Removed the duplicate model image from the Signature T-Shirt gallery.
+- Moved the Signature T-Shirt “Available on Etsy” badge to the bottom of its collection thumbnail.
+- Changed the Studio Hoodie collection action to “Coming Soon — Preview Here.”
+- Updated every song-card enquiry email with the approved song-specific template.
+- Added a complete pre-filled Publisher Catalogue access-request email.
+- Ensured the word “THE” in the approved website logo uses Marveltonez Grey (#B3B3B3).
+- Retained song Share buttons for the planned v11.5 Song Showcase release.
+
 ## v11.4 — Website Quality Pass
 
 - Connected the Writer’s Collection to the live TheMarveltonez Etsy shop.
