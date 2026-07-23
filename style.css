@@ -850,3 +850,71 @@ body.consent-open{overflow:hidden}
   .legal-copy>h2{font-size:36px}
   .legal-copy h3{font-size:22px}
 }
+
+
+/* Version 11.4 — Website Quality Pass */
+:root{--logoGrey:#b3b3b3}
+.logo-image-link{display:block;line-height:0}
+.site-logo-image{display:block;width:170px;height:auto}
+.footer-logo-image{display:block;width:min(260px,100%);height:auto}
+.collection-shop-button{margin-top:18px}
+.product-badge{padding:6px 9px 5px;background:rgba(7,7,7,.72);font-size:12px}
+.product-badge--hoodie{
+  top:auto;
+  bottom:14px;
+  max-width:calc(100% - 28px);
+  line-height:1.15;
+}
+.product-card:nth-child(4) .product-image-wrap img{
+  object-position:center 38%;
+}
+.collection-reviews{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);
+  gap:30px;
+  align-items:center;
+  max-width:1420px;
+  margin:28px auto 0;
+  padding:24px 26px;
+  border:1px solid rgba(255,255,255,.11);
+  background:linear-gradient(135deg,rgba(24,24,24,.96),rgba(8,8,8,.96));
+}
+.collection-reviews h3{
+  margin:0;
+  color:var(--logoGrey);
+  font-family:var(--font-head);
+  font-size:28px;
+  line-height:1;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+.collection-reviews p{margin:0;color:#c4c4c4}
+.publisher-access-list{
+  max-width:560px;
+  margin:24px auto 28px;
+  padding:22px 24px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.035);
+  text-align:left;
+}
+.publisher-access-list h3{
+  margin:0 0 14px;
+  color:var(--logoGrey);
+  font-family:var(--font-head);
+  font-size:24px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.publisher-access-list ul{margin:0;padding-left:20px;color:#ddd}
+.publisher-access-list li{margin:7px 0}
+@media(max-width:980px){
+  .site-logo-image{width:150px}
+}
+@media(max-width:620px){
+  .site-logo-image{width:132px}
+  .footer-logo-image{width:220px}
+  .collection-reviews{grid-template-columns:1fr;gap:12px;padding:20px}
+  .collection-shop-button{display:inline-block}
+}

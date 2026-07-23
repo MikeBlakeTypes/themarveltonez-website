@@ -1,5 +1,19 @@
 # Changelog
 
+## v11.4 — Website Quality Pass
+
+- Connected the Writer’s Collection to the live TheMarveltonez Etsy shop.
+- Replaced outdated “Coming Soon” wording for the live T-shirt, cap and mug.
+- Added direct Etsy purchase links for the three active products.
+- Retained the Studio Hoodie as “Sample Evaluation Pending.”
+- Added a customer reviews placeholder for the Writer’s Collection.
+- Updated the Publisher Catalogue wording and added the approved-access contents list.
+- Italicised “human-written” in the two agreed sections.
+- Added the J-Dash unreleased-song collaboration.
+- Replaced the text-built header and footer wordmarks with the approved Production Master logo export.
+- Refined merchandise badge sizing and repositioned the hoodie badge to protect faces and branding.
+- Updated collection product naming and post-launch wording.
+
 ## v11.3 — Compliance & Corrections
 
 - Added a bilingual English/German Privacy & Datenschutz page covering hosting, Cloudflare R2 audio, optional YouTube content, local storage, email enquiries, external links, data-subject rights and the Austrian Data Protection Authority.
