@@ -1,5 +1,11 @@
 # Changelog
 
+## v11.4.2 — Hero Logo Asset Hotfix
+
+- Replaced the reconstructed hero text logo with the approved Marveltonez Production Master logo image.
+- Ensured the hero now uses the exact approved grey and red logo colours and original logo proportions.
+- Preserved the existing hero layout, copy, buttons and responsive behaviour.
+
 ## v11.4.1 — Website Quality Corrections
 
 - Removed the duplicate front three-quarter Premium Cap gallery image.

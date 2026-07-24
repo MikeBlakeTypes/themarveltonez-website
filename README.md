@@ -2,9 +2,9 @@
 
 ## Current release
 
-**v11.4.1 — Website Quality Corrections**
+**v11.4.2 — Hero Logo Asset Hotfix**
 
-This correction release removes duplicated merchandise gallery images, repositions the T-shirt availability badge, clarifies the Studio Hoodie preview action, updates song-enquiry and Publisher Catalogue email templates, and ensures the word “THE” uses the official Marveltonez Grey.
+This hotfix replaces the reconstructed hero text logo with the approved Marveltonez Production Master logo asset, preserving the official proportions and colours.
 
 ## Deployment
 

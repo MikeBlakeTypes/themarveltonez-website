@@ -925,3 +925,23 @@ body.consent-open{overflow:hidden}
   top: auto;
   bottom: 14px;
 }
+
+
+/* v11.4.2 — Hero Logo Asset Hotfix */
+.hero-logo-image {
+  display: block;
+  width: min(100%, 650px);
+  height: auto;
+  margin: 0 0 22px;
+}
+@media (max-width: 980px) {
+  .hero-logo-image {
+    width: min(100%, 520px);
+  }
+}
+@media (max-width: 620px) {
+  .hero-logo-image {
+    width: min(100%, 430px);
+    margin-bottom: 18px;
+  }
+}
