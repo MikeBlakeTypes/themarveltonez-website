@@ -1,13 +1,12 @@
 /**
- * Marveltonez Catalogue Module v1.2
+ * Marveltonez Catalogue Module v1.3
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
   "use strict";
 
   const DEFAULT_JSON_SOURCES = [
-    "metadata/songs.json",
-    "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/metadata/songs.json"
+    "metadata/songs.json"
   ];
 
   const escapeHTML = (value = "") =>

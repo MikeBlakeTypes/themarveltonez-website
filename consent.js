@@ -144,7 +144,31 @@
     button.addEventListener("click", closePreferences);
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closePreferences();
+    const modal = document.getElementById("consentModal");
+
+    if (event.key === "Escape") {
+      closePreferences();
+      return;
+    }
+
+    if (event.key !== "Tab" || !modal || modal.hidden) return;
+
+    const focusable = Array.from(modal.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )).filter((element) => !element.hasAttribute("hidden") && element.offsetParent !== null);
+
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
   window.MarveltonezConsent = {

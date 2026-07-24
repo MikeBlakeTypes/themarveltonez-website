@@ -1,5 +1,19 @@
 # Changelog
 
+## v11.5 — Privacy, Consent and Embedded Media Corrections
+
+- Corrected the privacy policy to identify Cloudflare Pages as the current publishing and hosting platform.
+- Updated the bilingual privacy-policy date to 24 July 2026.
+- Clarified that song metadata normally loads locally and public audio loads from Cloudflare R2 only when played.
+- Added explicit English and German wording for external Etsy shop and product links.
+- Confirmed that no Etsy content or widget loads before a visitor clicks an Etsy link.
+- Removed the malformed and unusable Cloudflare R2 metadata fallback.
+- Retained the working local catalogue metadata file as the single metadata source.
+- Added keyboard focus containment to the cookie and media preferences dialog.
+- Versioned consent.js, script.js and catalogue.js references as v11.5 to reduce stale-cache behaviour.
+- Retained the existing local YouTube thumbnails, consent-gated YouTube loading, youtube-nocookie.com embeds, ordinary Etsy links and preload="none" public audio architecture.
+- Removed the retired GitHub Pages CNAME file from the deployment package.
+
 ## v11.4.3 — Hero Logo Sizing Hotfix
 
 - Reduced the hero logo maximum width across desktop, tablet and phone layouts.
