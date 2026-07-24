@@ -2,9 +2,9 @@
 
 ## Current release
 
-**v11.4.2 — Hero Logo Asset Hotfix**
+**v11.4.3 — Hero Logo Sizing Hotfix**
 
-This hotfix replaces the reconstructed hero text logo with the approved Marveltonez Production Master logo asset, preserving the official proportions and colours.
+This hotfix reduces the approved hero logo to a more balanced maximum size across desktop, tablet and phone layouts while preserving the official proportions and colours.
 
 ## Deployment
 

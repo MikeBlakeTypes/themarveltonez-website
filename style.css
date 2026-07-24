@@ -927,21 +927,32 @@ body.consent-open{overflow:hidden}
 }
 
 
-/* v11.4.2 — Hero Logo Asset Hotfix */
+
+
+/* v11.4.3 — Hero Logo Sizing Hotfix */
 .hero-logo-image {
   display: block;
-  width: min(100%, 650px);
+  width: min(75vw, 500px);
+  max-width: 100%;
   height: auto;
   margin: 0 0 22px;
 }
+
 @media (max-width: 980px) {
   .hero-logo-image {
-    width: min(100%, 520px);
+    width: min(78vw, 390px);
   }
 }
+
 @media (max-width: 620px) {
   .hero-logo-image {
-    width: min(100%, 430px);
+    width: min(82vw, 320px);
     margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-logo-image {
+    width: min(82vw, 290px);
   }
 }

@@ -1,5 +1,15 @@
 # Changelog
 
+## v11.4.3 — Hero Logo Sizing Hotfix
+
+- Reduced the hero logo maximum width across desktop, tablet and phone layouts.
+- Set the desktop and iPad maximum width to 500px.
+- Set the tablet maximum width to 390px.
+- Set the phone maximum width to 320px.
+- Set the narrow-phone maximum width to 290px.
+- Added inline safety sizing so the logo cannot render at its full source width if cached CSS is briefly stale.
+- Versioned the homepage stylesheet reference as `style.css?v=11.4.3` to force immediate loading of the corrected rules.
+
 ## v11.4.2 — Hero Logo Asset Hotfix
 
 - Replaced the reconstructed hero text logo with the approved Marveltonez Production Master logo image.
