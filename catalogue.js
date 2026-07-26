@@ -18,8 +18,6 @@
       "'": "&#039;"
     })[character]);
 
-  const enquiryAddress = "mikeblake@themarveltonez.com";
-
   function compactMood(mood = "") {
     return String(mood)
       .split("•")
@@ -77,12 +75,10 @@
       ? `<a class="catalogue-action" href="${escapeHTML(song.lyrics)}">Lyrics</a>`
       : `<span class="catalogue-action catalogue-action-disabled" aria-disabled="true">Lyrics soon</span>`;
 
-    const subject = encodeURIComponent(`Enquiry about “${song.title}”`);
-    const body = encodeURIComponent(`Hi Mike and Mike,\n\nI am interested in your song “${song.title}”.\n\nName:\nCompany / role:\n\nMy enquiry is:\n\nBest regards,`);
     return `
       <div class="catalogue-song-actions">
         ${lyricsAction}
-        <a class="catalogue-action catalogue-action-enquire" href="mailto:${enquiryAddress}?subject=${subject}&body=${body}">Enquire about this song</a>
+        <a class="catalogue-action catalogue-action-enquire" href="/track/song-enquiry/${encodeURIComponent(song.id)}">Enquire about this song</a>
       </div>`;
   }
 

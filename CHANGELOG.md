@@ -1,5 +1,13 @@
 # Changelog
 
+## v11.5.1 — Privacy-Conscious Outbound Click Analytics — 26 July 2026
+
+- Added a Cloudflare Pages Function at `functions/track/[[path]].js`.
+- Added aggregate D1 counting for selected Etsy, merchandise, publisher-access, contact and per-song enquiry actions.
+- Added fail-safe destination redirects and excluded HEAD requests from counting.
+- Updated the English and German privacy wording.
+- Updated the catalogue enquiry links and cache version.
+
 ## v11.5 — Privacy, Consent and Embedded Media Corrections
 
 - Corrected the privacy policy to identify Cloudflare Pages as the current publishing and hosting platform.
