@@ -55,15 +55,13 @@
     container.innerHTML = `
       <section class="consent-banner" id="consentBanner" aria-labelledby="consentTitle" role="region">
         <div class="consent-banner-copy">
-          <p class="consent-kicker">Privacy choices · The Marveltonez</p>
-          <h2 id="consentTitle">Cookies &amp; embedded media</h2>
-          <p>We use essential local storage to remember your choice. With your consent, YouTube videos can load and YouTube may set cookies or process device data. You can change your choice at any time.</p>
-          <a href="privacy.html">Privacy &amp; Datenschutz</a>
+          <h2 id="consentTitle">YouTube videos</h2>
+          <p>YouTube videos load only with your permission. YouTube may then set cookies or process device data. Your choice is saved locally and can be changed at any time.</p>
+          <a href="privacy.html" rel="noopener" target="_blank">Privacy &amp; Datenschutz</a>
         </div>
         <div class="consent-banner-actions">
-          <button class="consent-button" data-consent="accept" type="button"><span>Accept videos</span><small>Videos erlauben</small></button>
-          <button class="consent-button" data-consent="reject" type="button"><span>Reject optional</span><small>Optional ablehnen</small></button>
-          <button class="consent-button consent-button-secondary" data-consent="preferences" type="button"><span>Preferences</span><small>Einstellungen</small></button>
+          <button class="consent-button" data-consent="accept" type="button"><span>Accept videos</span></button>
+          <button class="consent-button" data-consent="reject" type="button"><span>Reject optional</span></button>
         </div>
       </section>
       <div class="consent-modal" id="consentModal" hidden>
