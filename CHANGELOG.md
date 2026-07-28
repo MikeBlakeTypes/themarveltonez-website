@@ -1,5 +1,14 @@
 # Changelog
 
+## v11.5.3a — Catalogue Metadata and Explicit Badge Refinement — 28 July 2026
+
+- Updated the public Unreleased Demos metadata from `Marveltonez Catalogue Master v2.4`.
+- Marked “Put Your Shirt Back On”, “Just Sayin’” and “I Didn’t Mean to Turn Out Bad” as explicit.
+- Changed the displayed title from “It’s a Happy Break-Up” to “It’s a Happy Breakup”.
+- Updated that song’s public catalogue metadata and keywords from the v2.4 source of truth while retaining its existing R2 audio URL.
+- Reduced the EXPLICIT badge font weight to match the existing Featured Song badge while preserving its red-tinted treatment.
+- Versioned the Unreleased Demos catalogue stylesheet as v11.5.3a.
+
 ## v11.5.3 — Explicit Lyrics Badge — 28 July 2026
 
 - Added metadata-driven support for the new `Explicit` catalogue field.

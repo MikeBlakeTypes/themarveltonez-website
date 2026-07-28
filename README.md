@@ -2,9 +2,9 @@
 
 ## Current release
 
-**v11.5.3 — Explicit Lyrics Badge**
+**v11.5.3a — Catalogue Metadata and Explicit Badge Refinement**
 
-This catalogue refinement adds a metadata-driven Explicit badge to public Unreleased Demos cards. Songs marked `Explicit = Yes` in Marveltonez Catalogue Master v2.3 receive a discreet red `EXPLICIT` badge while retaining their existing Featured Song or other status badge.
+This small Unreleased Demos update synchronises the public song metadata with Marveltonez Catalogue Master v2.4. Three songs are now marked Explicit, “It’s a Happy Breakup” uses the corrected displayed title and revised keywords, and the EXPLICIT badge retains its red treatment with a lighter font weight matching the existing status badge.
 
 ## Cloudflare binding
 

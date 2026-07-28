@@ -1,5 +1,5 @@
 {
-  "catalogueVersion": "2.3",
+  "catalogueVersion": "2.4",
   "updated": "2026-07-28",
   "audioBaseUrl": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/",
   "songs": [
@@ -14,7 +14,7 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/blocked-and-deleted.mp3?v=20260715",
       "lyrics": "",
       "artwork": "",
-      "description": "A witty, modern break-up anthem that turns the final act of moving on into an empowering declaration of independence.",
+      "description": "A witty, modern breakup anthem that turns the final act of moving on into an empowering declaration of independence.",
       "genre": "Contemporary Pop / Commercial Pop",
       "mood": "Empowering • Playful • Defiant • Confident • Contemporary",
       "vocal": "",
@@ -54,10 +54,10 @@
       "profileStatus": "APPROVED",
       "profile": {
         "overview": "Relationships don’t always end with dramatic confrontations—sometimes they end with a tap on a screen. Blocked and Deleted captures that moment with humour, confidence and a contemporary edge, transforming a familiar digital-age experience into an instantly relatable pop concept. Rather than dwelling on heartbreak, the song celebrates taking control, drawing a line under the past and embracing a fresh start. Its conversational lyric and memorable central phrase make it immediately accessible, while giving the song a distinctive identity within today’s pop landscape.",
-        "themes": "Modern relationships • Break-ups • Self-respect • Digital communication • Moving on • Emotional independence",
+        "themes": "Modern relationships • Breakups • Self-respect • Digital communication • Moving on • Emotional independence",
         "musicalStyle": "A contemporary commercial pop song built around a memorable lyrical hook and a conversational storytelling style. The emphasis is on personality, relatable situations and a modern perspective rather than melodrama, making it suitable for artists looking for confident, character-driven material.",
         "artistComparisons": "Dua Lipa • Anne-Marie • Maisie Peters • Sabrina Carpenter • Olivia Rodrigo",
-        "perfectFor": "Break-up playlists • Empowerment playlists • Girls’ night playlists • Modern pop playlists • Driving playlists • New beginnings playlists",
+        "perfectFor": "Breakup playlists • Empowerment playlists • Girls’ night playlists • Modern pop playlists • Driving playlists • New beginnings playlists",
         "syncPotential": "Romantic comedy • Streaming drama • Teen/YA television • Lifestyle programming • Fashion or beauty campaigns • Social media marketing"
       },
       "explicit": false
@@ -121,7 +121,7 @@
         "perfectFor": "Girls’ night playlists • Cheeky pop playlists • Adult pop playlists • Party aftermath playlists • Comedy and character-driven pop • Explicit pop playlists",
         "syncPotential": "Adult romantic comedy • Streaming dramedy • Nightlife or party montage • Comedy series • Dating-show promo • Fashion or beauty content with a mischievous tone"
       },
-      "explicit": false
+      "explicit": true
     },
     {
       "id": "so-youre-dating-my-ex",
@@ -296,11 +296,11 @@
         "perfectFor": "Coming-of-age playlists • Rebellion playlists • Emotional pop-rock • Youth anthems • Empowerment playlists • Cathartic listening",
         "syncPotential": "Teen drama • Coming-of-age film • Family-conflict montage • Youth campaign • Character-breakthrough scene • Streaming drama"
       },
-      "explicit": false
+      "explicit": true
     },
     {
       "id": "happy-breakup",
-      "title": "It’s a Happy Break-Up",
+      "title": "It’s a Happy Breakup",
       "category": "unreleased",
       "writers": [
         "Mike Blake",
@@ -309,8 +309,8 @@
       "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/happy-breakup.mp3",
       "lyrics": "",
       "artwork": "",
-      "description": "A stomping break-up anthem that swaps tears for make-up, relationships for freedom and the pleasure of rediscovering yourself.",
-      "genre": "Contemporary Pop / Feel-Good Pop / Break-Up Pop",
+      "description": "A stomping breakup anthem that swaps tears for make-up, relationships for freedom and the pleasure of rediscovering yourself.",
+      "genre": "Contemporary Pop / Feel-Good Pop / Breakup Pop",
       "mood": "Uplifting • Liberated • Playful • Confident • Celebratory",
       "vocal": "",
       "status": "Demo",
@@ -320,6 +320,7 @@
       "duration": "",
       "featuredArtist": "",
       "tags": [
+        "happy breakup",
         "happy break-up",
         "putting on my make-up",
         "freedom",
@@ -345,11 +346,11 @@
       "priority": "Featured Song",
       "profileStatus": "APPROVED",
       "profile": {
-        "overview": "It’s a Happy Break-Up overturns the expected sadness of separation by presenting its singer as relieved, energised and newly curious about her own life. She remembers neglected interests, reconnects with friends and enjoys the freedom to dance, drink and party. The chorus is built on a simple, memorable rhyme—“It’s a happy break-up / putting on my make-up”—and the repeated list of everything now out of her life gives the song a celebratory release. A brief moment of wondering whether her ex misses her or not adds an emotional texture without disturbing the song’s upbeat centre.",
+        "overview": "It’s a Happy Breakup overturns the expected sadness of separation by presenting its singer as relieved, energised and newly curious about her own life. She remembers neglected interests, reconnects with friends and enjoys the freedom to dance, drink and party. The chorus is built on a simple, memorable rhyme—“It’s a happy breakup / putting on my make-up”—and the repeated list of everything now out of her life gives the song a celebratory release. A brief moment of wondering whether her ex misses her or not adds an emotional texture without disturbing the song’s upbeat centre.",
         "themes": "Freedom • Rediscovery • Moving on • Friendship • Neglect within relationships • New beginnings",
-        "musicalStyle": "A feel-good contemporary pop song with a clear singalong chorus, conversational verses and an optimistic reversal of the traditional break-up narrative. Its strength lies in the contrast between what others expect her to feel and the freedom she actually experiences in her break-up.",
+        "musicalStyle": "A feel-good contemporary pop song with a clear singalong chorus, conversational verses and an optimistic reversal of the traditional breakup narrative. Its strength lies in the contrast between what others expect her to feel and the freedom she actually experiences in her breakup.",
         "artistComparisons": "Dua Lipa • Anne-Marie • Meghan Trainor • Katy Perry • Jess Glynne",
-        "perfectFor": "Break-up recovery • Girls’ night playlists • Feel-good pop • Fresh-start playlists • Getting-ready playlists • Driving playlists",
+        "perfectFor": "Breakup recovery • Girls’ night playlists • Feel-good pop • Fresh-start playlists • Getting-ready playlists • Driving playlists",
         "syncPotential": "Romantic comedy • Makeover or getting-ready montage • Lifestyle advertising • Reality TV • Travel or nightlife content • Fresh-start campaign"
       },
       "explicit": false
@@ -523,5 +524,5 @@
       "explicit": false
     }
   ],
-  "sourceCatalogue": "Marveltonez Catalogue Master v2.3"
+  "sourceCatalogue": "Marveltonez Catalogue Master v2.4"
 }
