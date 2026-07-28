@@ -176,11 +176,31 @@
   gap: 18px;
 }
 
+.catalogue-song-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .catalogue-song-status {
   padding: 4px 9px;
   border: 1px solid rgba(215, 25, 32, .68);
   color: #f2bec0;
   font-size: 11px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.catalogue-song-flag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid rgba(215, 25, 32, .88);
+  background: rgba(215, 25, 32, .16);
+  color: #ff9ca0;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: .09em;
   text-transform: uppercase;
 }

@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.3
+ * Marveltonez Catalogue Module v1.4
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -70,6 +70,18 @@
       </details>`;
   }
 
+  function renderSupplementaryBadges(song) {
+    const badges = [];
+
+    if (song.explicit === true) {
+      badges.push(
+        '<span class="catalogue-song-flag catalogue-song-flag-explicit">Explicit</span>'
+      );
+    }
+
+    return badges.join("");
+  }
+
   function renderActions(song) {
     const lyricsAction = song.lyrics
       ? `<a class="catalogue-action" href="${escapeHTML(song.lyrics)}">Lyrics</a>`
@@ -88,11 +100,15 @@
       : (song.writers || "");
 
     const badge = song.priority || song.status || "Demo";
+    const supplementaryBadges = renderSupplementaryBadges(song);
 
     return `
       <article class="catalogue-song-card" data-song-id="${escapeHTML(song.id)}">
         <div class="catalogue-song-card-head">
-          <span class="catalogue-song-status">${escapeHTML(badge)}</span>
+          <div class="catalogue-song-badges">
+            <span class="catalogue-song-status">${escapeHTML(badge)}</span>
+            ${supplementaryBadges}
+          </div>
           <span class="catalogue-song-index">${escapeHTML(song.id.replaceAll("-", " "))}</span>
         </div>
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## v11.5.3 — Explicit Lyrics Badge — 28 July 2026
+
+- Added metadata-driven support for the new `Explicit` catalogue field.
+- Added a discreet red `EXPLICIT` badge to Unreleased Demos cards where the catalogue value is `Yes`.
+- Preserved the existing Featured Song or other status badge so both labels can appear together.
+- Updated the public catalogue source reference to `Marveltonez Catalogue Master v2.3`.
+- Marked “Just Sayin’” as explicit in accordance with the uploaded v2.3 catalogue source of truth.
+- Versioned `catalogue.css` and `catalogue.js` references as v11.5.3.
+
 ## v11.5.1 — Privacy-Conscious Outbound Click Analytics — 26 July 2026
 
 - Added a Cloudflare Pages Function at `functions/track/[[path]].js`.

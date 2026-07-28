@@ -2,11 +2,9 @@
 
 ## Current release
 
-**v11.5.1 — Privacy-Conscious Outbound Click Analytics**
+**v11.5.3 — Explicit Lyrics Badge**
 
-This small update adds first-party aggregate outbound-click counting for selected high-value merchandise, catalogue and contact actions. Counts are stored in Cloudflare D1 only as date, descriptive link name and aggregate daily total. The system does not use analytics cookies or create individual visitor profiles, and every tracking route redirects to its destination even if the database write fails.
-
-Tracked actions include the main Etsy shop, the Signature T-Shirt, Premium Cap, Writer’s Mug, publisher-access requests, principal general-contact links and per-song enquiry links. The bilingual privacy policy has been updated accordingly.
+This catalogue refinement adds a metadata-driven Explicit badge to public Unreleased Demos cards. Songs marked `Explicit = Yes` in Marveltonez Catalogue Master v2.3 receive a discreet red `EXPLICIT` badge while retaining their existing Featured Song or other status badge.
 
 ## Cloudflare binding
 

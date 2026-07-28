@@ -1,6 +1,6 @@
 {
-  "catalogueVersion": "2.1",
-  "updated": "2026-07-13",
+  "catalogueVersion": "2.3",
+  "updated": "2026-07-28",
   "audioBaseUrl": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/",
   "songs": [
     {
@@ -59,7 +59,8 @@
         "artistComparisons": "Dua Lipa • Anne-Marie • Maisie Peters • Sabrina Carpenter • Olivia Rodrigo",
         "perfectFor": "Break-up playlists • Empowerment playlists • Girls’ night playlists • Modern pop playlists • Driving playlists • New beginnings playlists",
         "syncPotential": "Romantic comedy • Streaming drama • Teen/YA television • Lifestyle programming • Fashion or beauty campaigns • Social media marketing"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "put-your-shirt-back-on",
@@ -119,7 +120,8 @@
         "artistComparisons": "Lily Allen • Sabrina Carpenter • Anne-Marie • Chappell Roan • Katy Perry",
         "perfectFor": "Girls’ night playlists • Cheeky pop playlists • Adult pop playlists • Party aftermath playlists • Comedy and character-driven pop • Explicit pop playlists",
         "syncPotential": "Adult romantic comedy • Streaming dramedy • Nightlife or party montage • Comedy series • Dating-show promo • Fashion or beauty content with a mischievous tone"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "so-youre-dating-my-ex",
@@ -177,7 +179,8 @@
         "artistComparisons": "Sabrina Carpenter • Olivia Rodrigo • Maisie Peters • Anne-Marie • Lily Allen",
         "perfectFor": "Break-up playlists • Feel-good pop playlists • Girls’ night playlists • Empowerment playlists • Road trips • Contemporary pop playlists",
         "syncPotential": "Romantic comedy • Teen/young adult drama • Streaming comedy • Lifestyle programming • Fashion campaigns • Social media content • Relationship montages"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "just-sayin",
@@ -234,7 +237,8 @@
         "artistComparisons": "Lily Allen • Sabrina Carpenter • Chappell Roan • Anne-Marie • Meghan Trainor",
         "perfectFor": "Attitude-pop playlists • Girls’ night playlists • Satirical pop • Workout playlists • Character-driven pop • Explicit pop playlists",
         "syncPotential": "Comedy series • Reality television • Fashion satire • Social-media campaigns • Teen/young-adult dramedy • Character-introduction montage"
-      }
+      },
+      "explicit": true
     },
     {
       "id": "i-didnt-mean-to-turn-out-bad",
@@ -291,7 +295,8 @@
         "artistComparisons": "Olivia Rodrigo • Gayle • Anne-Marie • Maisie Peters • Avril Lavigne",
         "perfectFor": "Coming-of-age playlists • Rebellion playlists • Emotional pop-rock • Youth anthems • Empowerment playlists • Cathartic listening",
         "syncPotential": "Teen drama • Coming-of-age film • Family-conflict montage • Youth campaign • Character-breakthrough scene • Streaming drama"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "happy-breakup",
@@ -346,7 +351,8 @@
         "artistComparisons": "Dua Lipa • Anne-Marie • Meghan Trainor • Katy Perry • Jess Glynne",
         "perfectFor": "Break-up recovery • Girls’ night playlists • Feel-good pop • Fresh-start playlists • Getting-ready playlists • Driving playlists",
         "syncPotential": "Romantic comedy • Makeover or getting-ready montage • Lifestyle advertising • Reality TV • Travel or nightlife content • Fresh-start campaign"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "doorstep",
@@ -401,7 +407,8 @@
         "artistComparisons": "Maisie Peters • Carly Rae Jepsen • Sabrina Carpenter • Gabrielle Aplin • Anne-Marie",
         "perfectFor": "Dating playlists • Romantic-pop playlists • Crush playlists • Road-trip pop • Lighthearted relationship playlists • Story-song collections",
         "syncPotential": "Romantic comedy • First-date montage • Teen/young-adult drama • Dating-show sequence • Sitcom end scene • Awkward-romance advertisement"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "a-girl-like-me",
@@ -456,7 +463,8 @@
         "artistComparisons": "Carly Rae Jepsen • Kylie Minogue • Meghan Trainor • Jess Glynne • Paloma Faith",
         "perfectFor": "Feel-good romance playlists • Easy listening • Summer playlists • Retro-pop playlists • Love-song collections • Daytime listening",
         "syncPotential": "Romantic comedy • Music-themed film or series • Street-scene montage • Lifestyle advertising • Feel-good drama • Artist-performance sequence"
-      }
+      },
+      "explicit": false
     },
     {
       "id": "youre-my-boy",
@@ -511,8 +519,9 @@
         "artistComparisons": "Carly Rae Jepsen • Jess Glynne • Kylie Minogue • Meghan Trainor • Katy Perry",
         "perfectFor": "New-love playlists • Feel-good pop • Celebration playlists • Summer driving • Wedding-party playlists • Upbeat romance",
         "syncPotential": "Romantic comedy • New-couple montage • Wedding or engagement content • Family/lifestyle advertising • Feel-good television • Celebration campaign"
-      }
+      },
+      "explicit": false
     }
   ],
-  "sourceCatalogue": "Marveltonez Catalogue Master v2.1"
+  "sourceCatalogue": "Marveltonez Catalogue Master v2.3"
 }
