@@ -2,9 +2,9 @@
 
 ## Current release
 
-**v11.5.4 — Lyrics, Catalogue Order and Writer’s Collection Navigation**
+**v11.5.4a — Song Card Action and Badge Refinement**
 
-This incremental release synchronises the nine public songs with Marveltonez Catalogue Master v2.9.2, orders the cards by the dedicated Public Display Order field, adds accessible expandable lyrics with the approved copyright notices, preserves the metadata-driven Explicit badges and working R2 audio, and strengthens the return route from each product page to the Writer’s Collection section.
+This narrowly scoped refinement unifies View Song Profile, View Lyrics and Enquire About This Song as accessible left-aligned text action rows, adds clear View/Close Lyrics states with red plus/minus indicators, removes the redundant grey card identifier, and keeps Featured Song and EXPLICIT badges together. All v11.5.4 lyrics, catalogue metadata, display order, audio URLs, enquiry routes and Writer’s Collection navigation remain unchanged.
 
 ## Cloudflare binding
 
@@ -22,6 +22,12 @@ Mac source folder → GitHub Desktop → GitHub repository `main` → Cloudflare
 After deployment, verify the Etsy shop and product routes, a general contact route, the publisher-access route, one song-enquiry route, and the D1 aggregate query.
 
 The official Website Version Register is maintained in the Master Planning workstream.
+
+## v11.5.4a rollback
+
+Before committing, use GitHub Desktop’s **Repository → Discard All Changes** to return to the current live release.
+
+After deployment, open **History**, select the v11.5.4a commit, choose **Revert changes in commit**, and push the resulting revert commit to `main`.
 
 ## v11.5.4 rollback
 

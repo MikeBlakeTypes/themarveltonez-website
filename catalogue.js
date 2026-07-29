@@ -120,6 +120,18 @@
       </section>`;
   }
 
+  function setLyricsButtonState(button, isOpen) {
+    if (!button) return;
+
+    button.setAttribute("aria-expanded", String(isOpen));
+
+    const label = button.querySelector(".catalogue-action-label");
+    const symbol = button.querySelector(".catalogue-action-symbol");
+
+    if (label) label.textContent = isOpen ? "Close Lyrics" : "View Lyrics";
+    if (symbol) symbol.textContent = isOpen ? "−" : "+";
+  }
+
   function renderActions(song) {
     const hasLyrics =
       song.lyrics &&
@@ -128,8 +140,8 @@
     const panelId = `lyrics-${song.id}`;
 
     const lyricsAction = hasLyrics
-      ? `<button class="catalogue-action catalogue-lyrics-toggle" type="button" aria-controls="${escapeHTML(panelId)}" aria-expanded="false">View Lyrics +</button>`
-      : `<span class="catalogue-action catalogue-action-disabled" aria-disabled="true">Lyrics soon</span>`;
+      ? `<button class="catalogue-action catalogue-lyrics-toggle" type="button" aria-controls="${escapeHTML(panelId)}" aria-expanded="false"><span class="catalogue-action-label">View Lyrics</span><span class="catalogue-action-symbol" aria-hidden="true">+</span></button>`
+      : `<span class="catalogue-action catalogue-action-disabled" aria-disabled="true"><span class="catalogue-action-label">Lyrics soon</span></span>`;
 
     return `
       <div class="catalogue-song-actions">
@@ -153,7 +165,6 @@
             <span class="catalogue-song-status">${escapeHTML(badge)}</span>
             ${supplementaryBadges}
           </div>
-          <span class="catalogue-song-index">${escapeHTML(song.id.replaceAll("-", " "))}</span>
         </div>
 
         <h3>${escapeHTML(song.title)}</h3>
@@ -242,11 +253,11 @@
               openPanel.hidden = true;
               const openCard = openPanel.closest(".catalogue-song-card");
               const openButton = openCard && openCard.querySelector(".catalogue-lyrics-toggle");
-              if (openButton) openButton.setAttribute("aria-expanded", "false");
+              if (openButton) setLyricsButtonState(openButton, false);
             });
 
             panel.hidden = !willOpen;
-            button.setAttribute("aria-expanded", String(willOpen));
+            setLyricsButtonState(button, willOpen);
           });
         });
 
@@ -257,7 +268,7 @@
             const toggle = card && card.querySelector(".catalogue-lyrics-toggle");
             if (panel) panel.hidden = true;
             if (toggle) {
-              toggle.setAttribute("aria-expanded", "false");
+              setLyricsButtonState(toggle, false);
               toggle.focus();
             }
             requestAnimationFrame(() => {

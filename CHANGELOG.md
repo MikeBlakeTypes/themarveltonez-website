@@ -1,5 +1,15 @@
 # Changelog
 
+## v11.5.4a — Song Card Action and Badge Refinement — 29 July 2026
+
+- Unified View Song Profile, View Lyrics and Enquire About This Song as consistent left-aligned plain-text action rows.
+- Added accessible hover and keyboard-focus treatment using Marveltonez red.
+- Added View Lyrics / Close Lyrics state text with red plus and minus indicators.
+- Removed the redundant grey song identifier from the upper-right of every card.
+- Kept Featured Song and EXPLICIT badges together in the existing metadata-driven badge row.
+- Preserved all lyrics, copyright notices, catalogue metadata, public display order, audio URLs, enquiry routes, Writer’s Collection navigation, privacy, consent, analytics and Cloudflare configuration.
+- Versioned the Unreleased Demos catalogue stylesheet and script as v11.5.4a.
+
 ## v11.5.4 — Lyrics, Catalogue Order and Writer’s Collection Navigation — 29 July 2026
 
 - Added accessible View Lyrics controls and expandable lyric panels to all nine public Unreleased Demos cards.
