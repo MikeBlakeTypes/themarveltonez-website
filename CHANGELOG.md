@@ -1,5 +1,15 @@
 # Changelog
 
+## v11.5.4 — Lyrics, Catalogue Order and Writer’s Collection Navigation — 29 July 2026
+
+- Added accessible View Lyrics controls and expandable lyric panels to all nine public Unreleased Demos cards.
+- Preserved the supplied lyric wording, section structure, explicit language and two-line copyright notices.
+- Added metadata-driven `Public Display Order` values from `Marveltonez Catalogue Master v2.9.2` and made the card renderer sort by those values.
+- Synchronised public titles, keywords, Explicit values, status and profile metadata from catalogue master v2.9.2 without changing any working R2 audio URL.
+- Preserved the Featured Song and red EXPLICIT badge system.
+- Updated each merchandise product page’s Writer’s Collection and Back to Collection links to the root `/#writers-collection` anchor.
+- Versioned the Unreleased Demos catalogue stylesheet and script as v11.5.4.
+
 ## v11.5.3a — Catalogue Metadata and Explicit Badge Refinement — 28 July 2026
 
 - Updated the public Unreleased Demos metadata from `Marveltonez Catalogue Master v2.4`.
