@@ -281,6 +281,20 @@
           }
         });
 
+        grid.querySelectorAll(".catalogue-audio").forEach((audio) => {
+          audio.addEventListener("play", () => {
+            grid.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
+              if (otherAudio === audio) return;
+              otherAudio.pause();
+              try {
+                otherAudio.currentTime = 0;
+              } catch (error) {
+                // Ignore browsers that temporarily reject seeking before metadata loads.
+              }
+            });
+          });
+        });
+
         grid.querySelectorAll(".catalogue-profile-close").forEach((button) => {
           button.addEventListener("click", () => {
             const details = button.closest("details");

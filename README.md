@@ -1,3 +1,14 @@
+# Marveltonez Website v11.5.4c — Single Audio Playback Restoration
+
+Corrective Unreleased Demos update:
+- restores one-song-at-a-time playback across the nine public demo cards;
+- starting a new song pauses every other catalogue audio player;
+- previously playing audio is reset to 0:00;
+- preserves all v11.5.4b song-card, lyrics, profile, badge and panel-closing behaviour;
+- leaves catalogue metadata, lyrics, Public Display Order, R2 audio URLs, enquiry routes, analytics, privacy, consent, merchandise and Cloudflare configuration unchanged.
+
+Rollback: discard changes before committing, or revert the v11.5.4c commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.5.4b — Duplicate Title and Panel Close Refinement
 
 Corrective Unreleased Demos update:

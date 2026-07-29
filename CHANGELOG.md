@@ -1,3 +1,10 @@
+## v11.5.4c — Single Audio Playback Restoration
+
+- Restored single-audio-player behaviour on the Unreleased Demos page.
+- Starting one song now pauses every other catalogue player and resets previously playing audio to 0:00.
+- Preserved all v11.5.4b lyrics, panel-closing, badge, metadata, enquiry, privacy, analytics, merchandise and Cloudflare behaviour.
+- Updated only the Unreleased Demos JavaScript cache reference.
+
 ## v11.5.4b — Duplicate Title and Panel Close Refinement
 
 - Removed the unintended small duplicate song title from all Unreleased Demo cards.
