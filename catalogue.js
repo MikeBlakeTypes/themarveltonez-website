@@ -208,6 +208,45 @@
     throw lastError || new Error("Unable to load catalogue.");
   }
 
+  function isInteractivePanelTarget(target) {
+    return Boolean(
+      target &&
+      target.closest(
+        "a, button, input, select, textarea, audio, video, summary, [role='button'], [contenteditable='true']"
+      )
+    );
+  }
+
+  function closeProfilePanel(details, card, returnFocus = false) {
+    if (!details || !details.open) return;
+    details.open = false;
+
+    if (returnFocus) {
+      const summary = details.querySelector("summary");
+      if (summary) summary.focus();
+    }
+
+    requestAnimationFrame(() => {
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function closeLyricsPanel(panel, card, returnFocus = false) {
+    if (!panel || panel.hidden) return;
+
+    panel.hidden = true;
+    const toggle = card && card.querySelector(".catalogue-lyrics-toggle");
+
+    if (toggle) {
+      setLyricsButtonState(toggle, false);
+      if (returnFocus) toggle.focus();
+    }
+
+    requestAnimationFrame(() => {
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   async function initialiseCatalogue() {
     const grids = document.querySelectorAll("[data-catalogue-grid]");
     if (!grids.length) return;
@@ -229,14 +268,33 @@
 
         grid.innerHTML = visibleSongs.map(renderSongCard).join("");
 
+        grid.querySelectorAll(".catalogue-song-card").forEach((card) => {
+          const head = card.querySelector(".catalogue-song-card-head");
+          const mainTitle = card.querySelector(":scope > h3");
+          if (!head || !mainTitle) return;
+
+          let sibling = head.nextElementSibling;
+          while (sibling && sibling !== mainTitle) {
+            const nextSibling = sibling.nextElementSibling;
+            sibling.remove();
+            sibling = nextSibling;
+          }
+        });
+
         grid.querySelectorAll(".catalogue-profile-close").forEach((button) => {
           button.addEventListener("click", () => {
             const details = button.closest("details");
             const card = button.closest(".catalogue-song-card");
-            if (details) details.open = false;
-            requestAnimationFrame(() => {
-              if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
+            closeProfilePanel(details, card, true);
+          });
+        });
+
+        grid.querySelectorAll(".catalogue-profile-body").forEach((body) => {
+          body.addEventListener("click", (event) => {
+            if (isInteractivePanelTarget(event.target)) return;
+            const details = body.closest("details");
+            const card = body.closest(".catalogue-song-card");
+            closeProfilePanel(details, card, false);
           });
         });
 
@@ -265,16 +323,34 @@
           button.addEventListener("click", () => {
             const panel = button.closest(".catalogue-lyrics-panel");
             const card = button.closest(".catalogue-song-card");
-            const toggle = card && card.querySelector(".catalogue-lyrics-toggle");
-            if (panel) panel.hidden = true;
-            if (toggle) {
-              setLyricsButtonState(toggle, false);
-              toggle.focus();
-            }
-            requestAnimationFrame(() => {
-              if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
+            closeLyricsPanel(panel, card, true);
           });
+        });
+
+        grid.querySelectorAll(".catalogue-lyrics-body").forEach((body) => {
+          body.addEventListener("click", (event) => {
+            if (isInteractivePanelTarget(event.target)) return;
+            const panel = body.closest(".catalogue-lyrics-panel");
+            const card = body.closest(".catalogue-song-card");
+            closeLyricsPanel(panel, card, false);
+          });
+        });
+
+        grid.addEventListener("keydown", (event) => {
+          if (event.key !== "Escape") return;
+
+          const openLyrics = grid.querySelector(".catalogue-lyrics-panel:not([hidden])");
+          if (openLyrics) {
+            const card = openLyrics.closest(".catalogue-song-card");
+            closeLyricsPanel(openLyrics, card, true);
+            return;
+          }
+
+          const openProfile = grid.querySelector(".catalogue-profile[open]");
+          if (openProfile) {
+            const card = openProfile.closest(".catalogue-song-card");
+            closeProfilePanel(openProfile, card, true);
+          }
         });
 
         countElements.forEach((element) => {

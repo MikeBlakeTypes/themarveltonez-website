@@ -594,3 +594,31 @@
   .catalogue-page-main.page-top-standard .catalogue-page-content{padding-top:10px}
   .publisher-gate{margin-top:0}
 }
+
+/* v11.5.4b — duplicate-title safeguard and click-anywhere panel affordance */
+.catalogue-song-card-head > :not(.catalogue-song-badges),
+.catalogue-song-card-head + p {
+  display: none !important;
+}
+
+.catalogue-profile-body,
+.catalogue-lyrics-body {
+  cursor: pointer;
+}
+
+.catalogue-profile-body a,
+.catalogue-profile-body button,
+.catalogue-profile-body input,
+.catalogue-profile-body select,
+.catalogue-profile-body textarea,
+.catalogue-profile-body audio,
+.catalogue-profile-body video,
+.catalogue-lyrics-body a,
+.catalogue-lyrics-body button,
+.catalogue-lyrics-body input,
+.catalogue-lyrics-body select,
+.catalogue-lyrics-body textarea,
+.catalogue-lyrics-body audio,
+.catalogue-lyrics-body video {
+  cursor: auto;
+}

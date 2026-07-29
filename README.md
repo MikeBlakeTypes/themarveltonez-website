@@ -1,3 +1,15 @@
+# Marveltonez Website v11.5.4b — Duplicate Title and Panel Close Refinement
+
+Corrective Unreleased Demos update:
+- removes the unintended small duplicate song title beneath the badge row;
+- keeps the large main title unchanged;
+- retains the View Lyrics / Close Lyrics action with a red right-aligned plus/minus symbol;
+- allows non-interactive clicks inside an open song-profile or lyrics panel to close that panel;
+- preserves explicit close controls, interactive elements and Escape-key closing;
+- leaves lyrics, metadata, Public Display Order, audio URLs, badges, enquiry routes, analytics, privacy, consent, merchandise and Cloudflare configuration unchanged.
+
+Rollback: discard changes before committing, or revert the v11.5.4b commit in GitHub Desktop and push the revert to `main`.
+
 # The Marveltonez Website
 
 ## Current release

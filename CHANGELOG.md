@@ -1,3 +1,12 @@
+## v11.5.4b — Duplicate Title and Panel Close Refinement
+
+- Removed the unintended small duplicate song title from all Unreleased Demo cards.
+- Preserved the large main song title and consolidated status badges.
+- Standardised View Lyrics / Close Lyrics with a red right-aligned plus/minus state symbol.
+- Added click-anywhere closing for non-interactive areas of open song-profile and lyrics panels.
+- Added Escape-key closing while preserving links, buttons, audio controls and explicit close controls.
+- Updated Unreleased Demos cache references only; no catalogue metadata, lyrics, audio URLs, analytics, privacy, consent, merchandise or Cloudflare configuration changed.
+
 # Changelog
 
 ## v11.5.4a — Song Card Action and Badge Refinement — 29 July 2026
