@@ -1,3 +1,11 @@
+## v11.5.5 — Contact Click Analytics Refinement — 30 July 2026
+
+- Split the previous combined `general-contact` counter into placement-specific counters for the homepage Contact Us button, homepage Get In Touch card, footer email link and navigation Contact links.
+- Preserved all existing Etsy, merchandise, publisher-access and song-enquiry tracking.
+- Retained the legacy `general-contact` route for compatibility with previously cached pages.
+- Updated English and German privacy wording to describe the refined aggregate contact-link counting.
+- Preserved cookie-free, profile-free D1 aggregation, HEAD exclusion and fail-safe redirects.
+
 ## v11.5.4c — Single Audio Playback Restoration
 
 - Restored single-audio-player behaviour on the Unreleased Demos page.

@@ -1,3 +1,14 @@
+# Marveltonez Website v11.5.5 — Contact Click Analytics Refinement
+
+This small analytics refinement separates the former combined `general-contact` count into four placement-specific aggregate counters:
+
+- `homepage-contact-button`
+- `homepage-get-in-touch`
+- `footer-email`
+- `navigation-contact`
+
+The existing Etsy, merchandise, publisher-access and song-enquiry counters remain unchanged. The first-party Cloudflare Pages Function still records only date, descriptive link name and aggregate daily count, excludes HEAD requests, and redirects even if the D1 write fails. The legacy `general-contact` route remains available for compatibility with previously cached pages.
+
 # Marveltonez Website v11.5.4c — Single Audio Playback Restoration
 
 Corrective Unreleased Demos update:
