@@ -1,3 +1,13 @@
+## v11.5.6 — Privacy-Conscious Song Play and Replay Analytics — 1 August 2026
+
+- Added aggregate `song-play-[song-slug]` counters for the first deliberate start of each public catalogue song during the current open-page session.
+- Added aggregate `song-replay-[song-slug]` counters for later deliberate starts of the same song during that same open-page session.
+- Added a first-party `/analytics/song` Pages Function that accepts only approved public song slugs and approved `play` or `replay` event types.
+- Kept replay state only in temporary webpage memory; no cookies, local storage, session storage, persistent identifiers or visitor profiles were introduced.
+- Preserved one-song-at-a-time playback and excluded pause/resume, seeking, preload, metadata loading and HEAD requests from deliberate-start counting.
+- Updated English and German privacy wording.
+- Preserved all existing analytics routes and D1 data.
+
 ## v11.5.5 — Contact Click Analytics Refinement — 30 July 2026
 
 - Split the previous combined `general-contact` counter into placement-specific counters for the homepage Contact Us button, homepage Get In Touch card, footer email link and navigation Contact links.

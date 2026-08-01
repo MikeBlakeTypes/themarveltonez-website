@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.5
+ * Marveltonez Catalogue Module v1.6
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -8,6 +8,50 @@
   const DEFAULT_JSON_SOURCES = [
     "metadata/songs.json"
   ];
+
+
+  const playedSongsThisPageSession = new Set();
+  const countedCurrentStarts = new WeakMap();
+
+  function recordSongAction(slug, eventType) {
+    const body = JSON.stringify({ slug, eventType });
+
+    try {
+      if (navigator.sendBeacon) {
+        const queued = navigator.sendBeacon(
+          "/analytics/song",
+          new Blob([body], { type: "text/plain;charset=UTF-8" })
+        );
+        if (queued) return;
+      }
+
+      fetch("/analytics/song", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body,
+        keepalive: true,
+        credentials: "same-origin",
+        cache: "no-store"
+      }).catch(() => {
+        // Analytics must never interrupt or report errors to the visitor.
+      });
+    } catch (error) {
+      // Analytics must never interrupt or report errors to the visitor.
+    }
+  }
+
+  function recordDeliberateSongStart(audio) {
+    if (countedCurrentStarts.get(audio) === true) return;
+
+    const card = audio.closest(".catalogue-song-card");
+    const slug = card && card.dataset.songId;
+    if (!slug) return;
+
+    const eventType = playedSongsThisPageSession.has(slug) ? "replay" : "play";
+    playedSongsThisPageSession.add(slug);
+    countedCurrentStarts.set(audio, true);
+    recordSongAction(slug, eventType);
+  }
 
   const escapeHTML = (value = "") =>
     String(value).replace(/[&<>"']/g, (character) => ({
@@ -282,16 +326,35 @@
         });
 
         grid.querySelectorAll(".catalogue-audio").forEach((audio) => {
+          countedCurrentStarts.set(audio, false);
+
           audio.addEventListener("play", () => {
             grid.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
               if (otherAudio === audio) return;
               otherAudio.pause();
               try {
                 otherAudio.currentTime = 0;
+                countedCurrentStarts.set(otherAudio, false);
               } catch (error) {
                 // Ignore browsers that temporarily reject seeking before metadata loads.
               }
             });
+
+            // Native audio controls emit "play" after both a fresh start and a
+            // pause/resume. Count only a not-yet-counted start at the beginning.
+            if (audio.currentTime <= 0.25) {
+              recordDeliberateSongStart(audio);
+            }
+          });
+
+          audio.addEventListener("ended", () => {
+            countedCurrentStarts.set(audio, false);
+          });
+
+          audio.addEventListener("seeked", () => {
+            if (audio.paused && audio.currentTime <= 0.25) {
+              countedCurrentStarts.set(audio, false);
+            }
           });
         });
 

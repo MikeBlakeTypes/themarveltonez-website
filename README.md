@@ -1,3 +1,14 @@
+# Marveltonez Website v11.5.6 — Privacy-Conscious Song Play and Replay Analytics
+
+This controlled refinement extends the existing first-party Cloudflare D1 analytics system with aggregate per-song action counters:
+
+- `song-play-[song-slug]` for the first deliberate start of a song during the current open-page session;
+- `song-replay-[song-slug]` for later deliberate starts of the same song during that same open-page session.
+
+The distinction exists only in temporary webpage memory. No cookies, `localStorage`, `sessionStorage`, persistent browser identifiers, listener profiles, listening duration or completion data are introduced. Analytics requests are sent to `/analytics/song`, accept only the nine known public song slugs and the approved `play` or `replay` event types, and fail silently without delaying playback.
+
+All existing outbound-click, merchandise, contact, publisher-access and song-enquiry counters remain unchanged.
+
 # Marveltonez Website v11.5.5 — Contact Click Analytics Refinement
 
 This small analytics refinement separates the former combined `general-contact` count into four placement-specific aggregate counters:
