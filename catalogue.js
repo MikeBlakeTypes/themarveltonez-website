@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.6
+ * Marveltonez Catalogue Module v1.7
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -223,6 +223,11 @@
           <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
           Your browser does not support audio playback.
         </audio>
+        <div class="catalogue-audio-tools">
+          <button class="catalogue-restart-button" type="button" aria-label="Restart ${escapeHTML(song.title)} from the beginning">
+            Restart
+          </button>
+        </div>
 
         ${renderProfile(song)}
         ${renderActions(song)}
@@ -354,6 +359,30 @@
           audio.addEventListener("seeked", () => {
             if (audio.paused && audio.currentTime <= 0.25) {
               countedCurrentStarts.set(audio, false);
+            }
+          });
+        });
+
+        grid.querySelectorAll(".catalogue-restart-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const card = button.closest(".catalogue-song-card");
+            const audio = card && card.querySelector(".catalogue-audio");
+            if (!audio) return;
+
+            audio.pause();
+
+            try {
+              audio.currentTime = 0;
+              countedCurrentStarts.set(audio, false);
+            } catch (error) {
+              // Ignore browsers that temporarily reject seeking before metadata loads.
+            }
+
+            const playPromise = audio.play();
+            if (playPromise && typeof playPromise.catch === "function") {
+              playPromise.catch(() => {
+                // Leave the player usable if the browser blocks playback.
+              });
             }
           });
         });

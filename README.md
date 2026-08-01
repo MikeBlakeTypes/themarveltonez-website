@@ -1,3 +1,13 @@
+# Marveltonez Website v11.5.7 — Add Replay Button
+
+This narrowly scoped refinement adds a small visible **Restart** button beneath the native audio player on all nine public Unreleased Demos song cards.
+
+- Restart pauses the selected song, returns it to 0:00 and starts playback again.
+- The existing v11.5.6 play/replay analytics remain in place, so restarting a previously played song records the existing same-session replay action.
+- One-song-at-a-time playback, native audio controls, Featured Song badges, Explicit badges, song metadata, lyrics, enquiry links, privacy controls and all other website content remain unchanged.
+
+Rollback: before committing, discard all changes in GitHub Desktop. After deployment, revert the v11.5.7 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.5.6 — Privacy-Conscious Song Play and Replay Analytics
 
 This controlled refinement extends the existing first-party Cloudflare D1 analytics system with aggregate per-song action counters:

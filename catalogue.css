@@ -239,6 +239,39 @@
   margin: 12px 0 16px;
 }
 
+.catalogue-audio-tools {
+  display: flex;
+  justify-content: flex-end;
+  margin: -8px 0 16px;
+}
+
+.catalogue-restart-button {
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  background: transparent;
+  color: #bdbdbd;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.catalogue-restart-button:hover,
+.catalogue-restart-button:focus-visible {
+  border-color: var(--red);
+  color: #fff;
+}
+
+.catalogue-restart-button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
 .catalogue-song-actions {
   display: flex;
   flex-direction: column;

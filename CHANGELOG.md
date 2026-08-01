@@ -1,3 +1,11 @@
+## v11.5.7 — Add Replay Button — 1 August 2026
+
+- Added a small visible Restart button beneath the native audio player on all nine public Unreleased Demos song cards.
+- Restart pauses the selected song, returns it to 0:00 and starts it again.
+- Preserved the existing v11.5.6 deliberate play and same-session replay analytics.
+- Preserved one-song-at-a-time playback, native audio controls, Featured Song badges, metadata-driven Explicit badges, catalogue order, lyrics, profiles, enquiry links, privacy and responsive behaviour.
+- Updated only the catalogue script, catalogue stylesheet, Unreleased Demos cache references and version documentation.
+
 ## v11.5.6 — Privacy-Conscious Song Play and Replay Analytics — 1 August 2026
 
 - Added aggregate `song-play-[song-slug]` counters for the first deliberate start of each public catalogue song during the current open-page session.
