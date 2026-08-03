@@ -1,3 +1,17 @@
+# Marveltonez Website v11.5.9 — Further Song Card Transport and Artwork Space Refinement
+
+Narrowly scoped visual follow-up to v11.5.8:
+- preserves the approved Go to Start action and all JavaScript behaviour;
+- restyles the Go to Start control with a charcoal background, softly rounded rectangular shape and white transport icon;
+- retains Marveltonez-red hover and keyboard-focus feedback;
+- keeps the control aligned beside the native audio player at the same visual height;
+- reduces the four left-aligned lower action dividers from 218px to 142px, approximately 35% shorter;
+- increases the clear right-hand area reserved for future song-card artwork;
+- adds no artwork placeholder;
+- leaves lyrics, catalogue metadata, Public Display Order, audio URLs, badges, profiles, analytics, privacy, consent, merchandise and Cloudflare configuration unchanged.
+
+Rollback: discard changes before committing, or revert the v11.5.9 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.5.8 — Song Card Transport and Artwork Space Refinement
 
 Narrowly scoped Unreleased Demos refinement:

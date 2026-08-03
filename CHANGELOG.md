@@ -1,3 +1,12 @@
+## v11.5.9 — Further Song Card Transport and Artwork Space Refinement
+
+- Restyled the Go to Start control as a charcoal, softly rounded rectangle with a white Skip Backward icon.
+- Matched its visual height and alignment to the adjacent native audio-player control area.
+- Preserved the approved pause-and-reset behaviour, accessible label, one-song-at-a-time playback and play/replay analytics.
+- Reduced all four lower action dividers from 218px to 142px, approximately 35% shorter and still left-aligned.
+- Increased the right-hand space reserved for future song-card artwork.
+- Changed no JavaScript, lyrics, catalogue metadata, audio URLs, privacy, consent, merchandise, analytics or Cloudflare configuration.
+
 ## v11.5.8 — Song Card Transport and Artwork Space Refinement
 
 - Removed the separate Restart text button from all nine Unreleased Demo cards.
