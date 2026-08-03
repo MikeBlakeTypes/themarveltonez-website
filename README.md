@@ -1,3 +1,19 @@
+# Marveltonez Website v11.6 — Song Card Artwork Viewer
+
+Adds the nine approved 3:2 Song Card artworks and a lightweight, accessible Visual Listening Mode to the Unreleased Demos catalogue.
+
+- places the correct approved artwork in the reserved lower-right area of each song card;
+- uses small WebP card derivatives while retaining the supplied 1536 × 1024 PNG masters for enlarged viewing;
+- opens each artwork in a centred charcoal modal with the existing audio transport moved into the viewer;
+- reuses the same underlying audio element, playback state and event listeners, so playback continues uninterrupted and no duplicate audio stream is created;
+- preserves Play, Pause, Go to Start, one-song-at-a-time behaviour and aggregate play/replay analytics;
+- supports outside-click, Close button and Escape closing, focus trapping, focus return, background inertness and reduced-motion preferences;
+- preserves scroll position and all unrelated catalogue, privacy, consent, merchandise and Cloudflare behaviour.
+
+Changed files: `catalogue.js`, `catalogue.css`, `unreleased.html`, `metadata/songs.json`, `README.md`, `CHANGELOG.md`, plus the new `assets/images/song-artwork/` image assets.
+
+Rollback: discard the v11.6 changes before committing, or revert the v11.6 commit in GitHub Desktop and push the revert to the preview branch or `main`, depending on where it was tested.
+
 # Marveltonez Website v11.5.9 — Further Song Card Transport and Artwork Space Refinement
 
 Narrowly scoped visual follow-up to v11.5.8:

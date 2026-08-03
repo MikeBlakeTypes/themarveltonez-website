@@ -702,3 +702,228 @@
     height: 18px;
   }
 }
+
+/* v11.6 — Song Card Artwork Viewer and Visual Listening Mode */
+.catalogue-song-lower {
+  min-width: 0;
+}
+
+.catalogue-song-action-artwork-row {
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+  min-width: 0;
+}
+
+.catalogue-song-action-artwork-row .catalogue-song-actions {
+  grid-column: 1;
+}
+
+.catalogue-song-artwork-button {
+  display: block;
+  grid-column: 2;
+  align-self: start;
+  margin-top: -43px;
+  align-self: end;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 3 / 2;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 8px;
+  background: #0b0b0b;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .32);
+  cursor: zoom-in;
+  appearance: none;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
+}
+
+.catalogue-profile[open] + .catalogue-song-action-artwork-row .catalogue-song-artwork-button {
+  margin-top: 0;
+}
+
+.catalogue-song-artwork-button:hover {
+  border-color: rgba(215, 25, 32, .78);
+  box-shadow: 0 15px 34px rgba(0, 0, 0, .44);
+  transform: translateY(-1px);
+}
+
+.catalogue-song-artwork-button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-color: rgba(215, 25, 32, .9);
+}
+
+.catalogue-song-artwork-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalogue-audio-transport-placeholder {
+  width: 100%;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.catalogue-artwork-viewer[hidden] {
+  display: none;
+}
+
+.catalogue-artwork-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(4, 4, 4, .9);
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+.catalogue-artwork-viewer.is-open {
+  opacity: 1;
+}
+
+.catalogue-artwork-viewer-panel {
+  position: relative;
+  width: min(1000px, calc(100vw - 48px));
+  margin: auto;
+  padding: 0;
+  transform: translateY(6px) scale(.992);
+  transition: transform .18s ease;
+}
+
+.catalogue-artwork-viewer.is-open .catalogue-artwork-viewer-panel {
+  transform: translateY(0) scale(1);
+}
+
+.catalogue-artwork-viewer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 10px;
+  background: #090909;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .68);
+  object-fit: contain;
+}
+
+.catalogue-artwork-viewer-player {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(28, 28, 28, .98), rgba(12, 12, 12, .99));
+  box-shadow: 0 20px 52px rgba(0, 0, 0, .5);
+}
+
+.catalogue-artwork-viewer-player .catalogue-audio-transport {
+  margin: 0;
+}
+
+.catalogue-artwork-viewer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  background: rgba(12, 12, 12, .84);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 300;
+  line-height: 1;
+  appearance: none;
+}
+
+.catalogue-artwork-viewer-close span {
+  transform: translateY(-1px);
+}
+
+.catalogue-artwork-viewer-close:hover {
+  border-color: rgba(215, 25, 32, .9);
+  color: var(--red);
+}
+
+.catalogue-artwork-viewer-close:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-color: rgba(215, 25, 32, .9);
+}
+
+@media (max-width: 700px) {
+  .catalogue-song-action-artwork-row {
+    column-gap: 14px;
+  }
+
+  .catalogue-artwork-viewer {
+    align-items: flex-start;
+    padding: 16px 12px;
+  }
+
+  .catalogue-artwork-viewer-panel {
+    width: min(100%, calc(100vw - 24px));
+  }
+
+  .catalogue-artwork-viewer-player {
+    margin-top: 10px;
+    padding: 9px;
+  }
+}
+
+@media (max-width: 420px) {
+  .catalogue-song-action-artwork-row {
+    grid-template-columns: 142px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .catalogue-artwork-viewer-close {
+    top: 7px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+}
+
+@media (hover: none) {
+  .catalogue-song-artwork-button:hover {
+    border-color: rgba(255, 255, 255, .14);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .32);
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalogue-song-artwork-button,
+  .catalogue-artwork-viewer,
+  .catalogue-artwork-viewer-panel {
+    transition: none;
+  }
+
+  .catalogue-song-artwork-button:hover {
+    transform: none;
+  }
+}

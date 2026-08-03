@@ -1,3 +1,12 @@
+## v11.6 — Song Card Artwork Viewer — 3 August 2026
+
+- Added all nine approved 3:2 Song Card artworks to the Unreleased Demos cards.
+- Added responsive WebP card derivatives and retained the supplied 1536 × 1024 PNG masters for enlarged viewing.
+- Added an accessible Visual Listening Mode with a charcoal overlay, enlarged uncropped artwork and the selected song’s existing audio transport directly beneath it.
+- Reused the same audio element in the modal rather than cloning it, preserving playback position, Play/Pause state, Go to Start behaviour, one-song-at-a-time playback and play/replay analytics.
+- Added Close button, outside-click and Escape closing, focus trapping, focus return, background inertness, preserved scroll position and reduced-motion support.
+- Preserved existing song-card content, accordions, enquiry routes, privacy, consent, merchandise, analytics and unrelated site behaviour.
+
 ## v11.5.9 — Further Song Card Transport and Artwork Space Refinement
 
 - Restyled the Go to Start control as a charcoal, softly rounded rectangle with a white Skip Backward icon.

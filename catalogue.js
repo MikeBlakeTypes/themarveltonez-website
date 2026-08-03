@@ -1,5 +1,5 @@
 /**
- * Marveltonez Catalogue Module v1.7
+ * Marveltonez Catalogue Module v1.8
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
@@ -12,6 +12,15 @@
 
   const playedSongsThisPageSession = new Set();
   const countedCurrentStarts = new WeakMap();
+
+  let artworkViewer = null;
+  let artworkViewerTrigger = null;
+  let artworkViewerTransport = null;
+  let artworkViewerPlaceholder = null;
+  let artworkViewerScrollPosition = 0;
+  let artworkViewerClosing = false;
+  let artworkViewerBackgroundState = [];
+  let artworkViewerBodyStyleState = null;
 
   function recordSongAction(slug, eventType) {
     const body = JSON.stringify({ slug, eventType });
@@ -44,7 +53,7 @@
     if (countedCurrentStarts.get(audio) === true) return;
 
     const card = audio.closest(".catalogue-song-card");
-    const slug = card && card.dataset.songId;
+    const slug = audio.dataset.songId || (card && card.dataset.songId);
     if (!slug) return;
 
     const eventType = playedSongsThisPageSession.has(slug) ? "replay" : "play";
@@ -187,6 +196,38 @@
     if (symbol) symbol.textContent = isOpen ? "−" : "+";
   }
 
+  function renderArtwork(song) {
+    if (!song.artwork) return "";
+
+    const thumbnail = song.artworkThumbnail || song.artwork;
+    const thumbnailLarge = song.artworkThumbnailLarge || song.artwork;
+    const title = String(song.title || "this song");
+
+    return `
+      <button
+        class="catalogue-song-artwork-button"
+        type="button"
+        aria-label="Open artwork and player for ${escapeHTML(title)}"
+        aria-haspopup="dialog"
+        aria-controls="catalogue-artwork-viewer"
+        aria-expanded="false"
+        data-artwork-full="${escapeHTML(song.artwork)}"
+        data-song-title="${escapeHTML(title)}"
+      >
+        <img
+          class="catalogue-song-artwork-image"
+          src="${escapeHTML(thumbnail)}"
+          srcset="${escapeHTML(thumbnail)} 400w, ${escapeHTML(thumbnailLarge)} 800w"
+          sizes="(max-width: 700px) 42vw, (max-width: 1080px) 30vw, 18vw"
+          width="600"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          alt="Artwork for ${escapeHTML(title)}"
+        >
+      </button>`;
+  }
+
   function renderActions(song) {
     const hasLyrics =
       song.lyrics &&
@@ -237,16 +278,229 @@
               <path class="catalogue-go-start-triangle" d="M18 6.5 9.5 12 18 17.5Z"></path>
             </svg>
           </button>
-          <audio class="catalogue-audio" controls preload="none">
+          <audio class="catalogue-audio" controls preload="none" data-song-id="${escapeHTML(song.id)}">
             <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
         </div>
 
-        ${renderProfile(song)}
-        ${renderActions(song)}
+        <div class="catalogue-song-lower">
+          ${renderProfile(song)}
+          <div class="catalogue-song-action-artwork-row">
+            ${renderActions(song)}
+            ${renderArtwork(song)}
+          </div>
+        </div>
         ${renderLyricsPanel(song)}
       </article>`;
+  }
+
+  function getFocusableElements(container) {
+    return Array.from(container.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), audio[controls], [tabindex]:not([tabindex="-1"])'
+    )).filter((element) => {
+      const style = window.getComputedStyle(element);
+      return style.visibility !== "hidden" && style.display !== "none";
+    });
+  }
+
+  function setBackgroundInert(modalRoot, makeInert) {
+    if (makeInert) {
+      artworkViewerBackgroundState = [];
+
+      Array.from(document.body.children).forEach((element) => {
+        if (element === modalRoot || element.tagName === "SCRIPT") return;
+
+        artworkViewerBackgroundState.push({
+          element,
+          inert: element.inert === true,
+          ariaHidden: element.getAttribute("aria-hidden")
+        });
+
+        element.inert = true;
+        element.setAttribute("aria-hidden", "true");
+      });
+      return;
+    }
+
+    artworkViewerBackgroundState.forEach(({ element, inert, ariaHidden }) => {
+      element.inert = inert;
+      if (ariaHidden === null) {
+        element.removeAttribute("aria-hidden");
+      } else {
+        element.setAttribute("aria-hidden", ariaHidden);
+      }
+    });
+    artworkViewerBackgroundState = [];
+  }
+
+  function createArtworkViewer() {
+    if (artworkViewer) return artworkViewer;
+
+    const root = document.createElement("div");
+    root.className = "catalogue-artwork-viewer";
+    root.id = "catalogue-artwork-viewer";
+    root.hidden = true;
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", "Visual listening mode");
+    root.innerHTML = `
+      <div class="catalogue-artwork-viewer-panel" role="document">
+        <button class="catalogue-artwork-viewer-close" type="button" aria-label="Close visual listening mode" title="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <img class="catalogue-artwork-viewer-image" alt="" width="1536" height="1024">
+        <div class="catalogue-artwork-viewer-player" aria-label="Song player"></div>
+      </div>`;
+
+    document.body.appendChild(root);
+
+    const closeButton = root.querySelector(".catalogue-artwork-viewer-close");
+    const image = root.querySelector(".catalogue-artwork-viewer-image");
+    const playerSlot = root.querySelector(".catalogue-artwork-viewer-player");
+
+    closeButton.addEventListener("click", closeArtworkViewer);
+
+    root.addEventListener("click", (event) => {
+      if (event.target === root) closeArtworkViewer();
+    });
+
+    root.addEventListener("keydown", (event) => {
+      if (event.key !== "Tab") return;
+
+      const focusable = getFocusableElements(root);
+      if (!focusable.length) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    artworkViewer = { root, closeButton, image, playerSlot };
+    return artworkViewer;
+  }
+
+  function openArtworkViewer(button) {
+    const card = button.closest(".catalogue-song-card");
+    const transport = card && card.querySelector(":scope > .catalogue-audio-transport");
+    const fullSource = button.dataset.artworkFull;
+    const songTitle = button.dataset.songTitle || "this song";
+
+    if (!card || !transport || !fullSource) return;
+
+    const viewer = createArtworkViewer();
+    artworkViewerTrigger = button;
+    artworkViewerTransport = transport;
+    artworkViewerPlaceholder = document.createElement("div");
+    artworkViewerPlaceholder.className = "catalogue-audio-transport-placeholder";
+    artworkViewerPlaceholder.setAttribute("aria-hidden", "true");
+
+    const transportRect = transport.getBoundingClientRect();
+    const transportStyle = window.getComputedStyle(transport);
+    artworkViewerPlaceholder.style.height = `${transportRect.height}px`;
+    artworkViewerPlaceholder.style.marginTop = transportStyle.marginTop;
+    artworkViewerPlaceholder.style.marginBottom = transportStyle.marginBottom;
+
+    artworkViewerScrollPosition = window.scrollY;
+    artworkViewerClosing = false;
+    button.setAttribute("aria-expanded", "true");
+
+    transport.parentNode.insertBefore(artworkViewerPlaceholder, transport);
+    transport.classList.add("catalogue-audio-transport-modal");
+    viewer.playerSlot.appendChild(transport);
+
+    viewer.image.src = fullSource;
+    viewer.image.alt = `Artwork for ${songTitle}`;
+    viewer.root.setAttribute("aria-label", `Visual listening mode for ${songTitle}`);
+
+    artworkViewerBodyStyleState = {
+      position: document.body.style.position,
+      top: document.body.style.top,
+      left: document.body.style.left,
+      right: document.body.style.right,
+      width: document.body.style.width
+    };
+
+    viewer.root.hidden = false;
+    viewer.closeButton.focus({ preventScroll: true });
+    setBackgroundInert(viewer.root, true);
+
+    document.body.classList.add("catalogue-artwork-viewer-open");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${artworkViewerScrollPosition}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+
+    requestAnimationFrame(() => {
+      viewer.root.classList.add("is-open");
+    });
+  }
+
+  function finishClosingArtworkViewer() {
+    if (!artworkViewer) return;
+
+    if (artworkViewerTransport && artworkViewerPlaceholder) {
+      artworkViewerTransport.classList.remove("catalogue-audio-transport-modal");
+      artworkViewerPlaceholder.replaceWith(artworkViewerTransport);
+    }
+
+    artworkViewer.root.hidden = true;
+    artworkViewer.image.removeAttribute("src");
+    artworkViewer.image.alt = "";
+
+    setBackgroundInert(artworkViewer.root, false);
+    document.body.classList.remove("catalogue-artwork-viewer-open");
+
+    if (artworkViewerBodyStyleState) {
+      document.body.style.position = artworkViewerBodyStyleState.position;
+      document.body.style.top = artworkViewerBodyStyleState.top;
+      document.body.style.left = artworkViewerBodyStyleState.left;
+      document.body.style.right = artworkViewerBodyStyleState.right;
+      document.body.style.width = artworkViewerBodyStyleState.width;
+    }
+
+    window.scrollTo(0, artworkViewerScrollPosition);
+
+    const trigger = artworkViewerTrigger;
+    artworkViewerTrigger = null;
+    artworkViewerTransport = null;
+    artworkViewerPlaceholder = null;
+    artworkViewerBodyStyleState = null;
+    artworkViewerClosing = false;
+
+    if (trigger && document.contains(trigger)) {
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.focus({ preventScroll: true });
+    }
+  }
+
+  function closeArtworkViewer() {
+    if (!artworkViewer || artworkViewer.root.hidden || artworkViewerClosing) return;
+
+    artworkViewerClosing = true;
+    artworkViewer.root.classList.remove("is-open");
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.setTimeout(finishClosingArtworkViewer, reduceMotion ? 0 : 180);
+  }
+
+  function handleArtworkViewerEscape(event) {
+    if (event.key !== "Escape") return;
+    if (!artworkViewer || artworkViewer.root.hidden) return;
+
+    event.preventDefault();
+    closeArtworkViewer();
   }
 
   async function fetchCatalogue(sources = DEFAULT_JSON_SOURCES) {
@@ -379,8 +633,8 @@
 
         grid.querySelectorAll(".catalogue-go-start-button").forEach((button) => {
           button.addEventListener("click", () => {
-            const card = button.closest(".catalogue-song-card");
-            const audio = card && card.querySelector(".catalogue-audio");
+            const transport = button.closest(".catalogue-audio-transport");
+            const audio = transport && transport.querySelector(".catalogue-audio");
             if (!audio) return;
 
             audio.pause();
@@ -392,6 +646,10 @@
               // Ignore browsers that temporarily reject seeking before metadata loads.
             }
           });
+        });
+
+        grid.querySelectorAll(".catalogue-song-artwork-button").forEach((button) => {
+          button.addEventListener("click", () => openArtworkViewer(button));
         });
 
         grid.querySelectorAll(".catalogue-profile").forEach((details) => {
@@ -493,5 +751,6 @@
     }
   }
 
+  document.addEventListener("keydown", handleArtworkViewerEscape);
   document.addEventListener("DOMContentLoaded", initialiseCatalogue);
 })();

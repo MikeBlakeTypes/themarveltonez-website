@@ -1,6 +1,6 @@
 {
-  "catalogueVersion": "2.9.2",
-  "updated": "2026-07-29",
+  "catalogueVersion": "2.10.0",
+  "updated": "2026-08-03",
   "audioBaseUrl": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/",
   "songs": [
     {
@@ -84,7 +84,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/put-your-shirt-back-on-master.png",
       "description": "A sharp, chaotic, panic-the-morning-after pop story in which one spectacularly bad decision turns into an urgent race for the door.",
       "genre": "Contemporary Pop / Comedy Pop",
       "mood": "Chaotic • Cheeky • Frantic • Mischievous • Regretful • Bold",
@@ -135,7 +135,9 @@
       },
       "explicit": true,
       "catalogueId": "MTZ-002",
-      "publicDisplayOrder": 1
+      "publicDisplayOrder": 1,
+      "artworkThumbnail": "assets/images/song-artwork/put-your-shirt-back-on-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/put-your-shirt-back-on-800.webp"
     },
     {
       "id": "so-youre-dating-my-ex",
@@ -214,7 +216,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/so-youre-dating-my-ex-master.png",
       "description": "A sharp, tongue-in-cheek pop anthem that flips jealousy on its head with confidence, humour.. and the last laugh.",
       "genre": "Contemporary Pop / Commercial Pop / Attitude Pop",
       "mood": "Playful • Confident • Witty • Defiant • Empowering",
@@ -263,7 +265,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-003",
-      "publicDisplayOrder": 2
+      "publicDisplayOrder": 2,
+      "artworkThumbnail": "assets/images/song-artwork/so-youre-dating-my-ex-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/so-youre-dating-my-ex-800.webp"
     },
     {
       "id": "just-sayin",
@@ -348,7 +352,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/just-sayin-master.png",
       "description": "A barbed, comic-pop takedown of polished perfection, delivered with eye-rolls and attitude.",
       "genre": "Contemporary Pop / Satirical Pop / Attitude Pop",
       "mood": "Sarcastic • Cheeky • Confrontational • Comic • Energetic",
@@ -396,7 +400,9 @@
       },
       "explicit": true,
       "catalogueId": "MTZ-004",
-      "publicDisplayOrder": 3
+      "publicDisplayOrder": 3,
+      "artworkThumbnail": "assets/images/song-artwork/just-sayin-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/just-sayin-800.webp"
     },
     {
       "id": "i-didnt-mean-to-turn-out-bad",
@@ -468,7 +474,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-master.png",
       "description": "A rebellious yet vulnerable pop confession, from a girl refusing to fit back inside the box her family imagined for her.",
       "genre": "Contemporary Pop / Pop-Rock / Coming-of-Age Pop",
       "mood": "Defiant • Vulnerable • Rebellious • Hurt • Energetic",
@@ -516,7 +522,9 @@
       },
       "explicit": true,
       "catalogueId": "MTZ-005",
-      "publicDisplayOrder": 4
+      "publicDisplayOrder": 4,
+      "artworkThumbnail": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-800.webp"
     },
     {
       "id": "blocked-and-deleted",
@@ -591,7 +599,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/blocked-and-deleted-master.png",
       "description": "A witty, modern breakup anthem that turns the final act of moving on into an empowering declaration of independence.",
       "genre": "Contemporary Pop / Commercial Pop",
       "mood": "Empowering • Playful • Defiant • Confident • Contemporary",
@@ -640,7 +648,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-001",
-      "publicDisplayOrder": 5
+      "publicDisplayOrder": 5,
+      "artworkThumbnail": "assets/images/song-artwork/blocked-and-deleted-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp"
     },
     {
       "id": "happy-breakup",
@@ -732,7 +742,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/happy-breakup-master.png",
       "description": "A stomping breakup anthem that swaps tears for makeup, relationships for freedom and the pleasure of rediscovering yourself.",
       "genre": "Contemporary Pop / Feel-Good Pop / Breakup Pop",
       "mood": "Uplifting • Liberated • Playful • Confident • Celebratory",
@@ -779,7 +789,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-006",
-      "publicDisplayOrder": 6
+      "publicDisplayOrder": 6,
+      "artworkThumbnail": "assets/images/song-artwork/happy-breakup-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/happy-breakup-800.webp"
     },
     {
       "id": "doorstep",
@@ -871,7 +883,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/doorstep-master.png",
       "description": "A sweetly awkward pop story about the moment a perfect date reaches the front door—but the expected kiss never comes.",
       "genre": "Contemporary Pop / Romantic Pop / Story Pop",
       "mood": "Anticipatory • Awkward • Hopeful • Frustrated • Playful",
@@ -917,7 +929,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-007",
-      "publicDisplayOrder": 7
+      "publicDisplayOrder": 7,
+      "artworkThumbnail": "assets/images/song-artwork/doorstep-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/doorstep-800.webp"
     },
     {
       "id": "a-girl-like-me",
@@ -1019,7 +1033,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/a-girl-like-me-master.png",
       "description": "A warm, melody-led love song about hearing a song and realising its words seem written for you.",
       "genre": "Contemporary Pop / Retro-Influenced Pop / Romantic Pop",
       "mood": "Warm • Romantic • Dreamy • Hopeful • Sweet",
@@ -1065,7 +1079,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-008",
-      "publicDisplayOrder": 8
+      "publicDisplayOrder": 8,
+      "artworkThumbnail": "assets/images/song-artwork/a-girl-like-me-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/a-girl-like-me-800.webp"
     },
     {
       "id": "youre-my-boy",
@@ -1149,7 +1165,7 @@
           "A Marveltonez composition"
         ]
       },
-      "artwork": "",
+      "artwork": "assets/images/song-artwork/youre-my-boy-master.png",
       "description": "A bright, open-hearted pop celebration of a new love so exciting that it has to be shared with the whole world.",
       "genre": "Contemporary Pop / Feel-Good Pop / Romantic Pop",
       "mood": "Joyful • Excited • Romantic • Energetic • Sincere",
@@ -1195,7 +1211,9 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-009",
-      "publicDisplayOrder": 9
+      "publicDisplayOrder": 9,
+      "artworkThumbnail": "assets/images/song-artwork/youre-my-boy-400.webp",
+      "artworkThumbnailLarge": "assets/images/song-artwork/youre-my-boy-800.webp"
     }
   ],
   "sourceCatalogue": "Marveltonez Catalogue Master v2.4"
