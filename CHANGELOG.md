@@ -1,3 +1,14 @@
+## v11.5.8 — Song Card Transport and Artwork Space Refinement
+
+- Removed the separate Restart text button from all nine Unreleased Demo cards.
+- Added an accessible Skip Backward / Go to Start icon beside each native audio player.
+- Go to Start pauses and resets the selected track to 0:00 without starting playback.
+- Preserved one-song-at-a-time playback and play/replay analytics.
+- Moved Profile and Lyrics plus/minus symbols immediately after their labels.
+- Added View/Close Song Profile wording synchronized with the profile state.
+- Shortened and left-aligned the four lower action dividers to reserve right-hand artwork space.
+- Added no artwork placeholder and changed no catalogue metadata, lyrics, audio URLs, privacy, consent, merchandise, analytics or Cloudflare configuration.
+
 ## v11.5.7 — Add Replay Button — 1 August 2026
 
 - Added a small visible Restart button beneath the native audio player on all nine public Unreleased Demos song cards.

@@ -1,3 +1,20 @@
+# Marveltonez Website v11.5.8 — Song Card Transport and Artwork Space Refinement
+
+Narrowly scoped Unreleased Demos refinement:
+- removes the separate Restart text button;
+- adds an accessible icon-led Go to Start control in the same transport row immediately beside the native audio player;
+- Go to Start pauses the selected track, resets it to 0:00 and leaves it ready to play;
+- preserves the one-song-at-a-time playback and aggregate play/replay analytics introduced in earlier releases;
+- moves the red Profile and Lyrics plus/minus symbols immediately after their action text;
+- changes the profile action between View Song Profile and Close Song Profile;
+- shortens and left-aligns the four lower action dividers to create clear right-hand space for future artwork;
+- adds no artwork placeholder in this release;
+- leaves lyrics, catalogue metadata, Public Display Order, audio URLs, badges, enquiry routes, privacy, consent, merchandise, analytics and Cloudflare configuration unchanged.
+
+Implementation note: browser-native audio controls cannot accept additional controls inside their protected control interface. The smallest reliable cross-browser solution is therefore a hybrid transport row with the Go to Start icon immediately adjacent to the native player.
+
+Rollback: discard changes before committing, or revert the v11.5.8 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.5.7 — Add Replay Button
 
 This narrowly scoped refinement adds a small visible **Restart** button beneath the native audio player on all nine public Unreleased Demos song cards.

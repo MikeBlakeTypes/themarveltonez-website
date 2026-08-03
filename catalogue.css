@@ -234,46 +234,70 @@
   text-transform: uppercase;
 }
 
-.catalogue-audio {
+.catalogue-audio-transport {
+  display: flex;
   width: 100%;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
   margin: 12px 0 16px;
 }
 
-.catalogue-audio-tools {
-  display: flex;
-  justify-content: flex-end;
-  margin: -8px 0 16px;
+.catalogue-audio {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  margin: 0;
 }
 
-.catalogue-restart-button {
-  min-height: 36px;
-  padding: 7px 12px;
-  border: 1px solid #3a3a3a;
-  border-radius: 4px;
-  background: transparent;
-  color: #bdbdbd;
+.catalogue-go-start-button {
+  display: inline-flex;
+  flex: 0 0 40px;
+  width: 40px;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #c8c8c8;
+  border-radius: 999px;
+  background: #f1f3f4;
+  color: #202124;
   cursor: pointer;
-  font-family: var(--font-head);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  line-height: 1;
-  text-transform: uppercase;
+  appearance: none;
 }
 
-.catalogue-restart-button:hover,
-.catalogue-restart-button:focus-visible {
+.catalogue-go-start-button svg {
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+}
+
+.catalogue-go-start-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.catalogue-go-start-triangle {
+  fill: currentColor;
+}
+
+.catalogue-go-start-button:hover {
   border-color: var(--red);
-  color: #fff;
+  color: var(--red);
 }
 
-.catalogue-restart-button:focus-visible {
+.catalogue-go-start-button:focus-visible {
   outline: 2px solid var(--red);
   outline-offset: 3px;
+  color: var(--red);
 }
 
 .catalogue-song-actions {
+  --catalogue-action-width: 218px;
   display: flex;
+  width: min(100%, var(--catalogue-action-width));
   flex-direction: column;
   gap: 0;
 }
@@ -282,7 +306,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
   padding: 13px 0;
   border: 0;
@@ -299,6 +323,7 @@
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
   appearance: none;
 }
 
@@ -318,7 +343,7 @@
 
 .catalogue-action-symbol {
   flex: 0 0 auto;
-  margin-left: 16px;
+  margin-left: 6px;
   color: var(--red);
   font-size: 18px;
   line-height: .8;
@@ -528,15 +553,16 @@
 
 /* v10.4 — expandable public song profiles */
 .catalogue-profile {
+  --catalogue-action-width: 218px;
   margin: 2px 0 0;
-  border-top: 1px solid #2b2b2b;
 }
 
 .catalogue-profile summary {
   display: flex;
-  width: 100%;
+  width: min(100%, var(--catalogue-action-width));
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  border-top: 1px solid #2b2b2b;
   box-sizing: border-box;
   padding: 13px 0;
   color: #f0f0f0;
@@ -549,6 +575,7 @@
   list-style: none;
   text-align: left;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .catalogue-profile summary:hover,
@@ -565,17 +592,16 @@
   display: none;
 }
 
-.catalogue-profile summary::after {
-  content: "+";
+.catalogue-profile-label {
+  flex: 0 1 auto;
+}
+
+.catalogue-profile-symbol {
   flex: 0 0 auto;
-  margin-left: 16px;
+  margin-left: 6px;
   color: var(--red);
   font-size: 18px;
   line-height: .8;
-}
-
-.catalogue-profile[open] summary::after {
-  content: "–";
 }
 
 .catalogue-profile-body {
@@ -654,4 +680,22 @@
 .catalogue-lyrics-body audio,
 .catalogue-lyrics-body video {
   cursor: auto;
+}
+
+/* v11.5.8 — transport-row and future artwork-space safeguards */
+@media (max-width: 420px) {
+  .catalogue-audio-transport {
+    gap: 4px;
+  }
+
+  .catalogue-go-start-button {
+    flex-basis: 36px;
+    width: 36px;
+    min-height: 36px;
+  }
+
+  .catalogue-go-start-button svg {
+    width: 18px;
+    height: 18px;
+  }
 }

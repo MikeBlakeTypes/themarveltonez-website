@@ -101,7 +101,7 @@
 
     return `
       <details class="catalogue-profile">
-        <summary>View song profile</summary>
+        <summary><span class="catalogue-profile-label">View song profile</span><span class="catalogue-profile-symbol" aria-hidden="true">+</span></summary>
         <div class="catalogue-profile-body">
           ${renderProfileField("Overview", profile.overview)}
           ${renderProfileField("Themes", profile.themes)}
@@ -164,6 +164,17 @@
       </section>`;
   }
 
+  function setProfileButtonState(details) {
+    if (!details) return;
+
+    const label = details.querySelector(".catalogue-profile-label");
+    const symbol = details.querySelector(".catalogue-profile-symbol");
+    const isOpen = details.open === true;
+
+    if (label) label.textContent = isOpen ? "Close song profile" : "View song profile";
+    if (symbol) symbol.textContent = isOpen ? "−" : "+";
+  }
+
   function setLyricsButtonState(button, isOpen) {
     if (!button) return;
 
@@ -219,14 +230,17 @@
 
         ${renderMetadata(song)}
 
-        <audio class="catalogue-audio" controls preload="none">
-          <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
-          Your browser does not support audio playback.
-        </audio>
-        <div class="catalogue-audio-tools">
-          <button class="catalogue-restart-button" type="button" aria-label="Restart ${escapeHTML(song.title)} from the beginning">
-            Restart
+        <div class="catalogue-audio-transport">
+          <button class="catalogue-go-start-button" type="button" aria-label="Go to start of ${escapeHTML(song.title)}" title="Go to start">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+              <path class="catalogue-go-start-line" d="M6 5v14"></path>
+              <path class="catalogue-go-start-triangle" d="M18 6.5 9.5 12 18 17.5Z"></path>
+            </svg>
           </button>
+          <audio class="catalogue-audio" controls preload="none">
+            <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
         </div>
 
         ${renderProfile(song)}
@@ -363,7 +377,7 @@
           });
         });
 
-        grid.querySelectorAll(".catalogue-restart-button").forEach((button) => {
+        grid.querySelectorAll(".catalogue-go-start-button").forEach((button) => {
           button.addEventListener("click", () => {
             const card = button.closest(".catalogue-song-card");
             const audio = card && card.querySelector(".catalogue-audio");
@@ -377,13 +391,13 @@
             } catch (error) {
               // Ignore browsers that temporarily reject seeking before metadata loads.
             }
+          });
+        });
 
-            const playPromise = audio.play();
-            if (playPromise && typeof playPromise.catch === "function") {
-              playPromise.catch(() => {
-                // Leave the player usable if the browser blocks playback.
-              });
-            }
+        grid.querySelectorAll(".catalogue-profile").forEach((details) => {
+          setProfileButtonState(details);
+          details.addEventListener("toggle", () => {
+            setProfileButtonState(details);
           });
         });
 
