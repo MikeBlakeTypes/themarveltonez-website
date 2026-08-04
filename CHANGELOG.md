@@ -1,3 +1,23 @@
+## v11.7.1 — Hub Mobile Header and First-Screen Refinement — 4 August 2026
+
+- Reduced the rendered mobile logo width by approximately 14% without modifying the Production Master SVG.
+- Aligned the visible logo, positioning copy and card column on one coherent left axis.
+- Tightened mobile top padding and header spacing while retaining premium breathing room.
+- Made the Featured card approximately 6% shallower on mobile.
+- Reduced mobile gaps between the large cards and compact-card pair from 9px to 6px.
+- Improved first-screen visibility of Discover Marveltonez and Industry & Contact.
+- Preserved card-title sizes, body-copy readability, arrow controls and practical tap targets.
+- Changed no wording, destinations, photography, analytics, privacy, consent or accessibility behaviour.
+- Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.1 commit in GitHub Desktop to restore the original v11.7 Hub spacing exactly.
+
 ## v11.7 — Marveltonez Hub Initial Static Release — 4 August 2026
 
 - Added the new mobile-first `/hub/` social entrance using the approved Editorial B layout.

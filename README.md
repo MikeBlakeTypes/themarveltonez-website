@@ -1,3 +1,19 @@
+# Marveltonez Website v11.7.1 — Hub Mobile Header and First-Screen Refinement
+
+Targeted mobile refinement of the approved v11.7 Editorial B Hub.
+
+- reduces the rendered mobile logo width while preserving the unchanged Production Master SVG;
+- aligns the visible logo, positioning copy and card column on one coherent left axis;
+- tightens mobile header spacing without reducing card-title sizes or tap targets;
+- makes the Featured card approximately 6% shallower on mobile;
+- reduces mobile card gaps slightly to reveal more of the compact lower cards;
+- preserves all wording, destinations, analytics, privacy, consent, accessibility and photography;
+- leaves Featured-card rotation deliberately unimplemented.
+
+Modified files: `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.1 commit in GitHub Desktop to restore the original v11.7 Hub spacing exactly.
+
 # Marveltonez Website v11.7 — Marveltonez Hub Initial Static Release
 
 Adds a new isolated `/hub/` social-media entrance using the approved Editorial B composition and official Marveltonez Production Master SVG.

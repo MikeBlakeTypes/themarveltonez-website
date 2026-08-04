@@ -602,6 +602,33 @@ body.consent-open {
 @media (max-width: 520px) {
   .hub-shell {
     width: 100%;
+    padding-top: max(14px, env(safe-area-inset-top));
+  }
+
+  .hub-header {
+    padding: 0 0 7px;
+  }
+
+  .hub-brand {
+    width: min(86%, 258px);
+    margin-left: -3.1%;
+  }
+
+  .hub-positioning {
+    margin-top: 4px;
+    line-height: 1.15;
+  }
+
+  .hub-cards {
+    gap: 6px;
+  }
+
+  .hub-card-featured {
+    aspect-ratio: 2.26 / 1;
+  }
+
+  .hub-compact-grid {
+    gap: 6px;
   }
 
   .consent-banner {
