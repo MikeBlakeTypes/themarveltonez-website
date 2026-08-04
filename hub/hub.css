@@ -171,8 +171,14 @@ a {
   object-position: 58% 48%;
 }
 
+.hub-card-large:nth-of-type(3) .hub-card-media {
+  width: 69%;
+}
+
 .hub-card-large:nth-of-type(3) .hub-card-media img {
-  object-position: 61% 50%;
+  object-position: 50% 50%;
+  transform: translateX(5%) scale(.96);
+  transform-origin: center;
 }
 
 .hub-card-shade {
@@ -587,6 +593,10 @@ body.consent-open {
     filter: brightness(1.05);
   }
 
+  .hub-card-large:nth-of-type(3):hover .hub-card-media img {
+    transform: translateX(5%) scale(.985);
+  }
+
   .hub-card:hover .hub-card-arrow {
     color: #fff;
     background: var(--red);
@@ -629,7 +639,7 @@ body.consent-open {
   }
 
   .hub-brand {
-    width: min(86%, 258px);
+    width: min(80.8%, 243px);
     margin-left: -3.1%;
   }
 
@@ -652,6 +662,10 @@ body.consent-open {
 
   .hub-compact-grid {
     gap: 6px;
+  }
+
+  .hub-card-compact {
+    aspect-ratio: 1 / 1.005;
   }
 
   .consent-banner {

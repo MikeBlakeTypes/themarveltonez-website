@@ -1,3 +1,22 @@
+## v11.7.3 — Hub Final Mobile Fold Refinement — 4 August 2026
+
+- Reduced the rendered mobile logo by approximately 6% without modifying the Production Master SVG.
+- Reduced the mobile height of the Discover Marveltonez and Industry & Contact cards by approximately 7%.
+- Shifted the Songs We’ve Written image composition to the right and reduced its scale slightly.
+- Kept both eyes visible and preserved clear space between the face and the red arrow control.
+- Preserved the left-side black fade, live HTML copy and the approved landscape-card architecture.
+- Changed no wording, destinations, analytics, privacy, consent, accessibility or Featured-card behaviour.
+- Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.3 commit in GitHub Desktop to restore the exact v11.7.2 Hub layout.
+
 ## v11.7.2 — Hub Mobile Header and Second-Screen Refinement — 4 August 2026
 
 - Applied the approved optical logo alignment at desktop and tablet breakpoints without modifying the Production Master SVG.
@@ -39,6 +58,7 @@ Rollback: revert the v11.7.2 commit in GitHub Desktop to restore the exact v11.7
 
 Changed files:
 
+- modified: `hub/index.html`
 - modified: `hub/hub.css`
 - modified: `README.md`
 - modified: `CHANGELOG.md`

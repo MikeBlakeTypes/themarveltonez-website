@@ -1,3 +1,16 @@
+# Marveltonez Website v11.7.3 — Hub Final Mobile Fold Refinement
+
+Targeted final-fold refinement of the approved Editorial B Hub.
+
+- reduces the rendered mobile logo by approximately 6% while preserving the Production Master SVG and optical alignment;
+- makes the Discover Marveltonez and Industry & Contact cards approximately 7% shallower on mobile;
+- repositions and slightly scales down the Songs We’ve Written image so both eyes are visible and the arrow remains clear of the eye area;
+- preserves all wording, destinations, analytics, privacy, consent, accessibility, photography and Featured-card behaviour.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.3 commit in GitHub Desktop to restore the exact v11.7.2 Hub layout.
+
 # Marveltonez Website v11.7.2 — Hub Mobile Header and Second-Screen Refinement
 
 Targeted editorial-card and utility-row refinement of the approved v11.7.1 Hub.
@@ -29,7 +42,7 @@ Targeted mobile refinement of the approved v11.7 Editorial B Hub.
 - preserves all wording, destinations, analytics, privacy, consent, accessibility and photography;
 - leaves Featured-card rotation deliberately unimplemented.
 
-Modified files: `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
 
 Rollback: revert the v11.7.1 commit in GitHub Desktop to restore the original v11.7 Hub spacing exactly.
 
