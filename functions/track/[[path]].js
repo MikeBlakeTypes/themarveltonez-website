@@ -14,6 +14,7 @@ const FIXED_DESTINATIONS = {
   "hub-songs-weve-written": "/#selected-releases",
   "hub-discover": "/#story",
   "hub-industry-contact": "/publisher.html",
+  "hub-facebook": "https://www.facebook.com/themarveltonez",
   "hub-instagram": "https://www.instagram.com/themarveltonez/",
   "hub-youtube": "https://www.youtube.com/@marveltonez",
   "hub-shop": "https://www.etsy.com/shop/TheMarveltonez",

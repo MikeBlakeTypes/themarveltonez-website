@@ -1,3 +1,22 @@
+# Marveltonez Website v11.7.2 — Hub Mobile Header and Second-Screen Refinement
+
+Targeted editorial-card and utility-row refinement of the approved v11.7.1 Hub.
+
+- applies the approved optical logo alignment at desktop and tablet breakpoints without modifying the Production Master SVG;
+- moves photography in the three landscape cards to the right-hand 72% with a smooth CSS fade into a stable black text field;
+- replaces the Featured artwork with responsive derivatives from the approved *I Didn’t Mean to Turn Out Bad* reverse master;
+- replaces the Hear the Songs artwork with responsive derivatives from the approved *Just Sayin’* reverse master;
+- makes Featured approximately 14% shallower and both large music cards approximately 12% shallower on mobile;
+- adds the authoritative Marveltonez Facebook link and aggregate `hub-facebook` route;
+- renames the visible Shop utility label to Merch while preserving the existing Etsy destination and `hub-shop` counter;
+- preserves all existing card wording, destinations, privacy, consent, accessibility and static Featured behaviour.
+
+New files: `assets/images/hub/hub-featured-idmtob-480.webp`, `assets/images/hub/hub-featured-idmtob-960.webp`, `assets/images/hub/hub-hear-songs-just-sayin-480.webp`, and `assets/images/hub/hub-hear-songs-just-sayin-960.webp`.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `functions/track/[[path]].js`, `HUB-CONTENT-GUIDE.md`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.2 commit in GitHub Desktop to restore the exact v11.7.1 Hub artwork, card proportions, utility row and analytics routes.
+
 # Marveltonez Website v11.7.1 — Hub Mobile Header and First-Screen Refinement
 
 Targeted mobile refinement of the approved v11.7 Editorial B Hub.

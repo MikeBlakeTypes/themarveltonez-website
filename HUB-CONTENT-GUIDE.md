@@ -1,6 +1,6 @@
 # Marveltonez Hub Content Guide
 
-This guide covers the static Hub introduced in **Marveltonez Website v11.7**.
+This guide covers the static Hub introduced in **Marveltonez Website v11.7** and refined through **v11.7.2**.
 
 The Hub lives at:
 
@@ -22,7 +22,7 @@ The Featured card immediately below that comment contains:
 - label: `Featured`
 - title: `A Song for the Right Artist`
 - supporting copy: `Discover what we’re writing now.`
-- image references: `hub-featured-temp-480.webp` and `hub-featured-temp-960.webp`
+- image references: `hub-featured-idmtob-480.webp` and `hub-featured-idmtob-960.webp`
 - click route: `/track/hub-featured`
 
 The Featured destination is configured in `functions/track/[[path]].js`:
@@ -51,29 +51,30 @@ The utility routes are:
 
 | Utility link | Analytics route |
 |---|---|
+| Facebook | `hub-facebook` |
 | Instagram | `hub-instagram` |
 | YouTube | `hub-youtube` |
-| Shop | `hub-shop` |
+| Merch | `hub-shop` |
 | Main Website | `hub-main-website` |
 
 Do not rename an analytics route after it has started collecting data unless a deliberate new counter is required.
 
 ## Temporary photography
 
-The v11.7 images are local, optimised derivatives created from image material already in the website repository. Original source images remain unchanged.
+The Hub images are local, optimised derivatives. In v11.7.2, Featured and Hear the Songs use derivatives from the separately supplied approved reverse-master artworks; all source masters remain unchanged.
 
 | Card | Temporary files | Intended ratio |
 |---|---|---|
-| Featured | `hub-featured-temp-480.webp`, `hub-featured-temp-960.webp` | about 2.18:1 |
-| Hear the Songs | `hub-hear-songs-temp-480.webp`, `hub-hear-songs-temp-960.webp` | about 2.67:1 |
+| Featured | `hub-featured-idmtob-480.webp`, `hub-featured-idmtob-960.webp` | source 3:2; cropped responsively in the right-hand card field |
+| Hear the Songs | `hub-hear-songs-just-sayin-480.webp`, `hub-hear-songs-just-sayin-960.webp` | source 3:2; cropped responsively in the right-hand card field |
 | Songs We’ve Written | `hub-songs-written-temp-480.webp`, `hub-songs-written-temp-960.webp` | about 2.67:1 |
 | Discover Marveltonez | `hub-discover-temp-480.webp`, `hub-discover-temp-960.webp` | about 8:9 |
 | Industry & Contact | `hub-industry-temp-480.webp`, `hub-industry-temp-960.webp` | about 8:9 |
 
 Recommended replacement sizes:
 
-- Featured: 480 × 220 and 960 × 440 pixels
-- each large music card: 480 × 180 and 960 × 360 pixels
+- Featured and Hear the Songs source derivatives: 480 × 320 and 960 × 640 pixels; CSS crops them within the right-hand image field
+- Songs We’ve Written: retain the existing 480 × 180 and 960 × 360 derivatives unless deliberately replacing the source
 - each compact card: 480 × 540 and 960 × 1080 pixels
 - format: WebP
 - colour direction: predominantly cool monochrome, strong contrast, controlled Marveltonez-red details where suitable

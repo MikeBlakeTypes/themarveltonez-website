@@ -1,3 +1,30 @@
+## v11.7.2 — Hub Mobile Header and Second-Screen Refinement — 4 August 2026
+
+- Applied the approved optical logo alignment at desktop and tablet breakpoints without modifying the Production Master SVG.
+- Refactored the three landscape cards so their photography occupies the right-hand 72% and fades smoothly into a stable black text field through CSS.
+- Added responsive WebP derivatives from the approved *I Didn’t Mean to Turn Out Bad* reverse master for the Featured card.
+- Added responsive WebP derivatives from the approved *Just Sayin’* reverse master for Hear the Songs.
+- Retained the current Songs We’ve Written source image while applying the same right-justified fade treatment.
+- Made Featured approximately 14% shallower and both large music cards approximately 12% shallower on mobile, preserving title sizes, arrows and practical tap targets.
+- Added Facebook before Instagram using the authoritative repository URL `https://www.facebook.com/themarveltonez` and the new aggregate `hub-facebook` route.
+- Renamed the visible Shop utility label and accessible name to Merch while preserving the Etsy destination and existing `hub-shop` route.
+- Preserved card wording, existing destinations, privacy, consent, accessibility and static Featured behaviour.
+
+Changed files:
+
+- new: `assets/images/hub/hub-featured-idmtob-480.webp`
+- new: `assets/images/hub/hub-featured-idmtob-960.webp`
+- new: `assets/images/hub/hub-hear-songs-just-sayin-480.webp`
+- new: `assets/images/hub/hub-hear-songs-just-sayin-960.webp`
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `functions/track/[[path]].js`
+- modified: `HUB-CONTENT-GUIDE.md`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.2 commit in GitHub Desktop to restore the exact v11.7.1 Hub design, temporary artwork, four-item utility row and analytics routes.
+
 ## v11.7.1 — Hub Mobile Header and First-Screen Refinement — 4 August 2026
 
 - Reduced the rendered mobile logo width by approximately 14% without modifying the Production Master SVG.
