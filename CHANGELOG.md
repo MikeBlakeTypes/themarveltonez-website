@@ -1,3 +1,28 @@
+## v11.7 — Marveltonez Hub Initial Static Release — 4 August 2026
+
+- Added the new mobile-first `/hub/` social entrance using the approved Editorial B layout.
+- Used the unchanged official Production Master SVG, official Marveltonez colours and existing local Barlow Condensed and Inter font files.
+- Added one static manual Featured card, two large music cards, two compact editorial cards and four secondary utility links.
+- Added optimised provisional WebP photography derived only from existing repository images; all original source images remain unchanged.
+- Added nine fixed `hub-*` aggregate outbound-click routes to the existing Cloudflare Pages Function without changing its D1 schema, privacy behaviour, error handling or existing routes.
+- Reused the existing consent system, added no embedded media, third-party trackers, new cookies, persistent visitor identifiers or autoplay.
+- Added keyboard focus, screen-reader names, responsive card behaviour, safe-area support and reduced-motion handling.
+- Added `HUB-CONTENT-GUIDE.md` explaining manual Featured edits, image replacement and route configuration.
+- Did not add the Hub to the existing main navigation and did not change the homepage, catalogue, song artwork viewer, metadata, audio, merchandise, privacy page or Cloudflare configuration.
+
+Changed files:
+
+- new: `hub/index.html`
+- new: `hub/hub.css`
+- new: `assets/images/marveltonez-logo-production-master.svg`
+- new: `assets/images/hub/*`
+- new: `HUB-CONTENT-GUIDE.md`
+- modified: `functions/track/[[path]].js`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7 commit in GitHub Desktop. This removes all new Hub files and Hub-specific analytics routes and restores the exact previous v11.6 state.
+
 ## v11.6 — Song Card Artwork Viewer — 3 August 2026
 
 - Added all nine approved 3:2 Song Card artworks to the Unreleased Demos cards.

@@ -8,7 +8,16 @@ const FIXED_DESTINATIONS = {
   "homepage-get-in-touch": "mailto:mikeblake@themarveltonez.com",
   "footer-email": "mailto:mikeblake@themarveltonez.com",
   "navigation-contact": "mailto:mikeblake@themarveltonez.com",
-  "general-contact": "mailto:mikeblake@themarveltonez.com"
+  "general-contact": "mailto:mikeblake@themarveltonez.com",
+  "hub-featured": "/unreleased.html",
+  "hub-hear-the-songs": "/unreleased.html",
+  "hub-songs-weve-written": "/#selected-releases",
+  "hub-discover": "/#story",
+  "hub-industry-contact": "/publisher.html",
+  "hub-instagram": "https://www.instagram.com/themarveltonez/",
+  "hub-youtube": "https://www.youtube.com/@marveltonez",
+  "hub-shop": "https://www.etsy.com/shop/TheMarveltonez",
+  "hub-main-website": "/"
 };
 
 const SONG_TITLES = {

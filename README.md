@@ -1,3 +1,24 @@
+# Marveltonez Website v11.7 — Marveltonez Hub Initial Static Release
+
+Adds a new isolated `/hub/` social-media entrance using the approved Editorial B composition and official Marveltonez Production Master SVG.
+
+- introduces one static, manually editable Featured card;
+- adds two large music routes: Hear the Songs and Songs We’ve Written;
+- adds two compact editorial routes: Discover Marveltonez and Industry & Contact;
+- adds restrained Instagram, YouTube, Shop and Main Website utility links;
+- uses local, provisional responsive photography derived from existing repository assets;
+- extends the existing first-party Cloudflare D1 click analytics with nine fixed `hub-*` routes;
+- retains the existing consent interface, privacy principles, keyboard access, visible focus, reduced-motion support and mobile-first responsive behaviour;
+- keeps the implementation isolated from the homepage, catalogue, song-card artwork viewer, merchandise pages and existing navigation.
+
+New files: `hub/index.html`, `hub/hub.css`, `assets/images/marveltonez-logo-production-master.svg`, `assets/images/hub/`, and `HUB-CONTENT-GUIDE.md`.
+
+Modified files: `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Featured-card rotation is deliberately not included in this initial static release.
+
+Rollback: discard the v11.7 changes before committing, or revert the v11.7 commit in GitHub Desktop. Reverting removes the Hub files and Hub analytics routes and restores the exact previous v11.6 state.
+
 # Marveltonez Website v11.6 — Song Card Artwork Viewer
 
 Adds the nine approved 3:2 Song Card artworks and a lightweight, accessible Visual Listening Mode to the Unreleased Demos catalogue.
