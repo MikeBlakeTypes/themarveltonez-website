@@ -1,3 +1,10 @@
+# Marveltonez Website v11.8.1 — Industry Heading Refinement
+
+- Changed the large visible Industry-page heading from **Industry** to **For Music Professionals**.
+- Preserved the **Professional Information** eyebrow, Industry navigation label, `/industry/` URL, metadata, styling, analytics, privacy, consent, catalogue and all other website behaviour.
+
+Rollback: discard the v11.8.1 changes before committing, or revert the v11.8.1 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.8 — Industry and Conference Readiness Foundation
 
 Professional-readiness refinement based on the current production repository:

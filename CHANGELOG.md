@@ -1,3 +1,8 @@
+## v11.8.1 — Industry Heading Refinement — 5 August 2026
+
+- Changed the large visible Industry-page heading from `Industry` to `For Music Professionals`.
+- Preserved the `Professional Information` eyebrow, Industry navigation label, `/industry/` URL, metadata, styling, analytics, privacy, consent, catalogue and all other website behaviour.
+
 ## v11.8 — Industry and Conference Readiness Foundation — 5 August 2026
 
 - Added a permanent, responsive Industry page at `/industry/`.
