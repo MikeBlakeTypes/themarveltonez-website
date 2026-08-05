@@ -1,3 +1,20 @@
+# Marveltonez Website v11.8.2 — Industry Mobile Conference Refinement
+
+Focused mobile-first refinement of the permanent `/industry/` page:
+
+- restores a compact mobile header with the Marveltonez logo and an accessible hamburger menu closed by default;
+- keeps the desktop Industry navigation unchanged;
+- reduces mobile hero height while preserving Professional Information, For Music Professionals and the approved Austria–UK wording;
+- consolidates the Mike Blake and Mike Shannon profiles into one compact grouped mobile panel while preserving the desktop two-card layout;
+- reduces mobile card padding, gaps, heading scale and button bulk;
+- shortens the selected-songs button visually on mobile to **Hear the Featured Demos** while preserving its full accessible name and destination;
+- substantially compresses Back to Top and the mobile footer without removing legal or consent controls;
+- preserves all analytics action names, privacy, consent, catalogue, song, artwork, audio, merchandise and Cloudflare behaviour.
+
+Changed files: `industry/index.html`, `industry.css`, `README.md`, `CHANGELOG.md`; new file: `industry.js`.
+
+Rollback: discard the v11.8.2 changes before committing, or revert the v11.8.2 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.8.1 — Industry Heading Refinement
 
 - Changed the large visible Industry-page heading from **Industry** to **For Music Professionals**.

@@ -1,3 +1,13 @@
+## v11.8.2 — Industry Mobile Conference Refinement — 5 August 2026
+
+- Replaced the permanently expanded narrow-screen Industry navigation with a compact accessible hamburger menu closed by default.
+- Reduced the Industry hero’s mobile padding, heading scale, paragraph spacing and location spacing.
+- Consolidated the two writer cards into one grouped mobile panel while preserving the approved desktop two-card presentation.
+- Reduced mobile professional-card padding, gaps, heading scale and button bulk.
+- Added the mobile-visible selected-songs label `Hear the Featured Demos` while retaining the full accessible label and unchanged analytics route.
+- Compressed the mobile Back to Top and footer while retaining the logo, writer identification, copyright, Privacy & Datenschutz and Cookie Preferences.
+- Preserved desktop presentation, analytics action names, privacy, consent, catalogue, songs, artworks, audio, merchandise and Cloudflare configuration.
+
 ## v11.8.1 — Industry Heading Refinement — 5 August 2026
 
 - Changed the large visible Industry-page heading from `Industry` to `For Music Professionals`.

@@ -8,7 +8,7 @@
 <link href="/fonts.css" rel="stylesheet"/>
 <link href="/style.css?v=11.5.2" rel="stylesheet"/>
 <link href="/catalogue.css?v=11.6" rel="stylesheet"/>
-<link href="/industry.css?v=11.8" rel="stylesheet"/>
+<link href="/industry.css?v=11.8.2" rel="stylesheet"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <meta content="website" property="og:type"/>
@@ -27,7 +27,8 @@
 <body class="catalogue-page industry-page">
 <header class="site-header">
 <a class="logo logo-image-link" href="/"><img alt="The Marveltonez" class="site-logo-image" src="/assets/images/marveltonez-logo-production-master.png"/></a>
-<nav aria-label="Primary navigation" class="nav-links">
+<button aria-controls="industryNavigation" aria-expanded="false" aria-label="Open menu" class="menu-toggle industry-menu-toggle" type="button">☰</button>
+<nav aria-label="Primary navigation" class="nav-links" id="industryNavigation">
 <a href="/">Home</a>
 <a href="/unreleased.html">Unreleased Featured Demos</a>
 <a href="/#selected-releases">Selected Releases</a>
@@ -68,7 +69,7 @@
 <p class="industry-card-kicker">Selected Songs</p>
 <h2 id="industry-songs-title">Hear Selected Catalogue Work</h2>
 <p>The Unreleased Featured Demos are selected examples from the Marveltonez catalogue, presented with audio, lyrics and concise song information.</p>
-<a class="btn btn-primary industry-primary-action" href="/track/industry-featured-demos">Hear the Unreleased Featured Demos</a>
+<a aria-label="Hear the Unreleased Featured Demos" class="btn btn-primary industry-primary-action" href="/track/industry-featured-demos"><span class="industry-cta-full">Hear the Unreleased Featured Demos</span><span aria-hidden="true" class="industry-cta-mobile">Hear the Featured Demos</span></a>
 </section>
 
 <section class="industry-block" aria-labelledby="industry-approach-title">
@@ -103,5 +104,6 @@
 <p>© 2026 The Marveltonez.<br/>All rights reserved.</p>
 <div class="footer-legal"><h4>Privacy</h4><a href="/privacy.html">Privacy &amp; Datenschutz</a><button data-open-consent type="button">Cookie Preferences</button></div>
 </footer>
+<script defer src="/industry.js?v=11.8.2"></script>
 </body>
 </html>
