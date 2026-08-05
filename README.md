@@ -1,3 +1,16 @@
+# Marveltonez Website v11.8.3 — Industry Final Mobile Typography and Alignment Refinement
+
+Focused mobile-only refinements to the permanent `/industry/` page:
+
+- reduces the mobile **For Music Professionals** heading by approximately 25%;
+- removes the forced line break before Mike Shannon so `Mike Shannon · United Kingdom` can remain together where space permits;
+- vertically and horizontally centres the labels in the three mobile Industry action buttons;
+- preserves the complete v11.8.2 mobile conference refinement, desktop presentation, wording, analytics, privacy, consent and catalogue behaviour.
+
+Changed files: `industry.css`, `README.md`, `CHANGELOG.md`.
+
+Rollback: discard the v11.8.3 changes before committing, or revert the v11.8.3 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.8.2 — Industry Mobile Conference Refinement
 
 Focused mobile-first refinement of the permanent `/industry/` page:

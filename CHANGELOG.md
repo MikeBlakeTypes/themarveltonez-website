@@ -1,3 +1,10 @@
+## v11.8.3 — Industry Final Mobile Typography and Alignment Refinement — 5 August 2026
+
+- Reduced the mobile `For Music Professionals` heading by approximately 25% while preserving the desktop heading.
+- Removed the forced mobile line break before Mike Shannon so `Mike Shannon · United Kingdom` can remain on one line where space permits and wrap naturally when required.
+- Vertically and horizontally centred the labels in the three mobile Industry action buttons while preserving their touch height, wording, destinations, accessible labels and analytics routes.
+- Preserved all v11.8.2 mobile conference refinements, desktop presentation, privacy, consent, catalogue and unrelated website behaviour.
+
 ## v11.8.2 — Industry Mobile Conference Refinement — 5 August 2026
 
 - Replaced the permanently expanded narrow-screen Industry navigation with a compact accessible hamburger menu closed by default.
