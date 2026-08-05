@@ -1,3 +1,15 @@
+## v11.8 — Industry and Conference Readiness Foundation — 5 August 2026
+
+- Added a permanent, responsive Industry page at `/industry/`.
+- Added concise Austria–UK positioning and identified Mike Blake as based in Austria and Mike Shannon as based in the United Kingdom.
+- Renamed the public nine-song collection from Unreleased Demos to Unreleased Featured Demos without changing its URL or catalogue implementation.
+- Added the approved featured-demos introductory sentence.
+- Added a restrained Industry call-to-action to the homepage Our Story section and an Industry navigation link to the featured-demos and publisher-access pages.
+- Reused the existing nine-song catalogue, publisher-access email workflow and general professional contact email workflow.
+- Added privacy-conscious aggregate action names: `homepage-industry`, `navigation-industry`, `industry-featured-demos`, `industry-catalogue-access` and `industry-contact`.
+- Updated the privacy notice with a factual Austria–UK clarification and a reference to Industry-page aggregate action routes.
+- Preserved song cards, artworks, song order, audio, lyrics, profiles, enquiries, consent, privacy architecture, play/replay analytics, merchandise, Cloudflare D1 schema and R2 delivery.
+
 ## v11.6 — Song Card Artwork Viewer — 3 August 2026
 
 - Added all nine approved 3:2 Song Card artworks to the Unreleased Demos cards.

@@ -1,0 +1,173 @@
+.industry-page .site-header {
+  position: sticky;
+}
+
+.industry-hero .catalogue-page-lead {
+  max-width: 900px;
+}
+
+.industry-locations {
+  margin: 18px 0 0;
+  color: #bcbcbc;
+  font-size: 15px;
+  letter-spacing: .03em;
+}
+
+.industry-locations strong {
+  color: #f0f0f0;
+}
+
+.industry-locations span {
+  margin: 0 10px;
+  color: var(--red);
+}
+
+.industry-content {
+  max-width: 1320px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.industry-writer-grid,
+.industry-section-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.industry-writer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 20px;
+}
+
+.industry-section-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.industry-writer-card,
+.industry-block {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid #303030;
+  background: linear-gradient(180deg, #171717, #0a0a0a);
+  box-shadow: 0 17px 42px rgba(0, 0, 0, .28);
+}
+
+.industry-writer-card h2,
+.industry-block h2 {
+  margin: 4px 0 12px;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: .98;
+  text-transform: uppercase;
+}
+
+.industry-writer-card p,
+.industry-block p {
+  max-width: 62ch;
+  margin: 0;
+  color: #c9c9c9;
+}
+
+.industry-card-kicker {
+  color: var(--red) !important;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.industry-primary-action,
+.industry-secondary-action {
+  margin-top: 24px;
+}
+
+.industry-secondary-action {
+  border-color: var(--red);
+}
+
+.industry-page .btn:focus-visible,
+.industry-page .nav-links a:focus-visible,
+.industry-page .back-to-top:focus-visible,
+.industry-page .footer-legal a:focus-visible,
+.industry-page .footer-legal button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+.industry-page .nav-links a[aria-current="page"] {
+  color: var(--red);
+}
+
+@media (max-width: 980px) {
+  .industry-page .nav-links {
+    display: flex;
+    position: static;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 20px;
+    padding: 0;
+    background: transparent;
+  }
+
+  .industry-page .nav-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 760px) {
+  .industry-writer-grid,
+  .industry-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-writer-card,
+  .industry-block {
+    padding: 24px;
+  }
+
+  .industry-page .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .industry-page .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .industry-locations span {
+    display: block;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .industry-locations strong {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .industry-page .nav-links {
+    gap: 8px 14px;
+  }
+
+  .industry-page .btn {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}

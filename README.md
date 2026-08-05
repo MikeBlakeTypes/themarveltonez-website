@@ -1,3 +1,22 @@
+# Marveltonez Website v11.8 — Industry and Conference Readiness Foundation
+
+Professional-readiness refinement based on the current production repository:
+
+- establishes Marveltonez consistently as the Austria–UK songwriting partnership of Mike Blake and Mike Shannon;
+- identifies Mike Blake as based in Austria and Mike Shannon as based in the United Kingdom;
+- renames the public nine-song collection to **Unreleased Featured Demos** while preserving its URL, song order, artworks, audio, lyrics, profiles and enquiries;
+- applies the approved featured-demos introductory sentence;
+- adds a permanent, responsive `/industry/` page for conference delegates, publishers, artist managers, recording artists, producers, A&R contacts, music supervisors and collaborators;
+- links the Industry page from the homepage Our Story section and the concise catalogue-page navigation;
+- routes Industry visitors to the existing featured demos, catalogue-access email request and professional contact mechanisms;
+- adds privacy-conscious aggregate actions: `homepage-industry`, `navigation-industry`, `industry-featured-demos`, `industry-catalogue-access` and `industry-contact`;
+- updates the privacy notice only to clarify the Austria–UK operating position and the new descriptive Industry-page action routes;
+- preserves consent, optional-media blocking, accessibility, song-player behaviour, play/replay analytics, merchandise, Cloudflare Pages Functions, D1 schema and R2 audio delivery.
+
+New files: `industry/index.html` and `industry.css`.
+
+Rollback: discard v11.8 changes before committing, or revert the v11.8 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.6 — Song Card Artwork Viewer
 
 Adds the nine approved 3:2 Song Card artworks and a lightweight, accessible Visual Listening Mode to the Unreleased Demos catalogue.
