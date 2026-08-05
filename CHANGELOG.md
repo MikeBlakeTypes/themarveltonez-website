@@ -1,3 +1,10 @@
+## v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup — 5 August 2026
+
+- Updated the Industry stylesheet cache reference from `/industry.css?v=11.8.2` to `/industry.css?v=11.8.3`.
+- Removed committed and packaged macOS metadata files, including `.DS_Store`, AppleDouble `._*` files and `__MACOSX`.
+- Added a root `.gitignore` rule to prevent future macOS metadata commits.
+- Preserved all v11.8.3 styling, content, analytics, privacy, consent, catalogue and unrelated website behaviour.
+
 ## v11.8.3 — Industry Final Mobile Typography and Alignment Refinement — 5 August 2026
 
 - Reduced the mobile `For Music Professionals` heading by approximately 25% while preserving the desktop heading.

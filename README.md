@@ -1,3 +1,17 @@
+# Marveltonez Website v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup
+
+Small deployment hotfix:
+
+- updates the Industry stylesheet cache reference from `/industry.css?v=11.8.2` to `/industry.css?v=11.8.3` so normal browser sessions request the current v11.8.3 CSS;
+- removes committed and packaged macOS metadata files including `.DS_Store`, AppleDouble `._*` files and `__MACOSX`;
+- adds a root `.gitignore` rule to prevent macOS metadata from being committed again;
+- preserves all v11.8.3 styling, content, analytics, privacy, consent, catalogue and website functionality.
+
+Changed files: `industry/index.html`, `.gitignore`, `README.md`, `CHANGELOG.md`.
+Removed repository debris: `assets/.DS_Store`, `assets/images/.DS_Store`, `functions/.DS_Store`.
+
+Rollback: discard the v11.8.3a changes before committing, or revert the v11.8.3a commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v11.8.3 — Industry Final Mobile Typography and Alignment Refinement
 
 Focused mobile-only refinements to the permanent `/industry/` page:
