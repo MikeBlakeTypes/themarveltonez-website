@@ -1,3 +1,18 @@
+# Marveltonez Website v11.8.5 — Hub Main Synchronisation and Destination Correction
+
+Controlled reconciliation using the current production `main` repository as the website foundation and the approved v11.8.4 Hub branch as the Hub source.
+
+- preserves the current production homepage, Industry page, Unreleased Featured Demos page, Publisher page, privacy and consent system, merchandise pages, navigation, analytics and all v11.8.3a production refinements;
+- carries across the complete approved `/hub/` implementation, Hub assets, Production Master logo and Hub content guide;
+- reconciles production and Hub analytics routes without removing or duplicating existing routes;
+- changes `hub-featured` to the current Industry page at `/industry/`;
+- confirms `hub-hear-the-songs` points to the current Unreleased Featured Demos page at `/unreleased.html`;
+- preserves the approved Hub design, card dimensions, imagery, wording, responsive behaviour, privacy and consent behaviour.
+
+Changed or added files: `hub/index.html`, `hub/hub.css`, `HUB-CONTENT-GUIDE.md`, `assets/images/marveltonez-logo-production-master.svg`, `assets/images/hub/`, `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.5 commit to restore the preceding feature-branch state. This package intentionally updates the branch to the current production `main` baseline while retaining the approved Hub.
+
 # Marveltonez Website v11.8.4 — Hub Mobile Card Height Refinement
 
 Final mobile-only card-height refinement of the approved Editorial B Hub.
@@ -79,6 +94,76 @@ Modified files: `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
 Featured-card rotation is deliberately not included in this initial static release.
 
 Rollback: discard the v11.7 changes before committing, or revert the v11.7 commit in GitHub Desktop. Reverting removes the Hub files and Hub analytics routes and restores the exact previous v11.6 state.
+
+# Marveltonez Website v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup
+
+Small deployment hotfix:
+
+- updates the Industry stylesheet cache reference from `/industry.css?v=11.8.2` to `/industry.css?v=11.8.3` so normal browser sessions request the current v11.8.3 CSS;
+- removes committed and packaged macOS metadata files including `.DS_Store`, AppleDouble `._*` files and `__MACOSX`;
+- adds a root `.gitignore` rule to prevent macOS metadata from being committed again;
+- preserves all v11.8.3 styling, content, analytics, privacy, consent, catalogue and website functionality.
+
+Changed files: `industry/index.html`, `.gitignore`, `README.md`, `CHANGELOG.md`.
+Removed repository debris: `assets/.DS_Store`, `assets/images/.DS_Store`, `functions/.DS_Store`.
+
+Rollback: discard the v11.8.3a changes before committing, or revert the v11.8.3a commit in GitHub Desktop and push the revert to `main`.
+
+# Marveltonez Website v11.8.3 — Industry Final Mobile Typography and Alignment Refinement
+
+Focused mobile-only refinements to the permanent `/industry/` page:
+
+- reduces the mobile **For Music Professionals** heading by approximately 25%;
+- removes the forced line break before Mike Shannon so `Mike Shannon · United Kingdom` can remain together where space permits;
+- vertically and horizontally centres the labels in the three mobile Industry action buttons;
+- preserves the complete v11.8.2 mobile conference refinement, desktop presentation, wording, analytics, privacy, consent and catalogue behaviour.
+
+Changed files: `industry.css`, `README.md`, `CHANGELOG.md`.
+
+Rollback: discard the v11.8.3 changes before committing, or revert the v11.8.3 commit in GitHub Desktop and push the revert to `main`.
+
+# Marveltonez Website v11.8.2 — Industry Mobile Conference Refinement
+
+Focused mobile-first refinement of the permanent `/industry/` page:
+
+- restores a compact mobile header with the Marveltonez logo and an accessible hamburger menu closed by default;
+- keeps the desktop Industry navigation unchanged;
+- reduces mobile hero height while preserving Professional Information, For Music Professionals and the approved Austria–UK wording;
+- consolidates the Mike Blake and Mike Shannon profiles into one compact grouped mobile panel while preserving the desktop two-card layout;
+- reduces mobile card padding, gaps, heading scale and button bulk;
+- shortens the selected-songs button visually on mobile to **Hear the Featured Demos** while preserving its full accessible name and destination;
+- substantially compresses Back to Top and the mobile footer without removing legal or consent controls;
+- preserves all analytics action names, privacy, consent, catalogue, song, artwork, audio, merchandise and Cloudflare behaviour.
+
+Changed files: `industry/index.html`, `industry.css`, `README.md`, `CHANGELOG.md`; new file: `industry.js`.
+
+Rollback: discard the v11.8.2 changes before committing, or revert the v11.8.2 commit in GitHub Desktop and push the revert to `main`.
+
+# Marveltonez Website v11.8.1 — Industry Heading Refinement
+
+- Changed the large visible Industry-page heading from **Industry** to **For Music Professionals**.
+- Preserved the **Professional Information** eyebrow, Industry navigation label, `/industry/` URL, metadata, styling, analytics, privacy, consent, catalogue and all other website behaviour.
+
+Rollback: discard the v11.8.1 changes before committing, or revert the v11.8.1 commit in GitHub Desktop and push the revert to `main`.
+
+# Marveltonez Website v11.8 — Industry and Conference Readiness Foundation
+
+Professional-readiness refinement based on the current production repository:
+
+- establishes Marveltonez consistently as the Austria–UK songwriting partnership of Mike Blake and Mike Shannon;
+- identifies Mike Blake as based in Austria and Mike Shannon as based in the United Kingdom;
+- renames the public nine-song collection to **Unreleased Featured Demos** while preserving its URL, song order, artworks, audio, lyrics, profiles and enquiries;
+- applies the approved featured-demos introductory sentence;
+- adds a permanent, responsive `/industry/` page for conference delegates, publishers, artist managers, recording artists, producers, A&R contacts, music supervisors and collaborators;
+- links the Industry page from the homepage Our Story section and the concise catalogue-page navigation;
+- routes Industry visitors to the existing featured demos, catalogue-access email request and professional contact mechanisms;
+- adds privacy-conscious aggregate actions: `homepage-industry`, `navigation-industry`, `industry-featured-demos`, `industry-catalogue-access` and `industry-contact`;
+- updates the privacy notice only to clarify the Austria–UK operating position and the new descriptive Industry-page action routes;
+- preserves consent, optional-media blocking, accessibility, song-player behaviour, play/replay analytics, merchandise, Cloudflare Pages Functions, D1 schema and R2 audio delivery.
+
+New files: `industry/index.html` and `industry.css`.
+
+Rollback: discard v11.8 changes before committing, or revert the v11.8 commit in GitHub Desktop and push the revert to `main`.
 
 # Marveltonez Website v11.6 — Song Card Artwork Viewer
 

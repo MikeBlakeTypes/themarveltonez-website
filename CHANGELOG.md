@@ -1,3 +1,19 @@
+## v11.8.5 — Hub Main Synchronisation and Destination Correction — 6 August 2026
+
+- Reconciled the latest production `main` repository with the complete approved v11.8.4 Hub.
+- Preserved the current production Industry page at `/industry/` and the current Unreleased Featured Demos page at `/unreleased.html`.
+- Corrected `hub-featured` to redirect to `/industry/`.
+- Confirmed `hub-hear-the-songs` redirects to `/unreleased.html`.
+- Reconciled every current production analytics route with all ten existing Hub routes, without duplicates.
+- Preserved the approved Hub design, responsive layout, card sizes, wording, imagery, accessibility, privacy and consent behaviour.
+- Performed no deployment, GitHub push, pull request or merge to `main`.
+
+Added files from the Hub branch: `hub/index.html`, `hub/hub.css`, `HUB-CONTENT-GUIDE.md`, `assets/images/marveltonez-logo-production-master.svg`, and `assets/images/hub/`.
+
+Reconciled files: `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.5 commit to restore the preceding feature-branch state. The reconciliation intentionally brings the feature branch onto the current production baseline.
+
 ## v11.8.4 — Hub Mobile Card Height Refinement — 6 August 2026
 
 - Reduced the Featured mobile card height by approximately 6%.
@@ -107,6 +123,47 @@ Changed files:
 - modified: `CHANGELOG.md`
 
 Rollback: revert the v11.7 commit in GitHub Desktop. This removes all new Hub files and Hub-specific analytics routes and restores the exact previous v11.6 state.
+
+## v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup — 5 August 2026
+
+- Updated the Industry stylesheet cache reference from `/industry.css?v=11.8.2` to `/industry.css?v=11.8.3`.
+- Removed committed and packaged macOS metadata files, including `.DS_Store`, AppleDouble `._*` files and `__MACOSX`.
+- Added a root `.gitignore` rule to prevent future macOS metadata commits.
+- Preserved all v11.8.3 styling, content, analytics, privacy, consent, catalogue and unrelated website behaviour.
+
+## v11.8.3 — Industry Final Mobile Typography and Alignment Refinement — 5 August 2026
+
+- Reduced the mobile `For Music Professionals` heading by approximately 25% while preserving the desktop heading.
+- Removed the forced mobile line break before Mike Shannon so `Mike Shannon · United Kingdom` can remain on one line where space permits and wrap naturally when required.
+- Vertically and horizontally centred the labels in the three mobile Industry action buttons while preserving their touch height, wording, destinations, accessible labels and analytics routes.
+- Preserved all v11.8.2 mobile conference refinements, desktop presentation, privacy, consent, catalogue and unrelated website behaviour.
+
+## v11.8.2 — Industry Mobile Conference Refinement — 5 August 2026
+
+- Replaced the permanently expanded narrow-screen Industry navigation with a compact accessible hamburger menu closed by default.
+- Reduced the Industry hero’s mobile padding, heading scale, paragraph spacing and location spacing.
+- Consolidated the two writer cards into one grouped mobile panel while preserving the approved desktop two-card presentation.
+- Reduced mobile professional-card padding, gaps, heading scale and button bulk.
+- Added the mobile-visible selected-songs label `Hear the Featured Demos` while retaining the full accessible label and unchanged analytics route.
+- Compressed the mobile Back to Top and footer while retaining the logo, writer identification, copyright, Privacy & Datenschutz and Cookie Preferences.
+- Preserved desktop presentation, analytics action names, privacy, consent, catalogue, songs, artworks, audio, merchandise and Cloudflare configuration.
+
+## v11.8.1 — Industry Heading Refinement — 5 August 2026
+
+- Changed the large visible Industry-page heading from `Industry` to `For Music Professionals`.
+- Preserved the `Professional Information` eyebrow, Industry navigation label, `/industry/` URL, metadata, styling, analytics, privacy, consent, catalogue and all other website behaviour.
+
+## v11.8 — Industry and Conference Readiness Foundation — 5 August 2026
+
+- Added a permanent, responsive Industry page at `/industry/`.
+- Added concise Austria–UK positioning and identified Mike Blake as based in Austria and Mike Shannon as based in the United Kingdom.
+- Renamed the public nine-song collection from Unreleased Demos to Unreleased Featured Demos without changing its URL or catalogue implementation.
+- Added the approved featured-demos introductory sentence.
+- Added a restrained Industry call-to-action to the homepage Our Story section and an Industry navigation link to the featured-demos and publisher-access pages.
+- Reused the existing nine-song catalogue, publisher-access email workflow and general professional contact email workflow.
+- Added privacy-conscious aggregate action names: `homepage-industry`, `navigation-industry`, `industry-featured-demos`, `industry-catalogue-access` and `industry-contact`.
+- Updated the privacy notice with a factual Austria–UK clarification and a reference to Industry-page aggregate action routes.
+- Preserved song cards, artworks, song order, audio, lyrics, profiles, enquiries, consent, privacy architecture, play/replay analytics, merchandise, Cloudflare D1 schema and R2 delivery.
 
 ## v11.6 — Song Card Artwork Viewer — 3 August 2026
 

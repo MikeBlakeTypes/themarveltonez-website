@@ -1,6 +1,6 @@
 # Marveltonez Hub Content Guide
 
-This guide covers the static Hub introduced in **Marveltonez Website v11.7** and refined through **v11.7.2**.
+This guide covers the static Hub introduced in **Marveltonez Website v11.7** and refined through **v11.8.5**.
 
 The Hub lives at:
 
@@ -28,12 +28,12 @@ The Featured card immediately below that comment contains:
 The Featured destination is configured in `functions/track/[[path]].js`:
 
 ```js
-"hub-featured": "/unreleased.html"
+"hub-featured": "/industry/"
 ```
 
 Change the destination there rather than placing the final external URL directly in the card. This preserves the privacy-conscious aggregate click count.
 
-**Featured rotation is not implemented in v11.7.** The card remains static until its label, title, copy, image or destination is changed manually.
+**Featured rotation remains unimplemented in v11.8.5.** The card remains static until its label, title, copy, image or destination is changed manually.
 
 ## Permanent card destinations
 
@@ -41,7 +41,7 @@ The five Hub card routes are configured in `functions/track/[[path]].js`:
 
 | Hub card | Analytics route | Current destination |
 |---|---|---|
-| Featured | `hub-featured` | `/unreleased.html` |
+| Featured | `hub-featured` | `/industry/` |
 | Hear the Songs | `hub-hear-the-songs` | `/unreleased.html` |
 | Songs We’ve Written | `hub-songs-weve-written` | `/#selected-releases` |
 | Discover Marveltonez | `hub-discover` | `/#story` |

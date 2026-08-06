@@ -9,7 +9,7 @@ const FIXED_DESTINATIONS = {
   "footer-email": "mailto:mikeblake@themarveltonez.com",
   "navigation-contact": "mailto:mikeblake@themarveltonez.com",
   "general-contact": "mailto:mikeblake@themarveltonez.com",
-  "hub-featured": "/unreleased.html",
+  "hub-featured": "/industry/",
   "hub-hear-the-songs": "/unreleased.html",
   "hub-songs-weve-written": "/#selected-releases",
   "hub-discover": "/#story",
@@ -18,7 +18,12 @@ const FIXED_DESTINATIONS = {
   "hub-instagram": "https://www.instagram.com/themarveltonez/",
   "hub-youtube": "https://www.youtube.com/@marveltonez",
   "hub-shop": "https://www.etsy.com/shop/TheMarveltonez",
-  "hub-main-website": "/"
+  "hub-main-website": "/",
+  "homepage-industry": "/industry/",
+  "navigation-industry": "/industry/",
+  "industry-featured-demos": "/unreleased.html#featured-demos",
+  "industry-catalogue-access": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20discuss%20access%20to%20the%20broader%20Marveltonez%20catalogue%20and%20additional%20song%20information.%0A%0AName%3A%0ACompany%20/%20organisation%3A%0ARole%3A%0AWebsite%20or%20professional%20profile%3A%0A%0AI%20am%20looking%20for%3A%0A%0ABest%20regards%2C",
+  "industry-contact": "mailto:mikeblake@themarveltonez.com?subject=Industry%20enquiry%20for%20Marveltonez&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20start%20a%20conversation%20with%20Marveltonez.%0A%0AName%3A%0ACompany%20/%20organisation%3A%0ARole%3A%0A%0AI%20am%20looking%20for%3A%0A%0ABest%20regards%2C"
 };
 
 const SONG_TITLES = {
