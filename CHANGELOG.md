@@ -1,3 +1,14 @@
+## v11.9 — Search Identity and Legacy Contact Resolution — 6 August 2026
+
+- Updated the homepage HTML, Open Graph and Twitter titles to `The Marveltonez | Austria–UK Songwriting Partnership`.
+- Preserved the approved Austria–UK homepage description and visible positioning.
+- Added factual Organisation-member JSON-LD for Mike Blake in Austria and Mike Shannon in the United Kingdom.
+- Added the stable Industry contact anchor `professional-contact` and a sticky-header-safe scroll offset.
+- Added permanent redirects from `/contact` and `/contact/` to `/industry/#professional-contact`.
+- Added a canonical non-`www` XML sitemap and a `robots.txt` sitemap declaration.
+- Restored root `.gitignore` protection against `.DS_Store`, AppleDouble and `__MACOSX` debris.
+- Preserved v11.8.5 Hub synchronisation, analytics, privacy, consent, catalogue, songs, audio, merchandise and unrelated website behaviour.
+
 ## v11.8.5 — Hub Main Synchronisation and Destination Correction — 6 August 2026
 
 - Reconciled the latest production `main` repository with the complete approved v11.8.4 Hub.

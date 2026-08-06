@@ -97,6 +97,11 @@
   border-color: var(--red);
 }
 
+
+.industry-contact-block {
+  scroll-margin-top: 110px;
+}
+
 .industry-page .btn:focus-visible,
 .industry-page .nav-links a:focus-visible,
 .industry-page .back-to-top:focus-visible,

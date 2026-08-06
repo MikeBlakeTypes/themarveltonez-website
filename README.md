@@ -1,3 +1,22 @@
+# Marveltonez Website v11.9 — Search Identity and Legacy Contact Resolution
+
+Search identity and indexing-discovery refinement:
+
+- changes the homepage title, Open Graph title and Twitter title to **The Marveltonez | Austria–UK Songwriting Partnership**;
+- preserves the approved homepage Austria–UK description and visible positioning;
+- adds factual Organisation-member structured data for Mike Blake in Austria and Mike Shannon in the United Kingdom;
+- adds `id="professional-contact"` to the existing Industry contact section with a safe sticky-header scroll offset;
+- adds permanent `/contact` and `/contact/` redirects to `/industry/#professional-contact`;
+- adds a canonical non-`www` `sitemap.xml`;
+- adds `robots.txt` with the canonical sitemap location;
+- restores root `.gitignore` protection against macOS metadata;
+- preserves Hub synchronisation through v11.8.5, analytics, privacy, consent, catalogue, songs, audio, merchandise and all unrelated behaviour.
+
+Changed files: `index.html`, `industry/index.html`, `industry.css`, `README.md`, `CHANGELOG.md`.
+Added files: `_redirects`, `sitemap.xml`, `robots.txt`, `.gitignore`.
+
+Rollback: discard the v11.9 changes before committing, or revert the v11.9 commit in GitHub Desktop and push the revert to `main`. Reverting also removes the sitemap, robots file and legacy contact redirects unless reapplied separately.
+
 # Marveltonez Website v11.8.5 — Hub Main Synchronisation and Destination Correction
 
 Controlled reconciliation using the current production `main` repository as the website foundation and the approved v11.8.4 Hub branch as the Hub source.
