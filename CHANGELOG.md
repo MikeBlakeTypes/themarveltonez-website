@@ -1,3 +1,21 @@
+## v11.8.4 — Hub Mobile Card Height Refinement — 6 August 2026
+
+- Reduced the Featured mobile card height by approximately 6%.
+- Reduced the Discover Marveltonez and Industry & Contact mobile card heights by approximately 9%.
+- Preserved equal compact-card heights, practical full-card tap targets, current imagery, crops, titles, supporting copy and arrows.
+- Improved compact-card visibility above the iPhone Safari toolbar without changing the approved logo, header, Hear the Songs card or Songs We’ve Written card.
+- Changed no wording, destinations, analytics, privacy, consent or accessibility behaviour.
+- Made no desktop redesign; Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.8.4 commit in GitHub Desktop to restore the previous Hub card heights exactly.
+
 ## v11.7.3 — Hub Final Mobile Fold Refinement — 4 August 2026
 
 - Reduced the rendered mobile logo by approximately 6% without modifying the Production Master SVG.

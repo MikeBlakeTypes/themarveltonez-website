@@ -653,7 +653,7 @@ body.consent-open {
   }
 
   .hub-card-featured {
-    aspect-ratio: 2.63 / 1;
+    aspect-ratio: 2.80 / 1;
   }
 
   .hub-card-large {
@@ -665,7 +665,7 @@ body.consent-open {
   }
 
   .hub-card-compact {
-    aspect-ratio: 1 / 1.005;
+    aspect-ratio: 1.093 / 1;
   }
 
   .consent-banner {
@@ -714,7 +714,7 @@ body.consent-open {
   }
 
   .hub-card-compact {
-    aspect-ratio: 2.25 / 1;
+    aspect-ratio: 2.47 / 1;
   }
 
   .hub-card-compact .hub-card-copy {

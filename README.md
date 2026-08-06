@@ -1,3 +1,16 @@
+# Marveltonez Website v11.8.4 — Hub Mobile Card Height Refinement
+
+Final mobile-only card-height refinement of the approved Editorial B Hub.
+
+- makes the Featured card approximately 6% shallower at mobile breakpoints;
+- makes Discover Marveltonez and Industry & Contact approximately 9% shallower while preserving equal heights and practical full-card tap targets;
+- freezes the approved logo, header, Hear the Songs card, Songs We’ve Written card, image crops, wording, destinations, analytics, privacy and consent behaviour;
+- updates the Hub stylesheet cache version to v11.8.4 so Safari and Cloudflare request the refined CSS.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.4 commit in GitHub Desktop to restore the previous Hub card heights exactly.
+
 # Marveltonez Website v11.7.3 — Hub Final Mobile Fold Refinement
 
 Targeted final-fold refinement of the approved Editorial B Hub.
