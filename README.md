@@ -1,3 +1,100 @@
+# Marveltonez Website v11.8.5 — Hub Main Synchronisation and Destination Correction
+
+Controlled reconciliation using the current production `main` repository as the website foundation and the approved v11.8.4 Hub branch as the Hub source.
+
+- preserves the current production homepage, Industry page, Unreleased Featured Demos page, Publisher page, privacy and consent system, merchandise pages, navigation, analytics and all v11.8.3a production refinements;
+- carries across the complete approved `/hub/` implementation, Hub assets, Production Master logo and Hub content guide;
+- reconciles production and Hub analytics routes without removing or duplicating existing routes;
+- changes `hub-featured` to the current Industry page at `/industry/`;
+- confirms `hub-hear-the-songs` points to the current Unreleased Featured Demos page at `/unreleased.html`;
+- preserves the approved Hub design, card dimensions, imagery, wording, responsive behaviour, privacy and consent behaviour.
+
+Changed or added files: `hub/index.html`, `hub/hub.css`, `HUB-CONTENT-GUIDE.md`, `assets/images/marveltonez-logo-production-master.svg`, `assets/images/hub/`, `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.5 commit to restore the preceding feature-branch state. This package intentionally updates the branch to the current production `main` baseline while retaining the approved Hub.
+
+# Marveltonez Website v11.8.4 — Hub Mobile Card Height Refinement
+
+Final mobile-only card-height refinement of the approved Editorial B Hub.
+
+- makes the Featured card approximately 6% shallower at mobile breakpoints;
+- makes Discover Marveltonez and Industry & Contact approximately 9% shallower while preserving equal heights and practical full-card tap targets;
+- freezes the approved logo, header, Hear the Songs card, Songs We’ve Written card, image crops, wording, destinations, analytics, privacy and consent behaviour;
+- updates the Hub stylesheet cache version to v11.8.4 so Safari and Cloudflare request the refined CSS.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.4 commit in GitHub Desktop to restore the previous Hub card heights exactly.
+
+# Marveltonez Website v11.7.3 — Hub Final Mobile Fold Refinement
+
+Targeted final-fold refinement of the approved Editorial B Hub.
+
+- reduces the rendered mobile logo by approximately 6% while preserving the Production Master SVG and optical alignment;
+- makes the Discover Marveltonez and Industry & Contact cards approximately 7% shallower on mobile;
+- repositions and slightly scales down the Songs We’ve Written image so both eyes are visible and the arrow remains clear of the eye area;
+- preserves all wording, destinations, analytics, privacy, consent, accessibility, photography and Featured-card behaviour.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.3 commit in GitHub Desktop to restore the exact v11.7.2 Hub layout.
+
+# Marveltonez Website v11.7.2 — Hub Mobile Header and Second-Screen Refinement
+
+Targeted editorial-card and utility-row refinement of the approved v11.7.1 Hub.
+
+- applies the approved optical logo alignment at desktop and tablet breakpoints without modifying the Production Master SVG;
+- moves photography in the three landscape cards to the right-hand 72% with a smooth CSS fade into a stable black text field;
+- replaces the Featured artwork with responsive derivatives from the approved *I Didn’t Mean to Turn Out Bad* reverse master;
+- replaces the Hear the Songs artwork with responsive derivatives from the approved *Just Sayin’* reverse master;
+- makes Featured approximately 14% shallower and both large music cards approximately 12% shallower on mobile;
+- adds the authoritative Marveltonez Facebook link and aggregate `hub-facebook` route;
+- renames the visible Shop utility label to Merch while preserving the existing Etsy destination and `hub-shop` counter;
+- preserves all existing card wording, destinations, privacy, consent, accessibility and static Featured behaviour.
+
+New files: `assets/images/hub/hub-featured-idmtob-480.webp`, `assets/images/hub/hub-featured-idmtob-960.webp`, `assets/images/hub/hub-hear-songs-just-sayin-480.webp`, and `assets/images/hub/hub-hear-songs-just-sayin-960.webp`.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `functions/track/[[path]].js`, `HUB-CONTENT-GUIDE.md`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.2 commit in GitHub Desktop to restore the exact v11.7.1 Hub artwork, card proportions, utility row and analytics routes.
+
+# Marveltonez Website v11.7.1 — Hub Mobile Header and First-Screen Refinement
+
+Targeted mobile refinement of the approved v11.7 Editorial B Hub.
+
+- reduces the rendered mobile logo width while preserving the unchanged Production Master SVG;
+- aligns the visible logo, positioning copy and card column on one coherent left axis;
+- tightens mobile header spacing without reducing card-title sizes or tap targets;
+- makes the Featured card approximately 6% shallower on mobile;
+- reduces mobile card gaps slightly to reveal more of the compact lower cards;
+- preserves all wording, destinations, analytics, privacy, consent, accessibility and photography;
+- leaves Featured-card rotation deliberately unimplemented.
+
+Modified files: `hub/index.html`, `hub/hub.css`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.7.1 commit in GitHub Desktop to restore the original v11.7 Hub spacing exactly.
+
+# Marveltonez Website v11.7 — Marveltonez Hub Initial Static Release
+
+Adds a new isolated `/hub/` social-media entrance using the approved Editorial B composition and official Marveltonez Production Master SVG.
+
+- introduces one static, manually editable Featured card;
+- adds two large music routes: Hear the Songs and Songs We’ve Written;
+- adds two compact editorial routes: Discover Marveltonez and Industry & Contact;
+- adds restrained Instagram, YouTube, Shop and Main Website utility links;
+- uses local, provisional responsive photography derived from existing repository assets;
+- extends the existing first-party Cloudflare D1 click analytics with nine fixed `hub-*` routes;
+- retains the existing consent interface, privacy principles, keyboard access, visible focus, reduced-motion support and mobile-first responsive behaviour;
+- keeps the implementation isolated from the homepage, catalogue, song-card artwork viewer, merchandise pages and existing navigation.
+
+New files: `hub/index.html`, `hub/hub.css`, `assets/images/marveltonez-logo-production-master.svg`, `assets/images/hub/`, and `HUB-CONTENT-GUIDE.md`.
+
+Modified files: `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Featured-card rotation is deliberately not included in this initial static release.
+
+Rollback: discard the v11.7 changes before committing, or revert the v11.7 commit in GitHub Desktop. Reverting removes the Hub files and Hub analytics routes and restores the exact previous v11.6 state.
+
 # Marveltonez Website v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup
 
 Small deployment hotfix:

@@ -1,3 +1,129 @@
+## v11.8.5 — Hub Main Synchronisation and Destination Correction — 6 August 2026
+
+- Reconciled the latest production `main` repository with the complete approved v11.8.4 Hub.
+- Preserved the current production Industry page at `/industry/` and the current Unreleased Featured Demos page at `/unreleased.html`.
+- Corrected `hub-featured` to redirect to `/industry/`.
+- Confirmed `hub-hear-the-songs` redirects to `/unreleased.html`.
+- Reconciled every current production analytics route with all ten existing Hub routes, without duplicates.
+- Preserved the approved Hub design, responsive layout, card sizes, wording, imagery, accessibility, privacy and consent behaviour.
+- Performed no deployment, GitHub push, pull request or merge to `main`.
+
+Added files from the Hub branch: `hub/index.html`, `hub/hub.css`, `HUB-CONTENT-GUIDE.md`, `assets/images/marveltonez-logo-production-master.svg`, and `assets/images/hub/`.
+
+Reconciled files: `functions/track/[[path]].js`, `README.md`, and `CHANGELOG.md`.
+
+Rollback: revert the v11.8.5 commit to restore the preceding feature-branch state. The reconciliation intentionally brings the feature branch onto the current production baseline.
+
+## v11.8.4 — Hub Mobile Card Height Refinement — 6 August 2026
+
+- Reduced the Featured mobile card height by approximately 6%.
+- Reduced the Discover Marveltonez and Industry & Contact mobile card heights by approximately 9%.
+- Preserved equal compact-card heights, practical full-card tap targets, current imagery, crops, titles, supporting copy and arrows.
+- Improved compact-card visibility above the iPhone Safari toolbar without changing the approved logo, header, Hear the Songs card or Songs We’ve Written card.
+- Changed no wording, destinations, analytics, privacy, consent or accessibility behaviour.
+- Made no desktop redesign; Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.8.4 commit in GitHub Desktop to restore the previous Hub card heights exactly.
+
+## v11.7.3 — Hub Final Mobile Fold Refinement — 4 August 2026
+
+- Reduced the rendered mobile logo by approximately 6% without modifying the Production Master SVG.
+- Reduced the mobile height of the Discover Marveltonez and Industry & Contact cards by approximately 7%.
+- Shifted the Songs We’ve Written image composition to the right and reduced its scale slightly.
+- Kept both eyes visible and preserved clear space between the face and the red arrow control.
+- Preserved the left-side black fade, live HTML copy and the approved landscape-card architecture.
+- Changed no wording, destinations, analytics, privacy, consent, accessibility or Featured-card behaviour.
+- Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.3 commit in GitHub Desktop to restore the exact v11.7.2 Hub layout.
+
+## v11.7.2 — Hub Mobile Header and Second-Screen Refinement — 4 August 2026
+
+- Applied the approved optical logo alignment at desktop and tablet breakpoints without modifying the Production Master SVG.
+- Refactored the three landscape cards so their photography occupies the right-hand 72% and fades smoothly into a stable black text field through CSS.
+- Added responsive WebP derivatives from the approved *I Didn’t Mean to Turn Out Bad* reverse master for the Featured card.
+- Added responsive WebP derivatives from the approved *Just Sayin’* reverse master for Hear the Songs.
+- Retained the current Songs We’ve Written source image while applying the same right-justified fade treatment.
+- Made Featured approximately 14% shallower and both large music cards approximately 12% shallower on mobile, preserving title sizes, arrows and practical tap targets.
+- Added Facebook before Instagram using the authoritative repository URL `https://www.facebook.com/themarveltonez` and the new aggregate `hub-facebook` route.
+- Renamed the visible Shop utility label and accessible name to Merch while preserving the Etsy destination and existing `hub-shop` route.
+- Preserved card wording, existing destinations, privacy, consent, accessibility and static Featured behaviour.
+
+Changed files:
+
+- new: `assets/images/hub/hub-featured-idmtob-480.webp`
+- new: `assets/images/hub/hub-featured-idmtob-960.webp`
+- new: `assets/images/hub/hub-hear-songs-just-sayin-480.webp`
+- new: `assets/images/hub/hub-hear-songs-just-sayin-960.webp`
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `functions/track/[[path]].js`
+- modified: `HUB-CONTENT-GUIDE.md`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.2 commit in GitHub Desktop to restore the exact v11.7.1 Hub design, temporary artwork, four-item utility row and analytics routes.
+
+## v11.7.1 — Hub Mobile Header and First-Screen Refinement — 4 August 2026
+
+- Reduced the rendered mobile logo width by approximately 14% without modifying the Production Master SVG.
+- Aligned the visible logo, positioning copy and card column on one coherent left axis.
+- Tightened mobile top padding and header spacing while retaining premium breathing room.
+- Made the Featured card approximately 6% shallower on mobile.
+- Reduced mobile gaps between the large cards and compact-card pair from 9px to 6px.
+- Improved first-screen visibility of Discover Marveltonez and Industry & Contact.
+- Preserved card-title sizes, body-copy readability, arrow controls and practical tap targets.
+- Changed no wording, destinations, photography, analytics, privacy, consent or accessibility behaviour.
+- Featured-card rotation remains unimplemented.
+
+Changed files:
+
+- modified: `hub/index.html`
+- modified: `hub/hub.css`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7.1 commit in GitHub Desktop to restore the original v11.7 Hub spacing exactly.
+
+## v11.7 — Marveltonez Hub Initial Static Release — 4 August 2026
+
+- Added the new mobile-first `/hub/` social entrance using the approved Editorial B layout.
+- Used the unchanged official Production Master SVG, official Marveltonez colours and existing local Barlow Condensed and Inter font files.
+- Added one static manual Featured card, two large music cards, two compact editorial cards and four secondary utility links.
+- Added optimised provisional WebP photography derived only from existing repository images; all original source images remain unchanged.
+- Added nine fixed `hub-*` aggregate outbound-click routes to the existing Cloudflare Pages Function without changing its D1 schema, privacy behaviour, error handling or existing routes.
+- Reused the existing consent system, added no embedded media, third-party trackers, new cookies, persistent visitor identifiers or autoplay.
+- Added keyboard focus, screen-reader names, responsive card behaviour, safe-area support and reduced-motion handling.
+- Added `HUB-CONTENT-GUIDE.md` explaining manual Featured edits, image replacement and route configuration.
+- Did not add the Hub to the existing main navigation and did not change the homepage, catalogue, song artwork viewer, metadata, audio, merchandise, privacy page or Cloudflare configuration.
+
+Changed files:
+
+- new: `hub/index.html`
+- new: `hub/hub.css`
+- new: `assets/images/marveltonez-logo-production-master.svg`
+- new: `assets/images/hub/*`
+- new: `HUB-CONTENT-GUIDE.md`
+- modified: `functions/track/[[path]].js`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
+Rollback: revert the v11.7 commit in GitHub Desktop. This removes all new Hub files and Hub-specific analytics routes and restores the exact previous v11.6 state.
+
 ## v11.8.3a — Industry CSS Cache Refresh and macOS Debris Cleanup — 5 August 2026
 
 - Updated the Industry stylesheet cache reference from `/industry.css?v=11.8.2` to `/industry.css?v=11.8.3`.
