@@ -968,3 +968,10 @@ body.consent-open{overflow:hidden}
     width: min(82vw, 290px);
   }
 }
+
+
+/* Website v12.0 — top-to-bottom refinement */
+.video-fullscreen-hint{font-size:15px}
+.back-to-top{padding:0;border:0;background:transparent;cursor:pointer}
+.industry-brand-line{margin:16px 0 0;color:#f0f0f0;font-family:var(--font-head);font-size:21px;font-weight:700;letter-spacing:.045em;text-transform:uppercase}
+@media(max-width:720px){.video-fullscreen-hint{font-size:14px;line-height:1.5}}

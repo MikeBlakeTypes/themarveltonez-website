@@ -1,7 +1,7 @@
 {
-  "catalogueVersion": "2.10.0",
-  "updated": "2026-08-03",
-  "audioBaseUrl": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/",
+  "catalogueVersion": "12.0",
+  "updated": "2026-08-08",
+  "audioBaseUrl": "https://audio.themarveltonez.com/audio/",
   "songs": [
     {
       "id": "put-your-shirt-back-on",
@@ -11,7 +11,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/put-your-shirt-back-on.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/put-your-shirt-back-on.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -147,7 +147,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/so-youre-dating-my-ex.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/so-youre-dating-my-ex.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -277,7 +277,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/just-sayin.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/just-sayin.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -412,7 +412,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/i-didn%27t-mean-to-turn-out-bad.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/i-didn%27t-mean-to-turn-out-bad.mp3",
       "lyrics": {
         "paragraphs": [
           "INTRO",
@@ -534,7 +534,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/blocked-and-deleted.mp3?v=20260715",
+      "audio": "https://audio.themarveltonez.com/audio/blocked-and-deleted.mp3?v=20260715",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -660,7 +660,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/happy-breakup.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/happy-breakup.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -801,7 +801,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/doorstep.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/doorstep.mp3",
       "lyrics": {
         "paragraphs": [
           "VERSE",
@@ -941,7 +941,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/a-girl-like-me.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/a-girl-like-me.mp3",
       "lyrics": {
         "paragraphs": [
           "INTRO",
@@ -1091,7 +1091,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://pub-e1b8c12f934c46b8946890b4523c1bf9.r2.dev/audio/youre-my-boy.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/youre-my-boy.mp3",
       "lyrics": {
         "paragraphs": [
           "INTRO",

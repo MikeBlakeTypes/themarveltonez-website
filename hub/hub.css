@@ -764,3 +764,8 @@ body.consent-open {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* v12.0 — master slogan with supporting line */
+.hub-positioning-primary{color:#f1f1f1;font-weight:600}
+.hub-positioning-secondary{color:#bdbdbd}

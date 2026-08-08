@@ -1,3 +1,16 @@
+## v12.0 — Top-to-Bottom Improvements — 8 August 2026
+
+- Standardised the principal brand line while retaining the approved Our Story and Writer’s Collection copy.
+- Corrected the Marveltonez name timeline to 2012 and refined agreed homepage, writer, Industry and merchandise wording.
+- Added friendly general-contact email greetings without changing the privacy-conscious first-party click counters.
+- Replaced hash-based Back to Top links with history-neutral scrolling controls across the site.
+- Refined Featured Song transport controls, suppressed playback-rate controls where supported, added Share Song Link copy-to-clipboard controls and matched the approved flipped Hub artwork orientation for Just Sayin’ and I Didn’t Mean to Turn Out Bad.
+- Added nine stable public `/song/<slug>/` routes with canonical/Open Graph metadata and source-preserving dynamic song cards.
+- Migrated public Featured Song audio references from the R2 development hostname to `audio.themarveltonez.com`.
+- Added the properly styled `/catalogue/` empty-state page intended to sit behind the already-configured Cloudflare Access gate.
+- Added targeted SEO, accessibility, menu, reduced-motion and performance refinements while preserving consent, analytics, D1 and existing deployment architecture.
+- Deliberately left lyric wording unchanged and deferred professional catalogue search/filtering.
+
 ## v11.9 — Search Identity and Legacy Contact Resolution — 6 August 2026
 
 - Updated the homepage HTML, Open Graph and Twitter titles to `The Marveltonez | Austria–UK Songwriting Partnership`.

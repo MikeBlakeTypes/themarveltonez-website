@@ -17,24 +17,43 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  const setMenu = (open) => {
+    navLinks.classList.toggle('active', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuToggle.textContent = open ? '×' : '☰';
+  };
+
+  menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('active'));
+    link.addEventListener('click', () => setMenu(false));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) setMenu(false);
   });
 }
 
 // Version 9 premium: subtle section reveal as the page scrolls.
 const revealTargets = document.querySelectorAll('.section, .contact-cta, .site-footer');
-revealTargets.forEach(el => el.classList.add('reveal'));
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-revealTargets.forEach(el => observer.observe(el));
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  revealTargets.forEach(el => el.classList.add('reveal'));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach(el => observer.observe(el));
+}
 
 // Version 9.2: cinematic video viewer for Selected Works.
 const lightbox = document.getElementById('videoLightbox');

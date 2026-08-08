@@ -404,3 +404,7 @@
     font-size: 14px;
   }
 }
+
+
+/* v12.0 — master brand-line placement */
+.industry-page .industry-brand-line{max-width:760px}

@@ -1,12 +1,12 @@
 /**
- * Marveltonez Catalogue Module v1.8
+ * Marveltonez Catalogue Module v2.0 — Website v12.0
  * Reads metadata/songs.json and creates reusable, expandable song cards.
  */
 (() => {
   "use strict";
 
   const DEFAULT_JSON_SOURCES = [
-    "metadata/songs.json"
+    "/metadata/songs.json"
   ];
 
 
@@ -202,6 +202,7 @@
     const thumbnail = song.artworkThumbnail || song.artwork;
     const thumbnailLarge = song.artworkThumbnailLarge || song.artwork;
     const title = String(song.title || "this song");
+    const flipHorizontal = ["just-sayin", "i-didnt-mean-to-turn-out-bad"].includes(song.id);
 
     return `
       <button
@@ -213,9 +214,10 @@
         aria-expanded="false"
         data-artwork-full="${escapeHTML(song.artwork)}"
         data-song-title="${escapeHTML(title)}"
+        data-artwork-flip="${flipHorizontal ? "horizontal" : "none"}"
       >
         <img
-          class="catalogue-song-artwork-image"
+          class="catalogue-song-artwork-image${flipHorizontal ? " catalogue-song-artwork-image--flipped" : ""}"
           src="${escapeHTML(thumbnail)}"
           srcset="${escapeHTML(thumbnail)} 400w, ${escapeHTML(thumbnailLarge)} 800w"
           sizes="(max-width: 700px) 42vw, (max-width: 1080px) 30vw, 18vw"
@@ -243,10 +245,11 @@
       <div class="catalogue-song-actions">
         ${lyricsAction}
         <a class="catalogue-action catalogue-action-enquire" href="/track/song-enquiry/${encodeURIComponent(song.id)}">Enquire about this song</a>
+        <button class="catalogue-action catalogue-action-share" type="button" data-share-song="${escapeHTML(song.id)}" data-share-title="${escapeHTML(song.title)}">Share song link</button>
       </div>`;
   }
 
-  function renderSongCard(song) {
+  function renderSongCard(song, options = {}) {
     const writers = Array.isArray(song.writers)
       ? song.writers.join(" · ")
       : (song.writers || "");
@@ -263,11 +266,7 @@
           </div>
         </div>
 
-        <h3>${escapeHTML(song.title)}</h3>
-        <p class="catalogue-song-writers">Written by ${escapeHTML(writers)}</p>
-        <p class="catalogue-song-description">${escapeHTML(
-          song.description || "Unreleased Marveltonez demo."
-        )}</p>
+        ${options.singleSong ? "" : `<h3>${escapeHTML(song.title)}</h3><p class="catalogue-song-writers">Written by ${escapeHTML(writers)}</p><p class="catalogue-song-description">${escapeHTML(song.description || "Unreleased Marveltonez demo.")}</p>`}
 
         ${renderMetadata(song)}
 
@@ -278,7 +277,7 @@
               <path class="catalogue-go-start-triangle" d="M18 6.5 9.5 12 18 17.5Z"></path>
             </svg>
           </button>
-          <audio class="catalogue-audio" controls preload="none" data-song-id="${escapeHTML(song.id)}">
+          <audio class="catalogue-audio" controls controlsList="noplaybackrate" preload="none" data-song-id="${escapeHTML(song.id)}">
             <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
@@ -421,6 +420,7 @@
 
     viewer.image.src = fullSource;
     viewer.image.alt = `Artwork for ${songTitle}`;
+    viewer.image.classList.toggle("catalogue-artwork-viewer-image--flipped", button.dataset.artworkFlip === "horizontal");
     viewer.root.setAttribute("aria-label", `Visual listening mode for ${songTitle}`);
 
     artworkViewerBodyStyleState = {
@@ -458,6 +458,7 @@
     artworkViewer.root.hidden = true;
     artworkViewer.image.removeAttribute("src");
     artworkViewer.image.alt = "";
+    artworkViewer.image.classList.remove("catalogue-artwork-viewer-image--flipped");
 
     setBackgroundInert(artworkViewer.root, false);
     document.body.classList.remove("catalogue-artwork-viewer-open");
@@ -501,6 +502,53 @@
 
     event.preventDefault();
     closeArtworkViewer();
+  }
+
+  function showShareConfirmation(message) {
+    let status = document.getElementById("catalogueShareStatus");
+    if (!status) {
+      status = document.createElement("div");
+      status.id = "catalogueShareStatus";
+      status.className = "catalogue-share-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+      status.setAttribute("aria-atomic", "true");
+      document.body.appendChild(status);
+    }
+    status.textContent = message;
+    status.classList.add("is-visible");
+    window.clearTimeout(showShareConfirmation.hideTimer);
+    showShareConfirmation.hideTimer = window.setTimeout(() => status.classList.remove("is-visible"), 1800);
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand("copy");
+    textarea.remove();
+    if (!copied) throw new Error("Copy command was not available");
+  }
+
+  async function shareSongLink(button) {
+    const slug = button.dataset.shareSong;
+    if (!slug) return;
+    const url = `${window.location.origin}/song/${encodeURIComponent(slug)}/`;
+    try {
+      await copyText(url);
+      showShareConfirmation("Song link copied.");
+    } catch (_error) {
+      showShareConfirmation("Copy unavailable — use the page address.");
+    }
   }
 
   async function fetchCatalogue(sources = DEFAULT_JSON_SOURCES) {
@@ -575,15 +623,16 @@
 
       grids.forEach((grid) => {
         const category = grid.dataset.catalogueCategory || "unreleased";
+        const requestedSongId = grid.dataset.songId || "";
         const visibleSongs = catalogue.songs.filter(
-          (song) => song.category === category && song.hidden !== true
+          (song) => song.category === category && song.hidden !== true && (!requestedSongId || song.id === requestedSongId)
         ).sort((firstSong, secondSong) => {
           const firstOrder = Number(firstSong.publicDisplayOrder);
           const secondOrder = Number(secondSong.publicDisplayOrder);
           return firstOrder - secondOrder;
         });
 
-        grid.innerHTML = visibleSongs.map(renderSongCard).join("");
+        grid.innerHTML = visibleSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
 
         grid.querySelectorAll(".catalogue-song-card").forEach((card) => {
           const head = card.querySelector(".catalogue-song-card-head");
@@ -600,6 +649,11 @@
 
         grid.querySelectorAll(".catalogue-audio").forEach((audio) => {
           countedCurrentStarts.set(audio, false);
+          audio.defaultPlaybackRate = 1;
+          audio.playbackRate = 1;
+          audio.addEventListener("ratechange", () => {
+            if (audio.playbackRate !== 1) audio.playbackRate = 1;
+          });
 
           audio.addEventListener("play", () => {
             grid.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {
@@ -629,6 +683,10 @@
               countedCurrentStarts.set(audio, false);
             }
           });
+        });
+
+        grid.querySelectorAll(".catalogue-action-share").forEach((button) => {
+          button.addEventListener("click", () => shareSongLink(button));
         });
 
         grid.querySelectorAll(".catalogue-go-start-button").forEach((button) => {
@@ -733,7 +791,7 @@
 
         countElements.forEach((element) => {
           if ((element.dataset.catalogueCategory || "unreleased") === category) {
-            element.textContent = `${visibleSongs.length} demos`;
+            element.textContent = requestedSongId ? "Featured song" : `${visibleSongs.length} demos`;
           }
         });
       });
