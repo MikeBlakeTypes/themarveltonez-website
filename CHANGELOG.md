@@ -393,3 +393,12 @@ Rollback: revert the v11.7 commit in GitHub Desktop. This removes all new Hub fi
 - Added the closing slogan “Songs with hooks. Built for artists.” to the footer.
 - Added favicon, Apple touch icon, Open Graph/Twitter metadata, canonical homepage URL and basic structured data.
 - Added lazy loading to suitable images, reduced-motion support, focus states and accessibility refinements.
+
+## v12.1 — Studio Hoodie Launch & Product Gallery Repair — 13 Aug 2026
+- Launched the Marveltonez Studio Hoodie — Signature Edition across the Writer’s Collection website presentation.
+- Updated the Writer’s Collection availability copy from three products to four.
+- Changed the Studio Hoodie collection-card call to action from “Coming Soon — Preview Here” to “View & Order”.
+- Converted the Studio Hoodie page from preview state to live product state, removed the pending-sample wording and replaced “Notify Me” with “Shop the Hoodie on Etsy”.
+- Added tracked Studio Hoodie Etsy routing via the shop’s hoodie-filtered view.
+- Repaired the shared Writer’s Collection product gallery so secondary product views display as proportionate thumbnails instead of oversized/zoomed image panels on desktop and mobile.
+- Added v12.1 stylesheet/script cache-busting references on the affected pages.
