@@ -1,3 +1,10 @@
+## v12.3 — Access Email, BTS Asset Naming & Mobile Song-Action Spacing
+
+- Moved the manual-approval note in Professional Catalogue access-request emails below `Best regards,` with a larger signature area.
+- Renamed all Behind the Songs image assets from `behind-*` to `bts-*` and updated their site references.
+- Equalised the four Featured Song action rows on mobile so the five divider lines remain evenly spaced.
+- Updated the Featured Song catalogue stylesheet cache-busting reference to `v12.3`.
+
 ## v12.2 — Player, Access & Content Tidy-Up — 2 September 2026
 
 - Replaced native Featured Song audio controls with a compact accessible Marveltonez transport, removing Safari’s exposed playback-speed menu while preserving play/replay analytics and one-song-at-a-time playback.

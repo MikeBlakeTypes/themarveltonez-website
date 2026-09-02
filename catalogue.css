@@ -500,7 +500,14 @@
   }
 
   .catalogue-song-actions {
-    gap: 12px;
+    gap: 0;
+  }
+
+  .catalogue-action {
+    min-height: 58px;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
   }
 
   .catalogue-lyrics-body h4 {
