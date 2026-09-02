@@ -408,3 +408,8 @@
 
 /* v12.0 — master brand-line placement */
 .industry-page .industry-brand-line{max-width:760px}
+
+/* Website v12.2 — professional profile reference */
+.industry-profile-link{display:inline-block;margin-top:16px;color:#fff;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:2px}
+.industry-profile-link:hover{color:var(--red)}
+.industry-profile-link:focus-visible{outline:2px solid var(--red);outline-offset:4px}

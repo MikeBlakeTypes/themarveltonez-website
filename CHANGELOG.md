@@ -1,3 +1,12 @@
+## v12.2 — Player, Access & Content Tidy-Up — 2 September 2026
+
+- Replaced native Featured Song audio controls with a compact accessible Marveltonez transport, removing Safari’s exposed playback-speed menu while preserving play/replay analytics and one-song-at-a-time playback.
+- Reduced the visible Restart control height to align more closely with the player transport.
+- Added the approved manual-approval/time-zone delay note to Professional Catalogue access-request email templates.
+- Corrected Behind the Songs asset naming: piano/studio filenames now match their actual photographs, and `behind-guitar` is now `behind-facepalm`.
+- Added Mike Shannon’s approved LinkedIn profile to the Industry page.
+- Preserved all Featured Song lyric wording unchanged.
+
 ## v12.0 — Top-to-Bottom Improvements — 8 August 2026
 
 - Standardised the principal brand line while retaining the approved Our Story and Writer’s Collection copy.

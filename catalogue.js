@@ -270,14 +270,26 @@
 
         ${renderMetadata(song)}
 
-        <div class="catalogue-audio-transport">
-          <button class="catalogue-go-start-button" type="button" aria-label="Go to start of ${escapeHTML(song.title)}" title="Go to start">
+        <div class="catalogue-audio-transport" data-custom-audio-player>
+          <button class="catalogue-go-start-button" type="button" aria-label="Restart ${escapeHTML(song.title)}" title="Restart">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path class="catalogue-go-start-line" d="M6 5v14"></path>
               <path class="catalogue-go-start-triangle" d="M18 6.5 9.5 12 18 17.5Z"></path>
             </svg>
           </button>
-          <audio class="catalogue-audio" controls controlsList="noplaybackrate" preload="none" data-song-id="${escapeHTML(song.id)}">
+          <div class="catalogue-custom-player" role="group" aria-label="Audio player for ${escapeHTML(song.title)}">
+            <button class="catalogue-play-toggle" type="button" aria-label="Play ${escapeHTML(song.title)}" title="Play">
+              <svg class="catalogue-player-play-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M8 5.5 18 12 8 18.5Z"></path></svg>
+              <svg class="catalogue-player-pause-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>
+            </button>
+            <span class="catalogue-player-time catalogue-player-current" aria-hidden="true">0:00</span>
+            <input class="catalogue-player-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek through ${escapeHTML(song.title)}">
+            <span class="catalogue-player-time catalogue-player-duration" aria-hidden="true">0:00</span>
+            <button class="catalogue-mute-toggle" type="button" aria-label="Mute ${escapeHTML(song.title)}" title="Mute">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path class="catalogue-volume-speaker" d="M4 9h4l5-4v14l-5-4H4z"></path><path class="catalogue-volume-wave" d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5"></path></svg>
+            </button>
+          </div>
+          <audio class="catalogue-audio" preload="metadata" data-song-id="${escapeHTML(song.id)}">
             <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
@@ -618,6 +630,88 @@
 
     const countElements = document.querySelectorAll("[data-catalogue-count]");
 
+    function formatPlayerTime(seconds) {
+      if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+      const whole = Math.floor(seconds);
+      const minutes = Math.floor(whole / 60);
+      const remainder = String(whole % 60).padStart(2, "0");
+      return `${minutes}:${remainder}`;
+    }
+
+    function updateCustomPlayer(audio) {
+      const transport = audio.closest(".catalogue-audio-transport");
+      if (!transport) return;
+
+      const playButton = transport.querySelector(".catalogue-play-toggle");
+      const seek = transport.querySelector(".catalogue-player-seek");
+      const current = transport.querySelector(".catalogue-player-current");
+      const duration = transport.querySelector(".catalogue-player-duration");
+      const muteButton = transport.querySelector(".catalogue-mute-toggle");
+      const songTitle = playButton ? playButton.getAttribute("aria-label").replace(/^(Play|Pause)\s+/, "") : "song";
+      const total = Number.isFinite(audio.duration) ? audio.duration : 0;
+
+      if (playButton) {
+        const isPlaying = !audio.paused && !audio.ended;
+        playButton.classList.toggle("is-playing", isPlaying);
+        playButton.setAttribute("aria-label", `${isPlaying ? "Pause" : "Play"} ${songTitle}`);
+        playButton.title = isPlaying ? "Pause" : "Play";
+      }
+      if (seek) {
+        seek.value = total > 0 ? String(Math.round((audio.currentTime / total) * 1000)) : "0";
+        seek.setAttribute("aria-valuetext", `${formatPlayerTime(audio.currentTime)} of ${formatPlayerTime(total)}`);
+      }
+      if (current) current.textContent = formatPlayerTime(audio.currentTime);
+      if (duration) duration.textContent = formatPlayerTime(total);
+      if (muteButton) {
+        muteButton.classList.toggle("is-muted", audio.muted);
+        muteButton.setAttribute("aria-label", `${audio.muted ? "Unmute" : "Mute"} ${songTitle}`);
+        muteButton.title = audio.muted ? "Unmute" : "Mute";
+      }
+    }
+
+    function initialiseCustomPlayer(audio, grid) {
+      const transport = audio.closest(".catalogue-audio-transport");
+      if (!transport) return;
+      const playButton = transport.querySelector(".catalogue-play-toggle");
+      const seek = transport.querySelector(".catalogue-player-seek");
+      const muteButton = transport.querySelector(".catalogue-mute-toggle");
+
+      if (playButton) {
+        playButton.addEventListener("click", async () => {
+          if (audio.paused || audio.ended) {
+            try {
+              await audio.play();
+            } catch (error) {
+              console.warn("Audio playback could not start", error);
+            }
+          } else {
+            audio.pause();
+          }
+        });
+      }
+
+      if (seek) {
+        seek.addEventListener("input", () => {
+          if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+          audio.currentTime = (Number(seek.value) / 1000) * audio.duration;
+          updateCustomPlayer(audio);
+        });
+      }
+
+      if (muteButton) {
+        muteButton.addEventListener("click", () => {
+          audio.muted = !audio.muted;
+          updateCustomPlayer(audio);
+        });
+      }
+
+      ["loadedmetadata", "durationchange", "timeupdate", "play", "pause", "ended", "volumechange"].forEach((eventName) => {
+        audio.addEventListener(eventName, () => updateCustomPlayer(audio));
+      });
+
+      updateCustomPlayer(audio);
+    }
+
     try {
       const catalogue = await fetchCatalogue();
 
@@ -654,6 +748,7 @@
           audio.addEventListener("ratechange", () => {
             if (audio.playbackRate !== 1) audio.playbackRate = 1;
           });
+          initialiseCustomPlayer(audio, grid);
 
           audio.addEventListener("play", () => {
             grid.querySelectorAll(".catalogue-audio").forEach((otherAudio) => {

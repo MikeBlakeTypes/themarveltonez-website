@@ -4,7 +4,7 @@ const FIXED_DESTINATIONS = {
   "premium-cap": "https://www.etsy.com/listing/4541425553/marveltonez-premium-cap-embroidered",
   "writers-mug": "https://www.etsy.com/listing/4541405511/marveltonez-writers-mug-black-glossy-11",
   "studio-hoodie": "https://www.etsy.com/shop/TheMarveltonez?search_query=hoodie",
-  "publisher-access-request": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20secure%20Marveltonez%20Professional%20Catalogue.%0A%0AName%3A%0ACompany%20%2F%20organisation%3A%0ARole%3A%0AWebsite%20or%20professional%20profile%3A%0A%0AI%20am%20interested%20in%20accessing%20the%20catalogue%20for%3A%0A%0ABest%20regards%2C",
+  "publisher-access-request": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20secure%20Marveltonez%20Professional%20Catalogue.%0A%0AName:%0ACompany%20/%20organisation:%0ARole:%0AWebsite%20or%20professional%20profile:%0A%0AI%20am%20interested%20in%20accessing%20the%20catalogue%20for:%0A%0APlease%20note:%20access%20requests%20are%20approved%20manually%2C%20so%20there%20may%20be%20a%20short%20delay%20depending%20on%20time%20zone%20and%20time%20of%20day.%20Thanks%20for%20your%20patience.%0A%0ABest%20regards%2C",
   "homepage-contact-button": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
   "homepage-get-in-touch": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
   "footer-email": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
@@ -23,7 +23,7 @@ const FIXED_DESTINATIONS = {
   "homepage-industry": "/industry/",
   "navigation-industry": "/industry/",
   "industry-featured-demos": "/unreleased.html#featured-demos",
-  "industry-catalogue-access": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20discuss%20access%20to%20the%20broader%20Marveltonez%20catalogue%20and%20additional%20song%20information.%0A%0AName%3A%0ACompany%20/%20organisation%3A%0ARole%3A%0AWebsite%20or%20professional%20profile%3A%0A%0AI%20am%20looking%20for%3A%0A%0ABest%20regards%2C",
+  "industry-catalogue-access": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20discuss%20access%20to%20the%20broader%20Marveltonez%20catalogue%20and%20additional%20song%20information.%0A%0AName:%0ACompany%20/%20organisation:%0ARole:%0AWebsite%20or%20professional%20profile:%0A%0AI%20am%20looking%20for:%0A%0APlease%20note:%20access%20requests%20are%20approved%20manually%2C%20so%20there%20may%20be%20a%20short%20delay%20depending%20on%20time%20zone%20and%20time%20of%20day.%20Thanks%20for%20your%20patience.%0A%0ABest%20regards%2C",
   "industry-contact": "mailto:mikeblake@themarveltonez.com?subject=Industry%20enquiry%20for%20Marveltonez&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20start%20a%20conversation%20with%20Marveltonez.%0A%0AName%3A%0ACompany%20/%20organisation%3A%0ARole%3A%0A%0AI%20am%20looking%20for%3A%0A%0ABest%20regards%2C"
 };
 

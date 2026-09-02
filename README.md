@@ -1,12 +1,12 @@
-# Marveltonez Website v12.0 — Top-to-Bottom Improvements
+# Marveltonez Website v12.2 — Player, Access & Content Tidy-Up
 
-Controlled refinement of the current production `main` repository. This release standardises agreed brand/copy details, adds public song-share routes, moves Featured Song audio references to the production R2 custom domain, and supplies the real `/catalogue/` page for the existing Cloudflare Access-protected professional catalogue route.
+Controlled refinement of the current production v12.1 `main` repository. This release repairs the remaining Safari player-control issue with a compact custom transport, clarifies catalogue-access request timing, corrects Behind the Songs asset naming, and adds Mike Shannon’s approved LinkedIn profile.
 
 Key preservation rules: existing privacy/consent behaviour, D1 aggregate analytics, song play/replay tracking, Etsy tracking routes, Cloudflare Pages architecture and all Featured Song lyric wording are retained. Professional-catalogue search/filtering remains deferred.
 
 Manual post-deployment step: after confirming all nine live players load from `audio.themarveltonez.com`, disable the old R2 Public Development URL in Cloudflare.
 
-Outstanding: Mike Shannon’s LinkedIn URL was not present in the supplied repository, so no LinkedIn destination was invented.
+Mike Shannon’s approved LinkedIn profile is included on the Industry page. Featured Song lyric wording remains deliberately unchanged.
 
 # Marveltonez Website v11.9 — Search Identity and Legacy Contact Resolution
 
