@@ -1,3 +1,11 @@
+## v12.3.2 — Industry Page View Counter — 7 September 2026
+
+- Added the privacy-conscious first-party aggregate action `industry-page-view` when `/industry/` loads.
+- Reused the existing Cloudflare Pages + D1 daily aggregate counter architecture.
+- Added no analytics cookies, local/session storage, fingerprinting, unique-visitor tracking or third-party analytics.
+- Preserved all existing Industry click counters, song analytics, routes, content, styling, catalogue metadata and access-control behaviour.
+- Updated the bilingual privacy notice to describe the new aggregate Industry page-view count.
+
 ## v12.3 — Access Email, BTS Asset Naming & Mobile Song-Action Spacing
 
 - Moved the manual-approval note in Professional Catalogue access-request emails below `Best regards,` with a larger signature area.

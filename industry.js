@@ -1,3 +1,10 @@
+  fetch("/analytics/page", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ page: "industry" }),
+    keepalive: true
+  }).catch(() => {});
+
 (function () {
   const menuButton = document.querySelector(".industry-menu-toggle");
   const navigation = document.getElementById("industryNavigation");

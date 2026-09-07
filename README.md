@@ -1,3 +1,18 @@
+# Marveltonez Website v12.3.2 — Industry Page View Counter
+
+Bounded analytics refinement of the current production v12.3.1 repository.
+
+- records the aggregate daily action `industry-page-view` when `/industry/` loads;
+- uses the existing first-party Cloudflare Pages + D1 analytics database;
+- adds no analytics cookies, persistent visitor identifiers, fingerprinting, unique-visitor measurement or third-party analytics;
+- preserves the existing Industry click counters and all unrelated website behaviour;
+- updates the bilingual privacy notice to describe the page-view counter.
+
+Changed files: `industry.js`, `industry/index.html`, `privacy.html`, `README.md`, `CHANGELOG.md`.
+Added file: `functions/analytics/page.js`.
+
+Rollback: revert the v12.3.2 commit in GitHub Desktop and push the revert to `main`.
+
 # Marveltonez Website v12.2 — Player, Access & Content Tidy-Up
 
 Controlled refinement of the current production v12.1 `main` repository. This release repairs the remaining Safari player-control issue with a compact custom transport, clarifies catalogue-access request timing, corrects Behind the Songs asset naming, and adds Mike Shannon’s approved LinkedIn profile.
