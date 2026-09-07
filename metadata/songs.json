@@ -134,7 +134,7 @@
         "syncPotential": "Adult romantic comedy • Streaming dramedy • Nightlife or party montage • Comedy series • Dating-show promo • Fashion or beauty content with a mischievous tone"
       },
       "explicit": true,
-      "catalogueId": "MTZ-002",
+      "catalogueId": "MTZ-0008",
       "publicDisplayOrder": 1,
       "artworkThumbnail": "assets/images/song-artwork/put-your-shirt-back-on-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/put-your-shirt-back-on-800.webp"
@@ -264,7 +264,7 @@
         "syncPotential": "Romantic comedy • Teen/young adult drama • Streaming comedy • Lifestyle programming • Fashion campaigns • Social media content • Relationship montages"
       },
       "explicit": false,
-      "catalogueId": "MTZ-003",
+      "catalogueId": "MTZ-0009",
       "publicDisplayOrder": 2,
       "artworkThumbnail": "assets/images/song-artwork/so-youre-dating-my-ex-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/so-youre-dating-my-ex-800.webp"
@@ -399,7 +399,7 @@
         "syncPotential": "Comedy series • Reality television • Fashion satire • Social-media campaigns • Teen/young-adult dramedy • Character-introduction montage"
       },
       "explicit": true,
-      "catalogueId": "MTZ-004",
+      "catalogueId": "MTZ-0007",
       "publicDisplayOrder": 3,
       "artworkThumbnail": "assets/images/song-artwork/just-sayin-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/just-sayin-800.webp"
@@ -521,7 +521,7 @@
         "syncPotential": "Teen drama • Coming-of-age film • Family-conflict montage • Youth campaign • Character-breakthrough scene • Streaming drama"
       },
       "explicit": true,
-      "catalogueId": "MTZ-005",
+      "catalogueId": "MTZ-0001",
       "publicDisplayOrder": 4,
       "artworkThumbnail": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-800.webp"
@@ -647,7 +647,7 @@
         "syncPotential": "Romantic comedy • Streaming drama • Teen/YA television • Lifestyle programming • Fashion or beauty campaigns • Social media marketing"
       },
       "explicit": false,
-      "catalogueId": "MTZ-001",
+      "catalogueId": "MTZ-0004",
       "publicDisplayOrder": 5,
       "artworkThumbnail": "assets/images/song-artwork/blocked-and-deleted-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp"
@@ -788,7 +788,7 @@
         "syncPotential": "Romantic comedy • Makeover or getting-ready montage • Lifestyle advertising • Reality TV • Travel or nightlife content • Fresh-start campaign"
       },
       "explicit": false,
-      "catalogueId": "MTZ-006",
+      "catalogueId": "MTZ-0006",
       "publicDisplayOrder": 6,
       "artworkThumbnail": "assets/images/song-artwork/happy-breakup-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/happy-breakup-800.webp"
@@ -928,7 +928,7 @@
         "syncPotential": "Romantic comedy • First-date montage • Teen/young-adult drama • Dating-show sequence • Sitcom end scene • Awkward-romance advertisement"
       },
       "explicit": false,
-      "catalogueId": "MTZ-007",
+      "catalogueId": "MTZ-0005",
       "publicDisplayOrder": 7,
       "artworkThumbnail": "assets/images/song-artwork/doorstep-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/doorstep-800.webp"
@@ -1078,7 +1078,7 @@
         "syncPotential": "Romantic comedy • Music-themed film or series • Street-scene montage • Lifestyle advertising • Feel-good drama • Artist-performance sequence"
       },
       "explicit": false,
-      "catalogueId": "MTZ-008",
+      "catalogueId": "MTZ-0003",
       "publicDisplayOrder": 8,
       "artworkThumbnail": "assets/images/song-artwork/a-girl-like-me-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/a-girl-like-me-800.webp"
@@ -1210,7 +1210,7 @@
         "syncPotential": "Romantic comedy • New-couple montage • Wedding or engagement content • Family/lifestyle advertising • Feel-good television • Celebration campaign"
       },
       "explicit": false,
-      "catalogueId": "MTZ-009",
+      "catalogueId": "MTZ-0010",
       "publicDisplayOrder": 9,
       "artworkThumbnail": "assets/images/song-artwork/youre-my-boy-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/youre-my-boy-800.webp"
