@@ -1,0 +1,114 @@
+/* Professional Access Gateway — v12.4.1
+   Bounded to publisher.html; does not alter the protected catalogue framework. */
+
+.publisher-gateway {
+  max-width: 920px;
+  margin: 58px auto 70px;
+  padding: 38px;
+  border: 1px solid rgba(215, 25, 32, .65);
+  background: linear-gradient(145deg, #171717, #080808);
+  text-align: center;
+}
+
+.publisher-gateway .publisher-lock {
+  margin: 0 0 12px;
+}
+
+.publisher-gateway > h2 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.publisher-gateway-intro {
+  margin: 12px auto 28px;
+  max-width: 650px;
+  color: #c7c7c7;
+}
+
+.publisher-access-paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+  text-align: left;
+}
+
+.publisher-access-path {
+  padding: 26px;
+  border: 1px solid #333;
+  background: rgba(255, 255, 255, .025);
+}
+
+.publisher-access-path-approved {
+  border-color: rgba(215, 25, 32, .72);
+  background: linear-gradient(145deg, rgba(215, 25, 32, .09), rgba(255, 255, 255, .02));
+}
+
+.publisher-access-kicker {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.publisher-access-path h3 {
+  margin: 0 0 12px;
+  color: #eee;
+  font-family: var(--font-head);
+  font-size: 27px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.publisher-access-path p {
+  color: #c7c7c7;
+  line-height: 1.55;
+}
+
+.publisher-access-path .btn {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.publisher-secondary-action {
+  border: 1px solid var(--red);
+  background: transparent;
+  color: #fff;
+}
+
+.publisher-secondary-action:hover,
+.publisher-secondary-action:focus-visible {
+  background: var(--red);
+}
+
+.publisher-code-note,
+.publisher-manual-note {
+  margin: 16px 0 0;
+  color: #919191 !important;
+  font-size: 12px;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 760px) {
+  .publisher-gateway {
+    margin: 34px auto 46px;
+    padding: 26px 20px;
+  }
+
+  .publisher-gateway > h2 {
+    font-size: 38px;
+  }
+
+  .publisher-access-paths {
+    grid-template-columns: 1fr;
+  }
+
+  .publisher-access-path {
+    padding: 22px;
+  }
+}

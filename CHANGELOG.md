@@ -1,3 +1,13 @@
+## v12.4.1 — Professional Access Gateway Refinement — 8 September 2026
+
+- Changed request-only Professional Catalogue CTAs to neutral `Professional Access` wording on the homepage and Industry page.
+- Reworked the public Professional Access gateway into two explicit paths: `Open Professional Catalogue` for already-approved visitors and `Request Access` for first-time applicants.
+- Returning approved visitors now link directly to `/catalogue/`; an active Cloudflare session enters immediately, while an expired session falls back to Cloudflare's existing one-time-code login flow without requiring re-approval.
+- Standardised Marveltonez-controlled gateway copy on `one-time login code` and noted that Cloudflare may call the same code an access or verification code.
+- Preserved the existing manually vetted request-access email and existing aggregate Industry catalogue-access counter; the tracked Industry route now lands on `/publisher.html`.
+- Added `publisher-access.css` for gateway-only two-path presentation without changing the protected Professional Catalogue CSS/JS/data contract.
+- Made no Cloudflare Access configuration, session-duration, authentication-security, privacy-model, catalogue-content or behavioural-tracking changes.
+
 ## v12.4.0 — Professional Secure Access Area Foundation — 8 September 2026
 
 - Replaced the protected `/catalogue/` empty-state placeholder with the first real Professional Catalogue framework.

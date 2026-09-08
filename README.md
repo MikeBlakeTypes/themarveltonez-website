@@ -1,4 +1,4 @@
-# Marveltonez Website v12.4.0 — Professional Secure Access Area Foundation
+# Marveltonez Website v12.4.1 — Professional Access Gateway Refinement
 
 Bounded implementation of the protected Professional Catalogue framework and its separate approved-profile data contract, based on the current production v12.3.2 repository.
 
@@ -12,6 +12,18 @@ Changed files: `industry.js`, `industry/index.html`, `privacy.html`, `README.md`
 Added file: `functions/analytics/page.js`.
 
 Rollback: revert the v12.3.2 commit in GitHub Desktop and push the revert to `main`.
+
+## v12.4.1 Professional Access Gateway Refinement
+
+- Changes public Professional Catalogue CTAs from request-only wording to neutral `Professional Access`.
+- Converts `publisher.html` into a two-path gateway: returning approved visitors can `Open Professional Catalogue`, while first-time visitors can still `Request Access`.
+- Preserves the existing manual-vetting email request route.
+- Preserves the existing aggregate Industry catalogue-access counter while routing it to the gateway rather than directly to a request email.
+- Standardises Marveltonez-controlled guidance on the term `one-time login code`; Cloudflare-controlled wording remains unchanged.
+- Adds only gateway-specific styling in `publisher-access.css`; the protected Professional Catalogue framework and data contract remain unchanged.
+- Makes no Cloudflare Access, session-duration, authentication-security, privacy-model or behavioural-tracking changes.
+
+Rollback: restore the v12.4.0 versions of `index.html`, `industry/index.html`, `publisher.html`, `functions/track/[[path]].js`, `README.md` and `CHANGELOG.md`, and remove `publisher-access.css`.
 
 ## v12.4.0 Professional Secure Access Area
 
