@@ -1,4 +1,4 @@
-/* Professional Access Gateway — v12.4.1
+/* Professional Access Gateway — v12.4.2
    Bounded to publisher.html; does not alter the protected catalogue framework. */
 
 .publisher-gateway {
@@ -36,6 +36,9 @@
 }
 
 .publisher-access-path {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
   padding: 26px;
   border: 1px solid #333;
   background: rgba(255, 255, 255, .025);
@@ -50,9 +53,9 @@
   margin: 0 0 8px;
   color: var(--red);
   font-family: var(--font-head);
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 700;
-  letter-spacing: .08em;
+  letter-spacing: .07em;
   text-transform: uppercase;
 }
 
@@ -71,8 +74,9 @@
 }
 
 .publisher-access-path .btn {
+  align-self: flex-start;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: auto;
 }
 
 .publisher-secondary-action {
@@ -86,12 +90,13 @@
   background: var(--red);
 }
 
-.publisher-code-note,
-.publisher-manual-note {
-  margin: 16px 0 0;
-  color: #919191 !important;
+.publisher-access-shared-note {
+  max-width: 760px;
+  margin: 20px auto 0;
+  color: #919191;
   font-size: 12px;
-  line-height: 1.5 !important;
+  line-height: 1.5;
+  text-align: center;
 }
 
 @media (max-width: 760px) {
@@ -109,6 +114,11 @@
   }
 
   .publisher-access-path {
+    min-height: 0;
     padding: 22px;
+  }
+
+  .publisher-access-kicker {
+    font-size: 17px;
   }
 }

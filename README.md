@@ -1,4 +1,4 @@
-# Marveltonez Website v12.4.1 — Professional Access Gateway Refinement
+# Marveltonez Website v12.4.2 — Professional Access Layout Refinement
 
 Bounded implementation of the protected Professional Catalogue framework and its separate approved-profile data contract, based on the current production v12.3.2 repository.
 
@@ -12,6 +12,16 @@ Changed files: `industry.js`, `industry/index.html`, `privacy.html`, `README.md`
 Added file: `functions/analytics/page.js`.
 
 Rollback: revert the v12.3.2 commit in GitHub Desktop and push the revert to `main`.
+
+## v12.4.2 Professional Access Layout Refinement
+
+- Promotes the Professional Catalogue to a full-width feature near the top of the Industry page so conference and delegate visitors encounter it immediately.
+- Removes the now-redundant lower Professional Catalogue card and lets the Professional Contact card span the desktop grid.
+- Rebalances the public Professional Access gateway by shortening headings and copy and moving session/Cloudflare terminology into one shared note.
+- Increases the visual prominence of the `Already approved?` and `Need access?` decision labels.
+- Preserves all Cloudflare Access configuration, authentication/session behaviour, catalogue framework, catalogue data contract, privacy model and behavioural-tracking boundaries.
+
+Rollback: restore the v12.4.1 versions of `industry/index.html`, `industry.css`, `publisher.html`, `publisher-access.css`, `README.md` and `CHANGELOG.md`.
 
 ## v12.4.1 Professional Access Gateway Refinement
 

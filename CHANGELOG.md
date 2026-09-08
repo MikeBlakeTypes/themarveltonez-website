@@ -1,3 +1,11 @@
+## v12.4.2 — Professional Access Layout Refinement — 8 September 2026
+
+- Promoted Professional Catalogue access to a full-width feature near the top of the Industry page for conference/delegate visitors.
+- Removed the redundant lower Professional Catalogue card and allowed the Professional Contact block to span the grid on desktop.
+- Rebalanced the public Professional Access gateway cards with shorter headings/copy and a shared Cloudflare/session note.
+- Increased the prominence of the `Already approved?` and `Need access?` decision labels.
+- No Cloudflare Access configuration, protected catalogue framework, catalogue data, authentication logic or behavioural tracking was changed.
+
 ## v12.4.1 — Professional Access Gateway Refinement — 8 September 2026
 
 - Changed request-only Professional Catalogue CTAs to neutral `Professional Access` wording on the homepage and Industry page.

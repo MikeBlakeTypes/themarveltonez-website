@@ -99,6 +99,7 @@
 
 
 .industry-contact-block {
+  grid-column: 1 / -1;
   scroll-margin-top: 110px;
 }
 
@@ -413,3 +414,68 @@
 .industry-profile-link{display:inline-block;margin-top:16px;color:#fff;font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:2px}
 .industry-profile-link:hover{color:var(--red)}
 .industry-profile-link:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+
+
+/* v12.4.2 — prominent Professional Catalogue route for industry visitors */
+.industry-catalogue-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid rgba(215, 25, 32, .72);
+  background: linear-gradient(135deg, rgba(215, 25, 32, .11), #111 48%, #090909);
+  box-shadow: 0 17px 42px rgba(0, 0, 0, .28);
+}
+
+.industry-catalogue-feature-copy {
+  min-width: 0;
+}
+
+.industry-catalogue-feature h2 {
+  margin: 4px 0 10px;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: clamp(32px, 3.2vw, 46px);
+  line-height: .98;
+  text-transform: uppercase;
+}
+
+.industry-catalogue-feature p {
+  max-width: 78ch;
+  margin: 0;
+  color: #c9c9c9;
+}
+
+.industry-catalogue-feature .industry-card-kicker {
+  color: var(--red) !important;
+}
+
+.industry-catalogue-feature-action {
+  flex: 0 0 auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .industry-catalogue-feature {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .industry-catalogue-feature h2 {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .industry-catalogue-feature-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .industry-contact-block {
+    grid-column: auto;
+  }
+}
