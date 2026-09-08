@@ -1,3 +1,9 @@
+## v12.4.3 — Professional Access Copy Refinement — 8 September 2026
+
+- Simplified the `Need access?` gateway copy to `First-time access requests are reviewed manually.`
+- Removed the unnecessary request-page wording asking visitors to explain who they are and why they want access; the existing pre-filled request email continues to collect the relevant information.
+- Made no changes to access logic, Cloudflare Access, request-email behaviour, Professional Catalogue framework, catalogue data or tracking.
+
 ## v12.4.2 — Professional Access Layout Refinement — 8 September 2026
 
 - Promoted Professional Catalogue access to a full-width feature near the top of the Industry page for conference/delegate visitors.

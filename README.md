@@ -1,4 +1,4 @@
-# Marveltonez Website v12.4.2 — Professional Access Layout Refinement
+# Marveltonez Website v12.4.3 — Professional Access Copy Refinement
 
 Bounded implementation of the protected Professional Catalogue framework and its separate approved-profile data contract, based on the current production v12.3.2 repository.
 
@@ -12,6 +12,10 @@ Changed files: `industry.js`, `industry/index.html`, `privacy.html`, `README.md`
 Added file: `functions/analytics/page.js`.
 
 Rollback: revert the v12.3.2 commit in GitHub Desktop and push the revert to `main`.
+
+## v12.4.3 Professional Access Copy Refinement
+
+- Simplifies the first-time access gateway wording while preserving the existing manually reviewed request workflow and all catalogue/security behaviour.
 
 ## v12.4.2 Professional Access Layout Refinement
 
