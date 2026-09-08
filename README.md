@@ -1,6 +1,6 @@
-# Marveltonez Website v12.3.2 — Industry Page View Counter
+# Marveltonez Website v12.4.0 — Professional Secure Access Area Foundation
 
-Bounded analytics refinement of the current production v12.3.1 repository.
+Bounded implementation of the protected Professional Catalogue framework and its separate approved-profile data contract, based on the current production v12.3.2 repository.
 
 - records the aggregate daily action `industry-page-view` when `/industry/` loads;
 - uses the existing first-party Cloudflare Pages + D1 analytics database;
@@ -12,6 +12,19 @@ Changed files: `industry.js`, `industry/index.html`, `privacy.html`, `README.md`
 Added file: `functions/analytics/page.js`.
 
 Rollback: revert the v12.3.2 commit in GitHub Desktop and push the revert to `main`.
+
+## v12.4.0 Professional Secure Access Area
+
+- `/catalogue/` now contains the protected Professional Catalogue browsing framework.
+- `/metadata/professional-catalogue.json` is the only song-data source read by the new professional catalogue renderer.
+- Legacy `/metadata/songs.json` remains separate and is not publication-authoritative for the secure catalogue.
+- Only profiles explicitly marked `publication.status: "APPROVED"` render.
+- Search, data-derived filters, clickable tags, private browser-local ☆ Shortlist, reveal panels, audio transport and song-specific enquiry are implemented.
+- `/catalogue/song/<slug>/` provides protected individual-song deep-link architecture.
+- No real Professional Catalogue Profiles are included yet.
+
+Rollback: restore the v12.3.2 repository to return `/catalogue/` to the earlier protected empty-state placeholder.
+
 
 # Marveltonez Website v12.2 — Player, Access & Content Tidy-Up
 

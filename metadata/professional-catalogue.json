@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0",
+  "catalogueTitle": "Marveltonez Professional Catalogue",
+  "publicationRule": "Only profiles with publication.status equal to APPROVED are rendered.",
+  "profiles": []
+}

@@ -1,3 +1,18 @@
+## v12.4.0 — Professional Secure Access Area Foundation — 8 September 2026
+
+- Replaced the protected `/catalogue/` empty-state placeholder with the first real Professional Catalogue framework.
+- Added a fully separate `/metadata/professional-catalogue.json` publication data source; the secure catalogue does not read legacy `/metadata/songs.json`.
+- Added a hard renderer gate: only Professional Catalogue Profiles with `publication.status` exactly `APPROVED` can render.
+- Added compact responsive text/audio-led song cards with no artwork dependency.
+- Added full-text approved-profile search, dynamic filters, clickable tags, Technical, Lyrics, Details and Rights & Clearance reveals.
+- Added private browser-local `☆ Shortlist` behaviour with no server-side shortlist, no identity linkage and no new catalogue interaction analytics.
+- Updated the bilingual privacy notice to disclose the user-requested browser-local shortlist record and its six-month maximum persistence; no consent-banner redesign or new tracking was added.
+- Added song-specific pre-filled email enquiry links without automatically transmitting shortlist contents.
+- Added protected individual professional song deep-link architecture under `/catalogue/song/<slug>/`.
+- Added `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md` documenting the SIHO + SAO → approved Professional Catalogue Profile → website publication boundary.
+- Imported no legacy publisher-oriented song content and published no real Professional Catalogue Profiles in this release.
+- Preserved the public Featured Songs, Industry page, existing analytics, Cloudflare Access model and unrelated website presentation.
+
 ## v12.3.2 — Industry Page View Counter — 7 September 2026
 
 - Added the privacy-conscious first-party aggregate action `industry-page-view` when `/industry/` loads.
