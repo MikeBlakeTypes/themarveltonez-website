@@ -1,0 +1,175 @@
+
+/* v12.4.4 — canonical songwriter profile pages */
+.profile-page .site-header { position: sticky; }
+.profile-page .nav-links a[aria-current="page"] { color: var(--red); }
+.profile-hero .catalogue-page-hero-inner { max-width: 1320px; }
+.profile-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(260px, .58fr);
+  gap: clamp(34px, 6vw, 90px);
+  align-items: center;
+}
+.profile-identity { min-width: 0; }
+.profile-role {
+  margin: 14px 0 0;
+  color: #f0f0f0;
+  font-family: var(--font-head);
+  font-size: clamp(21px, 2.2vw, 31px);
+  font-weight: 700;
+  letter-spacing: .035em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.profile-affiliation {
+  margin: 10px 0 0;
+  color: #bcbcbc;
+  font-size: 15px;
+  letter-spacing: .04em;
+}
+.profile-intro {
+  max-width: 800px;
+  margin: 22px 0 0;
+  color: #d0d0d0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.profile-portrait-wrap {
+  justify-self: end;
+  width: min(100%, 360px);
+}
+.profile-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #343434;
+  box-shadow: 0 18px 48px rgba(0,0,0,.34);
+  filter: saturate(.88) contrast(1.02);
+}
+.profile-content { max-width: 1320px; }
+.profile-highlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid rgba(215,25,32,.72);
+  background: linear-gradient(135deg, rgba(215,25,32,.11), #111 48%, #090909);
+  box-shadow: 0 17px 42px rgba(0,0,0,.28);
+}
+.profile-highlight h2,
+.profile-block h2 {
+  margin: 4px 0 10px;
+  color: var(--logoGrey, #d8d8d8);
+  font-family: var(--font-head);
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: .98;
+  text-transform: uppercase;
+}
+.profile-highlight p,
+.profile-block p { margin: 0; color: #c9c9c9; }
+.profile-card-kicker {
+  margin: 0 !important;
+  color: var(--red) !important;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.profile-block {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid #303030;
+  background: linear-gradient(180deg, #171717, #0a0a0a);
+  box-shadow: 0 17px 42px rgba(0,0,0,.28);
+}
+.profile-block-wide { grid-column: 1 / -1; }
+.profile-credit-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0 24px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.profile-credit-list li {
+  padding: 10px 0;
+  border-top: 1px solid #2d2d2d;
+  color: #c9c9c9;
+}
+.profile-credit-list strong { color: #f0f0f0; }
+.profile-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.profile-actions .btn { margin: 0; }
+.profile-secondary-action { border-color: var(--red); }
+.profile-waves-note {
+  margin-top: 18px !important;
+  color: #f0f0f0 !important;
+  font-weight: 700;
+}
+.profile-brand-line {
+  margin: 18px 0 0;
+  color: #f0f0f0;
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+.profile-page .btn:focus-visible,
+.profile-page .nav-links a:focus-visible,
+.profile-page .back-to-top:focus-visible,
+.profile-page .footer-legal a:focus-visible,
+.profile-page .footer-legal button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+@media (max-width: 980px) {
+  .profile-page .site-header { position: sticky; flex-direction: row; align-items: center; gap: 16px; padding: 12px 4vw; }
+  .profile-page .site-logo-image { width: min(48vw,220px); }
+  .profile-page .industry-menu-toggle { display:block; margin-left:auto; min-width:44px; min-height:44px; padding:0; border:1px solid transparent; color:#fff; cursor:pointer; font-size:28px; line-height:1; }
+  .profile-page .industry-menu-toggle:hover,
+  .profile-page .industry-menu-toggle:focus-visible { border-color:var(--red); color:var(--red); outline:2px solid var(--red); outline-offset:2px; }
+  .profile-page .nav-links { display:none; position:absolute; top:100%; left:0; right:0; z-index:60; flex-direction:column; align-items:flex-start; gap:0; padding:8px 4vw 14px; border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.08); background:rgba(8,8,8,.98); }
+  .profile-page .nav-links.active { display:flex; }
+  .profile-page .nav-links a { width:100%; min-height:42px; padding:9px 0; font-size:15px; }
+  .profile-page .nav-links a:after { display:none; }
+}
+@media (max-width: 760px) {
+  .profile-page .catalogue-page-main { padding-top: 0; }
+  .profile-page .catalogue-page-hero { padding: 28px 4vw 24px; }
+  .profile-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .profile-portrait-wrap { justify-self: start; width: min(70vw, 300px); }
+  .profile-page .catalogue-page-hero h1 { font-size: clamp(42px, 12vw, 62px); line-height: .88; }
+  .profile-role { font-size: clamp(20px, 6vw, 27px); }
+  .profile-intro { margin-top: 16px; font-size: 16px; line-height: 1.48; }
+  .profile-content { padding: 16px 4vw 28px; }
+  .profile-highlight { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+  .profile-grid { grid-template-columns: 1fr; gap: 12px; }
+  .profile-block, .profile-block-wide { grid-column: auto; padding: 20px; }
+  .profile-credit-list { grid-template-columns: 1fr; }
+  .profile-actions { display:grid; }
+  .profile-actions .btn { width:100%; text-align:center; }
+  .profile-page .back-to-top-wrap { padding: 12px 4vw 6px; }
+  .profile-page .site-footer { grid-template-columns:1fr 1fr; gap:14px 22px; padding:22px 4vw 24px; }
+  .profile-page .footer-logo-image { width:min(58vw,220px); }
+  .profile-page .site-footer p { margin:8px 0 0; font-size:14px; line-height:1.4; }
+  .profile-page .site-footer > p { align-self:end; margin:0; }
+  .profile-page .footer-legal { grid-column:1 / -1; display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; }
+  .profile-page .footer-legal h4 { width:100%; margin:0; font-size:15px; }
+  .profile-page .footer-legal a, .profile-page .footer-legal button { margin:0; font-size:13px; }
+}
+@media (max-width: 520px) {
+  .profile-page .site-header { padding-top:10px; padding-bottom:10px; }
+  .profile-page .site-logo-image { width:min(52vw,190px); }
+  .profile-portrait-wrap { width:min(78vw,280px); }
+  .profile-page .site-footer { grid-template-columns:1fr; gap:12px; }
+  .profile-page .site-footer > p, .profile-page .footer-legal { grid-column:auto; }
+}

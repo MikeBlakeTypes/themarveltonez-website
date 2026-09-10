@@ -1,3 +1,12 @@
+## v12.4.4 — Individual Songwriter Profile Pages — 10 September 2026
+
+- Added canonical public profile pages at `/mike-blake/` and `/mike-shannon/` for clearer delegate, industry and search-engine identity resolution.
+- Positioned Mike Blake as an English songwriter, producer and composer based in Austria, and Mike Shannon as a UK songwriter, composer and musician.
+- Added approved Marveltonez catalogue focus, selected shared credits and temporary Waves Vienna 2026 meeting calls to action.
+- Added Person structured data, canonical URLs, Open Graph/Twitter metadata and individual profile imagery using the existing approved writer portraits.
+- Linked both profiles from the Industry page and homepage writer cards, and added both URLs to the sitemap.
+- Preserved the Professional Catalogue, Cloudflare Access, consent model, analytics architecture, song content and unrelated site presentation.
+
 ## v12.4.3 — Professional Access Copy Refinement — 8 September 2026
 
 - Simplified the `Need access?` gateway copy to `First-time access requests are reviewed manually.`
