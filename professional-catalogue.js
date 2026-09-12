@@ -1,5 +1,5 @@
 /**
- * Marveltonez Professional Catalogue — v12.5.1
+ * Marveltonez Professional Catalogue — v12.5.2
  *
  * PUBLICATION / PREVIEW BOUNDARY
  * - Reads only /metadata/professional-catalogue.json.
@@ -373,7 +373,7 @@
         </button>
         <span class="professional-player-time professional-player-current" aria-hidden="true">0:00</span>
         <input class="professional-player-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek through ${escapeHTML(title)}"/>
-        <span class="professional-player-time professional-player-duration" aria-hidden="true">${escapeHTML(formatDisplayDuration(profile.technical?.durationSeconds) || "0:00")}</span>
+        <span class="professional-player-time professional-player-duration" data-governed-duration="${escapeHTML(formatDisplayDuration(profile.technical?.durationSeconds) || "")}" aria-hidden="true">${escapeHTML(formatDisplayDuration(profile.technical?.durationSeconds) || "0:00")}</span>
         <button class="professional-player-button professional-mute-toggle" type="button" aria-label="Mute ${escapeHTML(title)}" title="Mute">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path class="professional-volume-speaker" d="M4 9h4l5-4v14l-5-4H4z"></path><path class="professional-volume-wave" d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5"></path></svg>
         </button>
@@ -568,7 +568,7 @@
     const total = Number.isFinite(audio.duration) ? audio.duration : 0;
     const profile = state.profiles.find((item) => String(item.id) === String(audio.dataset.songId)) || {};
     const title = profileTitle(profile);
-    const governedDuration = formatDisplayDuration(profile.technical?.durationSeconds);
+    const governedDuration = duration?.dataset.governedDuration || "";
     const displayedDuration = governedDuration || formatPlayerTime(total);
 
     if (playButton) {

@@ -1,3 +1,19 @@
+## v12.5.2 — Governed Player Duration Display Fix — 12 September 2026
+
+- Fixed the Professional Catalogue audio transport so the total-duration label is taken directly from the governed professional display duration embedded in the rendered player rather than being recalculated from browser-decoded media metadata.
+- Superstar now remains visually consistent at `4:09` in the card, Full Profile facts, Technical section and audio transport while playback seeking/progress continues to use the real media duration internally.
+- Updated Professional Catalogue JavaScript cache busting to `v12.5.2`.
+- Made no changes to the accepted catalogue layout, filters, reveals, profile content, publication authority, Cloudflare Access or unrelated site behaviour.
+
+Changed files:
+
+- modified: `catalogue/index.html`
+- modified: `catalogue/song/index.html`
+- modified: `catalogue/song/superstar/index.html`
+- modified: `professional-catalogue.js`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
 ## v12.5.1 — Superstar Profile Route & Duration Fix — 12 September 2026
 
 - Added a concrete protected `/catalogue/song/superstar/` static route so the Full Profile action resolves reliably on Cloudflare Pages without relying solely on the generic wildcard rewrite.

@@ -1,4 +1,13 @@
-# Marveltonez Website v12.5.1 — Superstar Profile Route & Duration Fix
+# Marveltonez Website v12.5.2 — Governed Player Duration Display Fix
+
+## v12.5.2 — Governed Player Duration Display Fix — 12 September 2026
+
+- keeps the Professional Catalogue transport total-duration label bound to the governed professional display duration embedded in the rendered player;
+- keeps Superstar consistently at `4:09` across catalogue facts, Full Profile, Technical and the player while real media duration still controls playback/seek calculations;
+- updates Professional Catalogue JavaScript cache busting to `v12.5.2`;
+- leaves the accepted catalogue UI, profile data, protected design-preview boundary, publication authority, Cloudflare Access and unrelated site behaviour unchanged.
+
+Rollback: revert the v12.5.2 commit to restore the v12.5.1 player-duration behaviour.
 
 ## v12.5.1 — Superstar Profile Route & Duration Fix — 12 September 2026
 
