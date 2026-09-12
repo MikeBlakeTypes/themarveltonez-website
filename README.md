@@ -1,4 +1,22 @@
-# Marveltonez Website v12.4.3 — Professional Access Copy Refinement
+# Marveltonez Website v12.5.0 — Superstar Professional Catalogue Prototype
+
+Protected first-real-record prototype of the Professional Catalogue presentation model, built from the current v12.4.4 production repository.
+
+- adds Superstar as an explicit protected `DESIGN_PREVIEW` fixture without changing Catalogue Master publication authority;
+- implements the accepted compact card hierarchy with professional facts, four visible tags, role, audio, Details/Lyrics/Rights reveals, shortlist and enquiry/full-profile actions;
+- converts `/catalogue/song/<slug>/` into a purpose-built professional song profile with progressive disclosure;
+- extends the website-facing Professional Catalogue data contract for the richer governed 2b field set while keeping NAVURRA internal object terminology out of the frontend;
+- preserves browser-local shortlist privacy, no behavioural analytics, Cloudflare Access architecture and unrelated public-site behaviour;
+- includes the approved Superstar preview MP3 only under the protected `/catalogue/preview-fixtures/` path as a temporary prototype fixture, not as the future production audio delivery mechanism.
+
+Primary changed files: `catalogue/index.html`, `catalogue/song/index.html`, `professional-catalogue.js`, `professional-catalogue.css`, `metadata/professional-catalogue.json`, `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md`, `README.md`, `CHANGELOG.md`.
+
+Prototype-only added asset: `catalogue/preview-fixtures/superstar-preview.mp3`.
+
+Repository hygiene: implementation-report files are excluded from this repository output.
+
+Rollback: revert the v12.5.0 commit to restore the v12.4.4 Professional Catalogue framework and remove the protected Superstar preview fixture.
+
 
 Bounded implementation of the protected Professional Catalogue framework and its separate approved-profile data contract, based on the current production v12.3.2 repository.
 

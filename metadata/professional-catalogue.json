@@ -1,6 +1,195 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "2.0-preview",
   "catalogueTitle": "Marveltonez Professional Catalogue",
-  "publicationRule": "Only profiles with publication.status equal to APPROVED are rendered.",
-  "profiles": []
+  "publicationRule": "Production records render only when publication.status is APPROVED. Protected design fixtures can render only on pages that explicitly opt in and only when preview.status is DESIGN_PREVIEW and preview.protectedOnly is true.",
+  "profiles": [
+    {
+      "id": "MTZ-0014-V02",
+      "slug": "superstar",
+      "identity": {
+        "title": "Superstar",
+        "compositionId": "MTZ-0014",
+        "recordingId": "MTZ-0014-V02",
+        "version": "V02",
+        "recordingType": "Presentation Master",
+        "catalogueRecordRevision": "R01"
+      },
+      "discovery": {
+        "genreStyle": [
+          "Uplifting pop",
+          "Anthemic pop",
+          "Adult-contemporary / pop crossover"
+        ],
+        "mood": [
+          "Hopeful",
+          "Affirming",
+          "Encouraging"
+        ],
+        "lyricalThemes": [
+          "Self-worth",
+          "Confidence",
+          "Visibility",
+          "Self-belief",
+          "Freedom"
+        ],
+        "tempoCategory": "Mid-tempo",
+        "leadVocal": [
+          "Female vocal"
+        ],
+        "tags": [
+          "Pop",
+          "Uplifting",
+          "Anthemic",
+          "Midtempo",
+          "Female vocal",
+          "Encouragement",
+          "Self-belief",
+          "Confidence"
+        ],
+        "cardTags": [
+          "Pop",
+          "Uplifting",
+          "Anthemic",
+          "Midtempo"
+        ],
+        "roles": [
+          "Artist Pitch",
+          "Publisher / A&R Showcase"
+        ],
+        "searchTerms": [
+          "encouragement",
+          "self-belief",
+          "confidence",
+          "transformation",
+          "breakthrough",
+          "reveal",
+          "positive celebration",
+          "adult contemporary",
+          "publisher",
+          "A&R"
+        ]
+      },
+      "positioning": {
+        "card": "Uplifting, anthemic pop with an aspirational, encouraging centre and a strong recurring title hook; V02 is presented as a polished female-led presentation production.",
+        "listeningDescription": "Midtempo uplifting/anthemic pop at 91 BPM in G# major, built around a direct-address encouragement lyric, repeated verse–pre-chorus–chorus architecture and a strongly recurring “Superstar” hook. This version is presented with a female solo lead in a polished, coherent full-mix production that builds toward the bridge and final chorus. The song is not gender-bound and is open to alternative lead-performer and production treatments; its repeated sectional structure also provides bounded edit and shortening potential while preserving the central title hook and message."
+      },
+      "professionalDetail": {
+        "moodDescription": "Hopeful, affirming and encouraging, with a positive motivational direction from discouragement and darkness toward light, colour, freedom and self-belief.",
+        "lyricalThemeDescription": "Direct-address encouragement centred on self-worth, confidence, visibility, self-belief and freedom, using light/colour imagery to move from discouragement toward emergence and belief.",
+        "vocalPerformance": "V02 uses a female solo lead that is text-forward and structurally central, carrying the encouragement message and recurring title refrain. The material favours a clear, confident, outward-facing delivery.",
+        "performerFit": "Strongly compatible with a solo lead performer capable of a clear, confident and affirmative delivery. Performer gender is not demonstrated as composition-bound; backing or group-vocal reinforcement is compatible but not required.",
+        "usageCharacteristics": "Intrinsic use characteristics include encouragement, confidence, self-belief, transformation, breakthrough, reveal and positive celebration. The lyric carries high semantic attention, so use beneath important dialogue may require care.",
+        "adaptability": "Alternative lead-performer and production treatments are supportable in principle while retaining the “Superstar” title/refrain, direct-address empowerment premise, repeated main form and light/colour imagery.",
+        "structuralEditability": "Repeated pre-chorus and chorus returns provide clear section-based edit opportunities. V02’s long pre-vocal opening is shortenable in principle, with the 26.73-second lead-vocal entry providing a relevant structural boundary; an earlier clean 10–15-second edit point has not been demonstrated.",
+        "titleHookIdentity": "“Superstar” is the song’s principal lexical and hook identity, densely repeated through the choruses and reinforced at the close; the chorus/title refrain is the strongest hook-bearing area."
+      },
+      "technical": {
+        "durationSeconds": 248.976,
+        "bpm": 91,
+        "key": "G# major",
+        "timeSignature": "4/4",
+        "language": "English",
+        "explicitContent": false,
+        "tempoDescriptor": "Mid-tempo",
+        "leadVocal": "Female vocal",
+        "productionSummary": "V02 presents as coherent, polished and technically controlled for general professional presentation.",
+        "sourceAvailability": "Higher-quality WAV or AIFF source available."
+      },
+      "rights": {
+        "writers": [
+          {
+            "name": "Mike Blake",
+            "share": "50%"
+          },
+          {
+            "name": "Mike Shannon",
+            "share": "50%"
+          }
+        ],
+        "publishingStatus": "Currently unpublished · No publishing agreement",
+        "masterControl": "The Marveltonez",
+        "clearanceStatus": "Composition and master pre-clearance recorded.",
+        "sampleStatus": "No third-party samples or sample-pack loops declared."
+      },
+      "provenance": {
+        "disclosure": "The composition and complete human demo date from 2016 and pre-date generative-AI use. V02 uses Suno-generated vocal and instrumental audio based on that human source; exported stems were subsequently selected, edited, repaired, balanced, mixed and completed by the writers in Logic Pro."
+      },
+      "considerations": {
+        "opening": "V02 has a substantial pre-vocal opening that may require adaptation where faster vocal or hook establishment is needed.",
+        "dialogue": "Its lyric is semantically foregrounded and may demand attention under dialogue.",
+        "assessmentScope": "General professional-presentation assessment does not establish opportunity-specific or final-delivery readiness."
+      },
+      "content": {
+        "audioUrl": "/catalogue/preview-fixtures/superstar-preview.mp3",
+        "lyricsAvailable": true,
+        "lyrics": [
+          "VERSE",
+          "There's no shame when you’re feelin' down",
+          "You're more than you think you are",
+          "And if you feel you're in the shade right now",
+          "It's time to put your head above the clouds",
+          "So we can see you're a superstar",
+          "",
+          "PRE-CHORUS",
+          "Don't hide don't you be afraid",
+          "Stand up and let the whole world know",
+          "Break out of the cover and into the light",
+          "And the colour of your true love will shine",
+          "Shine like a rainbow",
+          "",
+          "CHORUS",
+          "You are a superstar",
+          "Open your heart and let the colour of your love",
+          "Shine out superstar",
+          "Let everybody know you are a superstar",
+          "Open your heart and let the world see you're a superstar",
+          "",
+          "VERSE",
+          "There's no time to be feeling down",
+          "You're much more than you feel you are",
+          "Step out of the dark into the light",
+          "And you're gonna be lighting in the sky",
+          "So we can see you're a superstar",
+          "",
+          "PRE-CHORUS",
+          "Don't hide don't you be afraid",
+          "Stand up and let the whole world know",
+          "Break out of the cover and into the light",
+          "And the colour of your true love will shine",
+          "Shine like a rainbow",
+          "",
+          "CHORUS",
+          "You are a superstar",
+          "Open your heart and let the colour of your love",
+          "Shine out superstar",
+          "Let everybody know you are a superstar",
+          "Open your heart and let the world see you're a superstar",
+          "",
+          "BRIDGE",
+          "Fly out to the horizon",
+          "And you are gonna see the colours of your dreams come true",
+          "You must believe that you can be free",
+          "'Cause we all believe in you",
+          "",
+          "CHORUS",
+          "(You are a superstar open your heart and let the colour of your love",
+          "Shine out superstar)",
+          "Let everybody know you are a superstar",
+          "Open your heart and let the world see you're a",
+          "Superstar",
+          "You are a superstar"
+        ]
+      },
+      "publication": {
+        "status": "NOT_SELECTED",
+        "profileVersion": "1.0"
+      },
+      "preview": {
+        "status": "DESIGN_PREVIEW",
+        "protectedOnly": true,
+        "source": "Superstar Professional Catalogue Approved Profile Snapshot v1.0",
+        "note": "Protected design fixture only. Does not represent Catalogue Master Professional Catalogue publication approval."
+      }
+    }
+  ]
 }

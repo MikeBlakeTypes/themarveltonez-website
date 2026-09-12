@@ -1,3 +1,29 @@
+## v12.5.0 — Superstar Professional Catalogue Prototype — 12 September 2026
+
+- Implemented Superstar as the first fully populated protected Professional Catalogue design fixture using the approved professional profile snapshot and authoritative lyrics/audio assets.
+- Kept the production publication gate intact: normal records still require `publication.status = APPROVED`; Superstar renders only through an explicit protected `DESIGN_PREVIEW` fixture path.
+- Refined the compact browse card around professional-first hierarchy: title/version, positioning, 91 BPM, G# major, 4:09, female-vocal presentation, four visible tags, role, audio, Details/Lyrics/Rights reveals, shortlist, enquiry and Full Profile.
+- Rebuilt `/catalogue/song/<slug>/` as a genuine professional song profile with Professional Overview, Fit & Performance, Use & Adaptability, Technical, Rights & Clearance, Production & Provenance, conditional Considerations and Lyrics.
+- Added professional-facing duration transformation from canonical seconds to `m:ss`; raw `248.976` is never shown in normal UI.
+- Extended search/filter indexing across approved professional-facing fields while excluding internal Opportunity / Brief Readiness intelligence and NAVURRA engine/object terminology.
+- Extended `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md` to a v2.0 prototype contract aligned with future Catalogue Master → Professional Export → website-feed delivery.
+- Preserved browser-local shortlist privacy, no catalogue interaction analytics, existing Cloudflare Access architecture, public Featured Songs and unrelated website behaviour.
+- Added the approved Superstar preview MP3 only beneath protected `/catalogue/preview-fixtures/` for end-to-end prototype auditioning; this is explicitly not the future production audio-delivery mechanism.
+- Removed legacy implementation-report files from the repository output; implementation reporting remains a separate download.
+
+Changed files:
+
+- modified: `catalogue/index.html`
+- modified: `catalogue/song/index.html`
+- modified: `professional-catalogue.js`
+- modified: `professional-catalogue.css`
+- modified: `metadata/professional-catalogue.json`
+- modified: `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+- added: `catalogue/preview-fixtures/superstar-preview.mp3`
+- removed from repository packaging: legacy `IMPLEMENTATION-REPORT-*.md` files
+
 ## v12.4.4 — Individual Songwriter Profile Pages — 10 September 2026
 
 - Added canonical public profile pages at `/mike-blake/` and `/mike-shannon/` for clearer delegate, industry and search-engine identity resolution.
