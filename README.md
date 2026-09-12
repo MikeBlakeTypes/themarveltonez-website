@@ -1,6 +1,17 @@
-# Marveltonez Website v12.5.0 — Superstar Professional Catalogue Prototype
+# Marveltonez Website v12.5.1 — Superstar Profile Route & Duration Fix
 
-Protected first-real-record prototype of the Professional Catalogue presentation model, built from the current v12.4.4 production repository.
+## v12.5.1 — Superstar Profile Route & Duration Fix — 12 September 2026
+
+- adds a concrete protected `/catalogue/song/superstar/` static route so the Full Profile action resolves reliably on Cloudflare Pages instead of depending only on the wildcard fallback;
+- preserves the generic `/catalogue/song/<slug>/` renderer architecture for future profiles;
+- keeps the Superstar `DESIGN_PREVIEW` / `NOT_SELECTED` publication boundary unchanged;
+- makes the custom audio transport retain the governed professional display duration (`4:09`) instead of replacing it with the browser-decoded floored value (`4:08`) after metadata loads;
+- leaves the accepted card, filters, reveals, shortlist, enquiry, Cloudflare Access and unrelated site presentation unchanged.
+
+Rollback: revert the v12.5.1 commit to restore the v12.5.0 prototype routing/duration behaviour.
+
+
+Current bounded refinement of the v12.5.0 Superstar Professional Catalogue prototype. The underlying prototype was originally built from the authoritative v12.4.4 production repository.
 
 - adds Superstar as an explicit protected `DESIGN_PREVIEW` fixture without changing Catalogue Master publication authority;
 - implements the accepted compact card hierarchy with professional facts, four visible tags, role, audio, Details/Lyrics/Rights reveals, shortlist and enquiry/full-profile actions;

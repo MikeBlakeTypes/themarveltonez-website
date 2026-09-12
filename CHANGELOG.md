@@ -1,3 +1,22 @@
+## v12.5.1 — Superstar Profile Route & Duration Fix — 12 September 2026
+
+- Added a concrete protected `/catalogue/song/superstar/` static route so the Full Profile action resolves reliably on Cloudflare Pages without relying solely on the generic wildcard rewrite.
+- Preserved the generic `/catalogue/song/<slug>/` architecture and the protected `DESIGN_PREVIEW` fixture boundary; Superstar remains `NOT_SELECTED` upstream and is not treated as normally published.
+- Changed the custom audio transport to preserve the governed professional display duration (`4:09`) after browser audio metadata loads instead of replacing it with the browser-floored `4:08` value.
+- Updated Professional Catalogue JavaScript cache busting to `v12.5.1`.
+- Made no changes to the accepted catalogue card/filter/reveal design, Cloudflare Access, public Featured Songs, privacy model or unrelated site presentation.
+- Removed legacy implementation-report files and macOS metadata debris from the packaged repository output.
+
+Changed files:
+
+- modified: `catalogue/index.html`
+- modified: `catalogue/song/index.html`
+- added: `catalogue/song/superstar/index.html`
+- modified: `professional-catalogue.js`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+- removed from repository packaging: legacy `IMPLEMENTATION-REPORT-*.md`, `.DS_Store` and `__MACOSX` debris
+
 ## v12.5.0 — Superstar Professional Catalogue Prototype — 12 September 2026
 
 - Implemented Superstar as the first fully populated protected Professional Catalogue design fixture using the approved professional profile snapshot and authoritative lyrics/audio assets.

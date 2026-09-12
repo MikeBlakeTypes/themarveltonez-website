@@ -1,5 +1,5 @@
 /**
- * Marveltonez Professional Catalogue — v12.5.0
+ * Marveltonez Professional Catalogue — v12.5.1
  *
  * PUBLICATION / PREVIEW BOUNDARY
  * - Reads only /metadata/professional-catalogue.json.
@@ -566,7 +566,10 @@
     const duration = transport.querySelector(".professional-player-duration");
     const muteButton = transport.querySelector(".professional-mute-toggle");
     const total = Number.isFinite(audio.duration) ? audio.duration : 0;
-    const title = profileTitle(state.profiles.find((profile) => String(profile.id) === String(audio.dataset.songId)) || {});
+    const profile = state.profiles.find((item) => String(item.id) === String(audio.dataset.songId)) || {};
+    const title = profileTitle(profile);
+    const governedDuration = formatDisplayDuration(profile.technical?.durationSeconds);
+    const displayedDuration = governedDuration || formatPlayerTime(total);
 
     if (playButton) {
       const isPlaying = !audio.paused && !audio.ended;
@@ -574,12 +577,14 @@
       playButton.setAttribute("aria-label", `${isPlaying ? "Pause" : "Play"} ${title}`);
       playButton.title = isPlaying ? "Pause" : "Play";
     }
+    const atPlaybackEnd = Boolean(governedDuration && total > 0 && (audio.ended || audio.currentTime >= total - 0.25));
+    const displayedCurrent = atPlaybackEnd ? governedDuration : formatPlayerTime(audio.currentTime);
     if (seek) {
       seek.value = total > 0 ? String(Math.round((audio.currentTime / total) * 1000)) : "0";
-      seek.setAttribute("aria-valuetext", `${formatPlayerTime(audio.currentTime)} of ${formatPlayerTime(total)}`);
+      seek.setAttribute("aria-valuetext", `${displayedCurrent} of ${displayedDuration}`);
     }
-    if (current) current.textContent = formatPlayerTime(audio.currentTime);
-    if (duration && total > 0) duration.textContent = formatPlayerTime(total);
+    if (current) current.textContent = displayedCurrent;
+    if (duration && (total > 0 || governedDuration)) duration.textContent = displayedDuration;
     if (muteButton) {
       muteButton.classList.toggle("is-muted", audio.muted);
       muteButton.setAttribute("aria-label", `${audio.muted ? "Unmute" : "Mute"} ${title}`);
