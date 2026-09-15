@@ -1,8 +1,8 @@
 /**
- * Marveltonez Professional Catalogue — v12.5.2
+ * Marveltonez Professional Catalogue — v12.6.0
  *
  * PUBLICATION / PREVIEW BOUNDARY
- * - Reads only /metadata/professional-catalogue.json.
+ * - Reads only /catalogue/data/professional-catalogue.json, inside the Cloudflare Access-protected /catalogue/* surface.
  * - Production profiles render only when publication.status === "APPROVED".
  * - A protected design fixture may render only when the page explicitly opts in
  *   with data-allow-design-fixtures="true" AND preview.status === "DESIGN_PREVIEW"
@@ -13,7 +13,7 @@
 (() => {
   "use strict";
 
-  const DATA_URL = "/metadata/professional-catalogue.json";
+  const DATA_URL = "/catalogue/data/professional-catalogue.json";
   const SHORTLIST_KEY = "marveltonez-professional-shortlist-v1";
   const SHORTLIST_DAYS = 180;
   const CONTACT_EMAIL = "mikeblake@themarveltonez.com";
@@ -185,7 +185,10 @@
       provenance.disclosure,
       considerations.opening,
       considerations.dialogue,
-      considerations.assessmentScope
+      considerations.assessmentScope,
+      considerations.evidenceScope,
+      considerations.knownLimitations,
+      considerations.intendedRemediation
     ];
     return normalise(values.filter(Boolean).join(" "));
   }
@@ -358,8 +361,12 @@
     return `<div class="professional-song-actions" role="group" aria-label="Song information">${buttons}</div><div class="professional-card-reveal-panel" data-card-reveal-panel hidden>${contents}</div>`;
   }
 
+  function professionalAudioUrl(profile) {
+    return profile.content?.audio?.url || profile.content?.audioUrl || "";
+  }
+
   function renderAudio(profile, variant = "card") {
-    const audioUrl = profile.content?.audioUrl;
+    const audioUrl = professionalAudioUrl(profile);
     if (!audioUrl) return '<div class="professional-song-no-audio">Audio not currently available.</div>';
     const title = profileTitle(profile);
     return `<div class="professional-audio-transport ${variant === "profile" ? "professional-audio-transport-profile" : ""}" data-custom-audio-player>
