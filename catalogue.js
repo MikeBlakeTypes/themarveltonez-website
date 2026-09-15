@@ -196,6 +196,10 @@
     if (symbol) symbol.textContent = isOpen ? "−" : "+";
   }
 
+  function publicAudioUrl(song) {
+    return song.audioDelivery?.url || song.audio || "";
+  }
+
   function renderArtwork(song) {
     if (!song.artwork) return "";
 
@@ -290,7 +294,7 @@
             </button>
           </div>
           <audio class="catalogue-audio" preload="metadata" data-song-id="${escapeHTML(song.id)}">
-            <source src="${escapeHTML(song.audio)}" type="audio/mpeg">
+            <source src="${escapeHTML(publicAudioUrl(song))}" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
         </div>

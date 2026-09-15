@@ -137,7 +137,15 @@
       "catalogueId": "MTZ-0008",
       "publicDisplayOrder": 1,
       "artworkThumbnail": "assets/images/song-artwork/put-your-shirt-back-on-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/put-your-shirt-back-on-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/put-your-shirt-back-on-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/put-your-shirt-back-on.mp3",
+        "objectKey": "audio/put-your-shirt-back-on.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "so-youre-dating-my-ex",
@@ -267,7 +275,15 @@
       "catalogueId": "MTZ-0009",
       "publicDisplayOrder": 2,
       "artworkThumbnail": "assets/images/song-artwork/so-youre-dating-my-ex-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/so-youre-dating-my-ex-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/so-youre-dating-my-ex-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/so-youre-dating-my-ex.mp3",
+        "objectKey": "audio/so-youre-dating-my-ex.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "just-sayin",
@@ -402,7 +418,15 @@
       "catalogueId": "MTZ-0007",
       "publicDisplayOrder": 3,
       "artworkThumbnail": "assets/images/song-artwork/just-sayin-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/just-sayin-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/just-sayin-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/just-sayin.mp3",
+        "objectKey": "audio/just-sayin.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "i-didnt-mean-to-turn-out-bad",
@@ -524,7 +548,15 @@
       "catalogueId": "MTZ-0001",
       "publicDisplayOrder": 4,
       "artworkThumbnail": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/i-didnt-mean-to-turn-out-bad-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/i-didn%27t-mean-to-turn-out-bad.mp3",
+        "objectKey": "audio/i-didn't-mean-to-turn-out-bad.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "blocked-and-deleted",
@@ -650,7 +682,15 @@
       "catalogueId": "MTZ-0004",
       "publicDisplayOrder": 5,
       "artworkThumbnail": "assets/images/song-artwork/blocked-and-deleted-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/blocked-and-deleted.mp3?v=20260715",
+        "objectKey": "audio/blocked-and-deleted.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "happy-breakup",
@@ -791,7 +831,15 @@
       "catalogueId": "MTZ-0006",
       "publicDisplayOrder": 6,
       "artworkThumbnail": "assets/images/song-artwork/happy-breakup-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/happy-breakup-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/happy-breakup-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/happy-breakup.mp3",
+        "objectKey": "audio/happy-breakup.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "doorstep",
@@ -931,7 +979,15 @@
       "catalogueId": "MTZ-0005",
       "publicDisplayOrder": 7,
       "artworkThumbnail": "assets/images/song-artwork/doorstep-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/doorstep-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/doorstep-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/doorstep.mp3",
+        "objectKey": "audio/doorstep.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "a-girl-like-me",
@@ -1081,7 +1137,15 @@
       "catalogueId": "MTZ-0003",
       "publicDisplayOrder": 8,
       "artworkThumbnail": "assets/images/song-artwork/a-girl-like-me-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/a-girl-like-me-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/a-girl-like-me-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/a-girl-like-me.mp3",
+        "objectKey": "audio/a-girl-like-me.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     },
     {
       "id": "youre-my-boy",
@@ -1213,8 +1277,17 @@
       "catalogueId": "MTZ-0010",
       "publicDisplayOrder": 9,
       "artworkThumbnail": "assets/images/song-artwork/youre-my-boy-400.webp",
-      "artworkThumbnailLarge": "assets/images/song-artwork/youre-my-boy-800.webp"
+      "artworkThumbnailLarge": "assets/images/song-artwork/youre-my-boy-800.webp",
+      "audioDelivery": {
+        "recordingId": null,
+        "deliveryMode": "PUBLIC_R2_LEGACY",
+        "url": "https://audio.themarveltonez.com/audio/youre-my-boy.mp3",
+        "objectKey": "audio/youre-my-boy.mp3",
+        "canonicalObjectKey": null,
+        "migrationStatus": "PENDING_RECORDING_ID"
+      }
     }
   ],
-  "sourceCatalogue": "Marveltonez Catalogue Master v2.4"
+  "sourceCatalogue": "Marveltonez Catalogue Master v2.4",
+  "audioDeliverySchemaVersion": "1.0"
 }

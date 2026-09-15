@@ -1,3 +1,32 @@
+## v12.6.0 — Catalogue Audio & Exposure Architecture — 15 September 2026
+
+- Implemented the approved 2c catalogue/output addendum at the website-delivery layer: one canonical audio asset per governed recording/version, independently controlled Public and Professional presentation surfaces, and canonical production filenames of `MTZ-####-V##.mp3`.
+- Preserved all nine existing Public Featured Song audio URLs as verified legacy R2 references because their current Song Profiles rows do not yet carry authoritative Song Version values; canonical R2 migration remains pending until each current recording/version identity exists.
+- Added backward-compatible `audioDelivery` metadata to `/metadata/songs.json`; the public renderer now prefers the structured delivery URL while retaining the legacy `audio` field as a fallback.
+- Added a protected `/catalogue/audio/MTZ-####-V##.mp3` Pages Function for future Professional-only audio. It expects a private R2 binding named `PROFESSIONAL_AUDIO`, supports byte-range requests for seeking, and refuses files not present in its generated approved-recording allow-list.
+- Moved the Professional Catalogue feed from `/metadata/professional-catalogue.json` to `/catalogue/data/professional-catalogue.json`, placing professional profile data inside the existing `/catalogue/*` Cloudflare Access route tree.
+- Updated Professional Catalogue JavaScript to read the protected data path and the new structured audio-delivery object with a compatibility fallback.
+- Applied the current authoritative Superstar R02 professional-facing text revision and retained `publication.status = NOT_SELECTED` plus the protected `DESIGN_PREVIEW` boundary.
+- Preserved the already-implemented concise public `/song/<slug>/` routes and professional `/catalogue/song/<slug>/` routes.
+- Added `CATALOGUE-AUDIO-DELIVERY-CONTRACT.md` and updated `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md` to v2.1.
+- Removed legacy implementation-report files from the packaged repository output; reporting remains separate from the deployable repository.
+
+Changed files include:
+
+- modified: `metadata/songs.json`
+- moved/modified: `metadata/professional-catalogue.json` → `catalogue/data/professional-catalogue.json`
+- modified: `catalogue.js`
+- modified: `professional-catalogue.js`
+- modified: `catalogue/index.html`
+- modified: `catalogue/song/index.html`
+- modified: `catalogue/song/superstar/index.html`
+- modified: `unreleased.html` and the nine public `/song/<slug>/index.html` pages for cache-busting only
+- added: `functions/catalogue/audio/[[path]].js`
+- added: `CATALOGUE-AUDIO-DELIVERY-CONTRACT.md`
+- modified: `PROFESSIONAL-CATALOGUE-DATA-CONTRACT.md`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
 ## v12.5.2 — Governed Player Duration Display Fix — 12 September 2026
 
 - Fixed the Professional Catalogue audio transport so the total-duration label is taken directly from the governed professional display duration embedded in the rendered player rather than being recalculated from browser-decoded media metadata.

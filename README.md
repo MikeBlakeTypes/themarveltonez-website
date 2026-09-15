@@ -1,4 +1,20 @@
-# Marveltonez Website v12.5.2 — Governed Player Duration Display Fix
+# Marveltonez Website v12.6.0 — Catalogue Audio & Exposure Architecture
+
+
+## v12.6.0 — Catalogue Audio & Exposure Architecture — 15 September 2026
+
+- implements the approved 2c single-canonical-audio / independent Public-and-Professional exposure model without reopening Engine 1 or Engine 2;
+- keeps the existing nine Public Featured Song audio files on their verified legacy R2 URLs until each song receives an authoritative current recording/version ID; no `MTZ-####-V##` recording ID is invented;
+- adds backward-compatible audio-delivery metadata to the public song feed so each legacy object can later migrate cleanly to a canonical `MTZ-####-V##.mp3` object;
+- introduces a protected `/catalogue/audio/MTZ-####-V##.mp3` Pages Function for future Professional-only audio, backed by a private R2 binding named `PROFESSIONAL_AUDIO` and an explicit approved-recording allow-list;
+- moves the Professional Catalogue JSON feed from the root `/metadata/` tree into `/catalogue/data/`, keeping the professional profile data inside the same Cloudflare Access route boundary as the Professional Secure Access Area;
+- applies the authoritative Superstar `R02` professional-facing text revision from the current Catalogue Master while preserving its current `NOT_SELECTED` / protected `DESIGN_PREVIEW` state;
+- preserves the existing concise Public `/song/<slug>/` and Professional `/catalogue/song/<slug>/` sharing routes;
+- adds `CATALOGUE-AUDIO-DELIVERY-CONTRACT.md` and updates the Professional Catalogue data contract to v2.1.
+
+**Cloudflare setup before the first Professional-only production audio is used:** create/select a private R2 bucket, bind it to the Pages project as `PROFESSIONAL_AUDIO`, and redeploy. Existing Public + Professional songs do not need this binding because both surfaces can reference their single public canonical audio asset.
+
+Rollback: revert the v12.6.0 commit to restore the v12.5.2 data-path/audio-delivery implementation.
 
 ## v12.5.2 — Governed Player Duration Display Fix — 12 September 2026
 
