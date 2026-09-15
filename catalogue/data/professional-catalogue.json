@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.0-preview",
+  "schemaVersion": "2.1-preview",
   "catalogueTitle": "Marveltonez Professional Catalogue",
   "publicationRule": "Production records render only when publication.status is APPROVED. Protected design fixtures can render only on pages that explicitly opt in and only when preview.status is DESIGN_PREVIEW and preview.protectedOnly is true.",
   "profiles": [
@@ -12,7 +12,7 @@
         "recordingId": "MTZ-0014-V02",
         "version": "V02",
         "recordingType": "Presentation Master",
-        "catalogueRecordRevision": "R01"
+        "catalogueRecordRevision": "R02"
       },
       "discovery": {
         "genreStyle": [
@@ -70,17 +70,17 @@
         ]
       },
       "positioning": {
-        "card": "Uplifting, anthemic pop with an aspirational, encouraging centre and a strong recurring title hook; V02 is presented as a polished female-led presentation production.",
+        "card": "Uplifting, anthemic pop with an aspirational, encouraging centre and a strong recurring title hook; the current Superstar presentation is a polished, female-led production.",
         "listeningDescription": "Midtempo uplifting/anthemic pop at 91 BPM in G# major, built around a direct-address encouragement lyric, repeated verse–pre-chorus–chorus architecture and a strongly recurring “Superstar” hook. This version is presented with a female solo lead in a polished, coherent full-mix production that builds toward the bridge and final chorus. The song is not gender-bound and is open to alternative lead-performer and production treatments; its repeated sectional structure also provides bounded edit and shortening potential while preserving the central title hook and message."
       },
       "professionalDetail": {
         "moodDescription": "Hopeful, affirming and encouraging, with a positive motivational direction from discouragement and darkness toward light, colour, freedom and self-belief.",
         "lyricalThemeDescription": "Direct-address encouragement centred on self-worth, confidence, visibility, self-belief and freedom, using light/colour imagery to move from discouragement toward emergence and belief.",
-        "vocalPerformance": "V02 uses a female solo lead that is text-forward and structurally central, carrying the encouragement message and recurring title refrain. The material favours a clear, confident, outward-facing delivery.",
+        "vocalPerformance": "Superstar is presented here with a female solo lead that is text-forward and structurally central, carrying the encouragement message and recurring title refrain. The material favours a clear, confident, outward-facing delivery.",
         "performerFit": "Strongly compatible with a solo lead performer capable of a clear, confident and affirmative delivery. Performer gender is not demonstrated as composition-bound; backing or group-vocal reinforcement is compatible but not required.",
         "usageCharacteristics": "Intrinsic use characteristics include encouragement, confidence, self-belief, transformation, breakthrough, reveal and positive celebration. The lyric carries high semantic attention, so use beneath important dialogue may require care.",
         "adaptability": "Alternative lead-performer and production treatments are supportable in principle while retaining the “Superstar” title/refrain, direct-address empowerment premise, repeated main form and light/colour imagery.",
-        "structuralEditability": "Repeated pre-chorus and chorus returns provide clear section-based edit opportunities. V02’s long pre-vocal opening is shortenable in principle, with the 26.73-second lead-vocal entry providing a relevant structural boundary; an earlier clean 10–15-second edit point has not been demonstrated.",
+        "structuralEditability": "Repeated pre-chorus and chorus returns provide clear section-based edit opportunities. The current Superstar presentation has a long pre-vocal opening that is shortenable in principle, with the 26.73-second lead-vocal entry providing a relevant structural boundary; an earlier clean 10–15-second edit point has not been demonstrated.",
         "titleHookIdentity": "“Superstar” is the song’s principal lexical and hook identity, densely repeated through the choruses and reinforced at the close; the chorus/title refrain is the strongest hook-bearing area."
       },
       "technical": {
@@ -92,7 +92,7 @@
         "explicitContent": false,
         "tempoDescriptor": "Mid-tempo",
         "leadVocal": "Female vocal",
-        "productionSummary": "V02 presents as coherent, polished and technically controlled for general professional presentation.",
+        "productionSummary": "The current Superstar presentation is coherent, polished and technically controlled for general professional presentation. Production maturity has not been separately assessed and no remediation decision has been made. Separate creator declarations describe the production as complete and pitch-ready; those remain creator declarations rather than independent readiness determinations.",
         "sourceAvailability": "Higher-quality WAV or AIFF source available."
       },
       "rights": {
@@ -108,16 +108,19 @@
         ],
         "publishingStatus": "Currently unpublished · No publishing agreement",
         "masterControl": "The Marveltonez",
-        "clearanceStatus": "Composition and master pre-clearance recorded.",
+        "clearanceStatus": "Pre-clearance status: Yes — Composition and Master.",
         "sampleStatus": "No third-party samples or sample-pack loops declared."
       },
       "provenance": {
-        "disclosure": "The composition and complete human demo date from 2016 and pre-date generative-AI use. V02 uses Suno-generated vocal and instrumental audio based on that human source; exported stems were subsequently selected, edited, repaired, balanced, mixed and completed by the writers in Logic Pro."
+        "disclosure": "The composition and complete human demo date from 2016 and pre-date generative-AI use. The current Superstar recording uses Suno-generated vocal and instrumental audio based on that human source; exported stems were subsequently selected, edited, repaired, balanced, mixed and completed by the writers in Logic Pro."
       },
       "considerations": {
-        "opening": "V02 has a substantial pre-vocal opening that may require adaptation where faster vocal or hook establishment is needed.",
+        "knownLimitations": "No material sonic or production defect is currently identified in the approved assessment. A separate formal limitations/defects assessment has not been completed. The current Superstar presentation has a substantial pre-vocal opening that may be adaptable, but it is not treated as an automatic defect.",
+        "intendedRemediation": "No specific remediation has been decided. A shortened-opening treatment may be considered only where a future opportunity requires faster vocal or hook establishment.",
+        "opening": "The current Superstar presentation has a substantial pre-vocal opening that may require adaptation where faster vocal or hook establishment is needed.",
         "dialogue": "Its lyric is semantically foregrounded and may demand attention under dialogue.",
-        "assessmentScope": "General professional-presentation assessment does not establish opportunity-specific or final-delivery readiness."
+        "assessmentScope": "General professional presentation does not establish opportunity-specific or final-delivery readiness.",
+        "evidenceScope": "Exact instrumentation and fine vocal-range/timbre detail are not claimed from the current full-mix presentation."
       },
       "content": {
         "audioUrl": "/catalogue/preview-fixtures/superstar-preview.mp3",
@@ -178,17 +181,23 @@
           "Open your heart and let the world see you're a",
           "Superstar",
           "You are a superstar"
-        ]
+        ],
+        "audio": {
+          "recordingId": "MTZ-0014-V02",
+          "deliveryMode": "PROTECTED_DESIGN_FIXTURE",
+          "url": "/catalogue/preview-fixtures/superstar-preview.mp3",
+          "canonicalObjectKey": null
+        }
       },
       "publication": {
         "status": "NOT_SELECTED",
-        "profileVersion": "1.0"
+        "profileVersion": "1.1"
       },
       "preview": {
         "status": "DESIGN_PREVIEW",
         "protectedOnly": true,
         "source": "Superstar Professional Catalogue Approved Profile Snapshot v1.0",
-        "note": "Protected design fixture only. Does not represent Catalogue Master Professional Catalogue publication approval."
+        "note": "Protected design fixture only. R02 governed professional-facing text. Does not represent Catalogue Master Professional Catalogue publication approval."
       }
     }
   ]

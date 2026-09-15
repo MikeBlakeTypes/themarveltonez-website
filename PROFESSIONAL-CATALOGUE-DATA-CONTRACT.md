@@ -1,4 +1,4 @@
-# Marveltonez Professional Catalogue Data Contract v2.0 — Prototype
+# Marveltonez Professional Catalogue Data Contract v2.1 — Protected Data & Canonical Audio
 
 ## Purpose
 
@@ -14,9 +14,11 @@ The website does **not** consume raw SIHO, SAO, E2D, 2b operational reports, hum
 
 ## Authoritative website data source in the current implementation
 
-`/metadata/professional-catalogue.json`
+`/catalogue/data/professional-catalogue.json`
 
 The legacy `/metadata/songs.json` remains non-authoritative for the Professional Secure Access Area and is not read by the Professional Catalogue renderer.
+
+The professional feed deliberately lives under `/catalogue/*` so it is covered by the same Cloudflare Access boundary as the protected catalogue pages. The retired root-level `/metadata/professional-catalogue.json` path must not be restored, because protected professional data must not sit outside the protected route tree.
 
 ## Production publication gate
 
@@ -109,12 +111,21 @@ The frontend is designed around discrete approved professional fields rather tha
     "disclosure": "Approved professional-facing provenance disclosure"
   },
   "considerations": {
+    "knownLimitations": "Approved professional-facing limitations/assessment text where retained in the feed",
+    "intendedRemediation": "Approved remediation text where retained in the feed",
     "opening": "Optional professional consideration",
     "dialogue": "Optional professional consideration",
-    "assessmentScope": "Optional professional consideration"
+    "assessmentScope": "Optional professional consideration",
+    "evidenceScope": "Optional professional consideration"
   },
   "content": {
-    "audioUrl": "Authorised protected or production audio URL",
+    "audio": {
+      "recordingId": "MTZ-XXXX-VXX",
+      "deliveryMode": "PUBLIC_CANONICAL_R2 or PROTECTED_CATALOGUE_R2",
+      "url": "Authorised public or protected audio URL",
+      "canonicalObjectKey": "MTZ-XXXX-VXX.mp3"
+    },
+    "audioUrl": "Backward-compatible fallback only",
     "lyricsAvailable": true,
     "lyrics": ["VERSE", "Lyric line"]
   },
@@ -198,7 +209,24 @@ The shortlist is not part of the feed. It remains browser-local after deliberate
 
 ## Audio
 
-Routine production audio should continue to use the authorised Marveltonez audio delivery architecture. The v12.5.0 Superstar prototype stores one temporary approved preview MP3 under `/catalogue/preview-fixtures/` solely so the protected design fixture can be auditioned end to end. That protected fixture path is not the proposed production delivery mechanism and must be replaced by the eventual Professional Export / production-audio arrangement when the prototype is promoted.
+A recording/version has one canonical audio asset at a time. Public and Professional catalogue pages are separate presentation surfaces; they do not require duplicate copies of identical audio.
+
+Canonical web-delivery filenames use the governed recording identity:
+
+`MTZ-####-V##.mp3`
+
+Delivery depends on exposure state:
+
+- **Public + Professional:** both surfaces may use the same public canonical R2 asset.
+- **Public only:** the public surface uses the public canonical R2 asset.
+- **Professional only:** the profile uses `/catalogue/audio/MTZ-####-V##.mp3`, which is inside the Cloudflare Access-protected route tree and is served from a private R2 binding named `PROFESSIONAL_AUDIO`.
+- **Neither:** no external page/feed should expose the recording.
+
+The protected audio Function also maintains an explicit allow-list of currently approved Professional-only recording IDs. Merely leaving an object in the private bucket does not make it deliverable after Professional exposure is switched off.
+
+The legacy nine public recordings retain their existing public R2 URLs until each has an authoritative current recording/version ID. Their web records may carry `PUBLIC_R2_LEGACY` migration metadata, but no `MTZ-####-V##` recording ID is invented. Migration is copy/update/verify/retire: the legacy object is not retired until the canonical object and website reference have been verified.
+
+The v12.5.x Superstar prototype stores one temporary approved preview MP3 under `/catalogue/preview-fixtures/` solely so the protected design fixture can be auditioned end to end. In v12.6.0 this is represented as `PROTECTED_DESIGN_FIXTURE`; it is not the production delivery mechanism.
 
 ## Legacy separation
 
