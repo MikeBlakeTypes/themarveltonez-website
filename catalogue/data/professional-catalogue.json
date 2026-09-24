@@ -123,7 +123,7 @@
         "evidenceScope": "Exact instrumentation and fine vocal-range/timbre detail are not claimed from the current full-mix presentation."
       },
       "content": {
-        "audioUrl": "/catalogue/preview-fixtures/superstar-preview.mp3",
+        "audioUrl": "/catalogue/audio/MTZ-0014-V02.mp3",
         "lyricsAvailable": true,
         "lyrics": [
           "VERSE",
@@ -184,20 +184,15 @@
         ],
         "audio": {
           "recordingId": "MTZ-0014-V02",
-          "deliveryMode": "PROTECTED_DESIGN_FIXTURE",
-          "url": "/catalogue/preview-fixtures/superstar-preview.mp3",
-          "canonicalObjectKey": null
+          "deliveryMode": "PROTECTED_CATALOGUE_R2",
+          "url": "/catalogue/audio/MTZ-0014-V02.mp3",
+          "canonicalObjectKey": "MTZ-0014-V02.mp3"
         }
       },
       "publication": {
-        "status": "NOT_SELECTED",
-        "profileVersion": "1.1"
-      },
-      "preview": {
-        "status": "DESIGN_PREVIEW",
-        "protectedOnly": true,
-        "source": "Superstar Professional Catalogue Approved Profile Snapshot v1.0",
-        "note": "Protected design fixture only. R02 governed professional-facing text. Does not represent Catalogue Master Professional Catalogue publication approval."
+        "status": "APPROVED",
+        "profileVersion": "1.1",
+        "sourceCatalogueStatus": "PUBLISHED"
       }
     }
   ]
