@@ -293,7 +293,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://audio.themarveltonez.com/audio/just-sayin.mp3",
+      "audio": "https://audio.themarveltonez.com/audio/MTZ-0007-V02.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -420,12 +420,12 @@
       "artworkThumbnail": "assets/images/song-artwork/just-sayin-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/just-sayin-800.webp",
       "audioDelivery": {
-        "recordingId": null,
-        "deliveryMode": "PUBLIC_R2_LEGACY",
-        "url": "https://audio.themarveltonez.com/audio/just-sayin.mp3",
-        "objectKey": "audio/just-sayin.mp3",
-        "canonicalObjectKey": null,
-        "migrationStatus": "PENDING_RECORDING_ID"
+        "recordingId": "MTZ-0007-V02",
+        "deliveryMode": "PUBLIC_CANONICAL_R2",
+        "url": "https://audio.themarveltonez.com/audio/MTZ-0007-V02.mp3",
+        "objectKey": "audio/MTZ-0007-V02.mp3",
+        "canonicalObjectKey": "MTZ-0007-V02.mp3",
+        "migrationStatus": "CANONICAL_VERIFIED"
       }
     },
     {
@@ -566,7 +566,7 @@
         "Mike Blake",
         "Mike Shannon"
       ],
-      "audio": "https://audio.themarveltonez.com/audio/blocked-and-deleted.mp3?v=20260715",
+      "audio": "https://audio.themarveltonez.com/audio/MTZ-0004-V02.mp3",
       "lyrics": {
         "paragraphs": [
           "CHORUS",
@@ -684,12 +684,12 @@
       "artworkThumbnail": "assets/images/song-artwork/blocked-and-deleted-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp",
       "audioDelivery": {
-        "recordingId": null,
-        "deliveryMode": "PUBLIC_R2_LEGACY",
-        "url": "https://audio.themarveltonez.com/audio/blocked-and-deleted.mp3?v=20260715",
-        "objectKey": "audio/blocked-and-deleted.mp3",
-        "canonicalObjectKey": null,
-        "migrationStatus": "PENDING_RECORDING_ID"
+        "recordingId": "MTZ-0004-V02",
+        "deliveryMode": "PUBLIC_CANONICAL_R2",
+        "url": "https://audio.themarveltonez.com/audio/MTZ-0004-V02.mp3",
+        "objectKey": "audio/MTZ-0004-V02.mp3",
+        "canonicalObjectKey": "MTZ-0004-V02.mp3",
+        "migrationStatus": "CANONICAL_VERIFIED"
       }
     },
     {

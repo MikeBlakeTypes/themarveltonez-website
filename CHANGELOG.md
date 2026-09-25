@@ -1,3 +1,21 @@
+## v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication — 25 September 2026
+
+- Added Blocked and Deleted `MTZ-0004-V02` and Just Sayin’ `MTZ-0007-V02` as approved production records in the protected Professional Catalogue feed, using the live approved Professional Export fields and governed lyrics.
+- Set both Professional Catalogue records to `PUBLIC_CANONICAL_R2` with verified canonical public audio URLs.
+- Migrated only the two corresponding Public Catalogue audio-delivery records from legacy title-based objects to their canonical recording-ID objects; all public editorial content, artwork, lyrics and ordering remain unchanged.
+- Added concrete protected routes at `/catalogue/song/blocked-and-deleted/` and `/catalogue/song/just-sayin/` following the existing Superstar route pattern.
+- Preserved Superstar, You’re My Boy, the Professional Catalogue renderer and styling, filters, shortlist, enquiry behaviour, Cloudflare Access and unrelated site behaviour.
+- Legacy title-based public R2 objects remain in place pending post-deployment verification; no R2 deletion is part of this release.
+
+Changed files:
+
+- modified: `catalogue/data/professional-catalogue.json`
+- modified: `metadata/songs.json`
+- added: `catalogue/song/blocked-and-deleted/index.html`
+- added: `catalogue/song/just-sayin/index.html`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
 ## v12.6.0 — Catalogue Audio & Exposure Architecture — 15 September 2026
 
 - Implemented the approved 2c catalogue/output addendum at the website-delivery layer: one canonical audio asset per governed recording/version, independently controlled Public and Professional presentation surfaces, and canonical production filenames of `MTZ-####-V##.mp3`.
