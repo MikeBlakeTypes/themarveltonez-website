@@ -4,7 +4,7 @@ const CANONICAL_RECORDING_FILE = /^MTZ-\d{4}-V\d{2}\.mp3$/i;
 // Catalogue exposure state. A protected R2 object is not served merely because
 // it exists in the bucket. No production professional-only recordings are
 // authorised in the current v12.6.0 build, so the initial allow-list is empty.
-const APPROVED_PROTECTED_RECORDINGS = new Set(["MTZ-0014-V02"]);
+const APPROVED_PROTECTED_RECORDINGS = new Set(["MTZ-0014-V02", "MTZ-0002-V02", "MTZ-0026-V01"]);
 
 function requestFileName(params) {
   const raw = Array.isArray(params?.path)

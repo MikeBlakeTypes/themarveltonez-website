@@ -553,6 +553,352 @@
         "profileVersion": "1.1",
         "sourceCatalogueStatus": "PUBLISHED"
       }
+    },
+    {
+      "id": "MTZ-0002-V02",
+      "slug": "sisters-united",
+      "identity": {
+        "title": "Sisters United",
+        "compositionId": "MTZ-0002",
+        "recordingId": "MTZ-0002-V02",
+        "version": "V02",
+        "recordingType": "Presentation Master",
+        "catalogueRecordRevision": "R01"
+      },
+      "discovery": {
+        "genreStyle": [
+          "Retro female vocal-group pop; doo-wop-like ensemble presentation; Doo-wop / Retro Pop as creator-Intake positioning."
+        ],
+        "mood": [
+          "Assertive, uplifting, communal, energised and celebratory, with frustration converted into confidence, unity and collective resolve."
+        ],
+        "lyricalThemes": [
+          "Female solidarity, self-assertion, teamwork, collective action and refusing to be put down, expressed through plural identity, urgency and performance/action imagery."
+        ],
+        "tempoCategory": "Upbeat / brisk",
+        "leadVocal": [
+          "Female vocal group / three-part female harmony"
+        ],
+        "tags": [
+          "Pop",
+          "Doo-wop",
+          "Retro",
+          "Upbeat",
+          "Female vocal group",
+          "Three-part harmony",
+          "Empowerment",
+          "Solidarity",
+          "Teamwork",
+          "Girl group"
+        ],
+        "cardTags": [
+          "Pop",
+          "Doo-wop",
+          "Retro",
+          "Upbeat"
+        ],
+        "roles": [
+          "Artist Pitch",
+          "Publisher / A&R Showcase",
+          "Sync Pitch"
+        ]
+      },
+      "positioning": {
+        "card": "Upbeat retro female vocal-group pop with doo-wop-like ensemble characteristics, built around collective empowerment, female solidarity, a shared determination and a strongly repeated chorus, with a rallying three-part female-harmony presentation.",
+        "listeningDescription": "Sisters United is a brisk 130 BPM song in A major built around a plural female-solidarity lyric, repeated title choruses and recurring Pre-Chorus response cues. The current presentation uses a three-part female-harmony girl-group configuration with a steady 4/4 drive, bright activating character and compact full-mix dynamics. Its hook identity is concentrated in “Sisters united”, the recurring “right now” urgency and group-response language. The authorised evidence supports a retro female vocal-group / doo-wop-like reading; the specific 1940s label remains creator/Intake positioning rather than an independently verified historical-authenticity conclusion."
+      },
+      "professionalDetail": {
+        "moodDescription": "Assertive, uplifting, communal, energised and celebratory, with frustration converted into confidence, unity and collective resolve.",
+        "lyricalThemeDescription": "Female solidarity, self-assertion, teamwork, collective action and refusing to be put down, expressed through plural identity, urgency and performance/action imagery.",
+        "vocalPerformance": "The current presentation uses three AI-generated female vocalist identities in a three-part female-harmony girl-group configuration. The arrangement favours clear ensemble diction, rhythmic confidence, coordinated lead/response moments and stacked-harmony reinforcement. Exact individual ranges, tessituras and isolated timbres are not claimed from the current full mix.",
+        "performerFit": "Strongly compatible with a female vocal group or ensemble able to project shared identity, rallying energy and coordinated harmony/response. A solo recast is possible in principle but would reduce the currently evidenced ensemble dimension and would still need to carry the plural “sisters united” identity.",
+        "usageCharacteristics": "Intrinsic compatibility with female-solidarity, teamwork, empowerment, confidence, performance/show and collective-mobilisation contexts. The direct, slogan-like title refrain carries high semantic attention, so use beneath important dialogue may require care.",
+        "adaptability": "Alternative instrumentation, production density and groove treatments are supportable in principle while preserving the title/refrain, plural collective premise, recurring urgency, repeated Pre-Chorus/Chorus architecture and vocal-group function. No destination genre, named artist or live opportunity is inferred.",
+        "structuralEditability": "Repeated Pre-Chorus/Chorus cycles and an extended Final Chorus/Outro create section-selection and shortening opportunities in principle while preserving title identity. Exact clean cut points and sonic edit cleanliness have not been demonstrated from the authorised full mix.",
+        "titleHookIdentity": "¯"
+      },
+      "technical": {
+        "durationSeconds": 185.592,
+        "bpm": 130,
+        "key": "A major",
+        "timeSignature": "4/4",
+        "language": "English",
+        "explicitContent": false,
+        "tempoDescriptor": "Upbeat / brisk",
+        "leadVocal": "Female vocal group / three-part female harmony",
+        "productionSummary": "At the authorised MP3 resolution, the current presentation is technically controlled in overall level and stereo behaviour, with a forward compact presentation and no measured level/stereo defect that by itself invalidates professional review. Engine 1 production maturity and declared pitch readiness remain not assessed, so this does not establish production completion, final-delivery readiness or opportunity-specific readiness."
+      },
+      "rights": {
+        "writers": [
+          {
+            "name": "Mike Blake",
+            "share": "50%"
+          },
+          {
+            "name": "Mike Shannon",
+            "share": "50%"
+          }
+        ],
+        "publishingStatus": "Underlying composition ownership is Mike Blake 50% / Mike Shannon 50%. Master owner: The Marveltonez. The work is recorded as unpublished with no current publishing agreement, and PRS registration is not currently found/established.",
+        "masterControl": "Master owner: The Marveltonez. The current nominated presentation asset is the governed MP3; a higher-quality WAV or AIFF source is recorded as available.",
+        "clearanceStatus": "Engine 1 source pre-clearance: Yes — Composition and Master. No third-party samples or sample-pack loops are declared. PRS registration is not currently established; no stronger independent licensing-clearance conclusion is inferred beyond the governed source facts."
+      },
+      "provenance": {
+        "disclosure": "The human-written, human-arranged, human-performed and human-produced 2006 source song and recording pre-date generative-AI use. The current presentation uses Suno-generated alternate arrangement, vocal and instrumental audio based on that pre-existing work, followed by substantial human editing, repair, balancing, mixing and completion in Logic Pro."
+      },
+      "considerations": {
+        "knownLimitations": "Production maturity, current limitations/defects, remediation-before-pitching and declared pitch readiness remain not assessed/unknown/not decided. Exact instrumentation, individual vocal ranges/timbres and note-level chord/melody detail are unavailable at the current evidence resolution; technical observations are limited to the nominated MP3.",
+        "intendedRemediation": "No specific remediation is governed. Any future opportunity-specific edit, alternate treatment or final-delivery preparation should be assessed and validated against the actual use.",
+        "assessmentScope": "The plural “sisters united” identity and current ensemble/harmony design are material presentation anchors. A solo or substantially different vocal recast may change the evidenced group dimension. The current retro/doowop-like reading is supported broadly, while the specific 1940s period label remains creator/Intake context rather than independently verified historical authenticity. Production maturity/pitch readiness remain not assessed; PRS registration is not currently established."
+      },
+      "content": {
+        "audioUrl": "/catalogue/audio/MTZ-0002-V02.mp3",
+        "lyricsAvailable": true,
+        "lyrics": [
+          "CHORUS",
+          "Mmm, right now, right now,",
+          "Sisters united gonna shake it all out",
+          "Right now, right now",
+          "Sisters united gonna bring the house down",
+          "",
+          "VERSE",
+          "I’m getting tired of people puttin’ us down",
+          "Time to get together put your feet on the ground",
+          "No good a-wishing thinking something might change",
+          "Sisters united gonna do it our way",
+          "",
+          "PRE-CHORUS",
+          "Gonna hit the road (oh yeah)",
+          "We’re gonna take the show (out there)",
+          "Show ‘em what we know (oh yeah)",
+          "The only way to go is up there",
+          "",
+          "CHORUS",
+          "We’re gonna do it, gonna do it right now",
+          "Sisters united gonna shake it all out",
+          "We’re all united, never be divided",
+          "Sisters united gonna bring the house down",
+          "",
+          "VERSE",
+          "If you don’t believe me better open your eyes",
+          "Brother let me tell ya better take some advice",
+          "Won’t do no favours ‘til we get what we want",
+          "Sisters united gonna kick up a storm",
+          "",
+          "PRE-CHORUS",
+          "Gonna hit the road (oh yeah)",
+          "We’re gonna take the show (out there)",
+          "Show ‘em what we know (oh yeah)",
+          "The only way to go is up there",
+          "",
+          "CHORUS",
+          "We’re gonna do it, gonna do it right now",
+          "Sisters united gonna shake it all out",
+          "We’re all united, never be divided",
+          "Sisters united gonna bring the house down",
+          "",
+          "PRE-CHORUS",
+          "Gonna hit the road (oh yeah)",
+          "We’re gonna take the show (out there)",
+          "Show ‘em what we know (oh yeah)",
+          "The only way to go is up there",
+          "",
+          "CHORUS",
+          "(Sisters united gonna shake it all out)",
+          "We’re all united, never be divided",
+          "Sisters united gonna bring the house down",
+          "(Right now) right now (right now)",
+          "Oh! Sisters united gonna shake it all out",
+          "We’re all united, never be divided",
+          "Sisters united gonna bring the house down",
+          "(Right now, right now)",
+          "Sisters united gonna shake it all out",
+          "We’re all united, never be divided",
+          "Sisters united gonna bring the house down"
+        ],
+        "audio": {
+          "recordingId": "MTZ-0002-V02",
+          "deliveryMode": "PROTECTED_CATALOGUE_R2",
+          "url": "/catalogue/audio/MTZ-0002-V02.mp3",
+          "canonicalObjectKey": "MTZ-0002-V02.mp3"
+        }
+      },
+      "publication": {
+        "status": "APPROVED",
+        "sourceCatalogueStatus": "PUBLISHED"
+      }
+    },
+    {
+      "id": "MTZ-0026-V01",
+      "slug": "move-your-ass",
+      "identity": {
+        "title": "Move Your Ass",
+        "compositionId": "MTZ-0026",
+        "recordingId": "MTZ-0026-V01",
+        "version": "V01",
+        "recordingType": "Full Demo",
+        "catalogueRecordRevision": "R01"
+      },
+      "discovery": {
+        "genreStyle": [
+          "Country; Country Rock as creator/Intake positioning; broad story-led country/country-rock compatibility at the approved intrinsic-analysis resolution."
+        ],
+        "mood": [
+          "Defiant, confrontational, dismissive and self-assertive, with an empowered trajectory from accusation and recognition toward decisive separation and boundary-setting."
+        ],
+        "lyricalThemes": [
+          "Breakup confrontation, recognising a roaming or womanising partner, rejecting reconciliation, reclaiming personal boundaries and ordering the partner to leave."
+        ],
+        "tempoCategory": "Midtempo",
+        "leadVocal": [
+          "Female vocal / solo lead"
+        ],
+        "tags": [
+          "Country",
+          "Country Rock",
+          "Midtempo",
+          "Female vocal",
+          "Solo lead",
+          "Breakup",
+          "Confrontation",
+          "Boundary-setting",
+          "Defiant",
+          "Explicit"
+        ],
+        "cardTags": [
+          "Country",
+          "Country Rock",
+          "Midtempo",
+          "Female vocal"
+        ],
+        "roles": [
+          "Artist Pitch",
+          "Publisher / A&R Showcase",
+          "Sync Pitch"
+        ]
+      },
+      "positioning": {
+        "card": "Midtempo country/country-rock breakup material built around a blunt imperative title hook, direct confrontation and decisive boundary-setting; the current presentation uses a female solo lead with an assertive, character-forward delivery.",
+        "listeningDescription": "Move Your Ass is a 90 BPM song in A major built around Verse → Pre-Chorus → Chorus cycles, a Bridge, an exit-tag extension and a Final Chorus/Outro. The current V01 presentation uses a female solo lead over a steady 4/4 midtempo pulse, with the repeated “Move your ass” command functioning as the principal title and structural hook. The lyric moves from accusation and recognition of a roaming, womanising partner into explicit dismissal and refusal of reconciliation. Engine 1 records Country as the primary creator genre assertion and Country Rock as secondary; the approved intrinsic analysis broadly supports that framing without narrowing it to a specific market subgenre or external artist comparison."
+      },
+      "professionalDetail": {
+        "moodDescription": "Defiant, confrontational, dismissive and self-assertive, with an empowered trajectory from accusation and recognition toward decisive separation and boundary-setting.",
+        "lyricalThemeDescription": "Breakup confrontation, recognising a roaming or womanising partner, rejecting reconciliation, reclaiming personal boundaries and ordering the partner to leave.",
+        "vocalPerformance": "The current presentation uses a human female solo lead carrying sustained second-person confrontation and repeated imperative-hook delivery. The performance function centres on clear diction, character, firmness and escalating dismissal. Exact isolated-vocal range, tessitura and fine timbre are not claimed without an authorised vocal stem or score.",
+        "performerFit": "Strongly compatible with a solo lead capable of direct first-person confrontation, attitude and a decisive repeated-command hook. The lyric addresses a male partner but does not textually fix the narrator’s gender, so alternate lead casting is possible in principle. The explicit title and additional profanity are material persona characteristics and may be unsuitable for clean-language performers or contexts unless a separately authorised adaptation is created.",
+        "usageCharacteristics": "Strong intrinsic compatibility with breakup, cheating or womanising discovery, confrontation, kicking someone out, reclaiming boundaries and self-assertion scenes. The lyric is title-heavy and narratively specific, so foreground use communicates meaning strongly while background use may compete with important dialogue. Explicit language materially constrains clean, family-safe and broadcast-sensitive contexts.",
+        "adaptability": "Alternative instrumentation, production density, groove and lead-performer treatments are supportable in principle while preserving the imperative title/refrain, direct breakup-confrontation premise, repeated Verse–Pre-Chorus–Chorus architecture and refusal-of-reconciliation Bridge. The current 90 BPM tempo, A-major key and female lead are V01 characteristics rather than demonstrated immutable composition requirements. Any clean-language adaptation would alter the principal title hook and therefore requires deliberate composition-level rewriting rather than a trivial mute.",
+        "structuralEditability": "Repeated choruses, recurring Pre-Choruses and the Bridge / exit-tag / Final-Chorus sequence provide section-selection and shortening opportunities in principle. Exact clean cut points, edit tails and dialogue-under suitability have not been demonstrated from the authorised full mix.",
+        "titleHookIdentity": "“Move your ass” is the principal lexical and structural identity hook. Its repeated imperative use carries both the plot resolution and the song’s confrontational character, making it a core composition anchor rather than an incidental phrase."
+      },
+      "technical": {
+        "durationSeconds": 195.526542,
+        "bpm": 90,
+        "key": "A major",
+        "timeSignature": "4/4",
+        "language": "English",
+        "explicitContent": true,
+        "tempoDescriptor": "Midtempo",
+        "leadVocal": "Female vocal / solo lead",
+        "productionSummary": "Engine 1 records V01 as Production Complete and declares pitch readiness Ready, with no remediation planned before pitching. At the authorised MP3 resolution the approved analysis describes a loud, tightly controlled macro-dynamic presentation with strong centre coherence. Engine 2 does not independently convert those measurements into a separate readiness certification."
+      },
+      "rights": {
+        "writers": [
+          {
+            "name": "Mike Blake",
+            "share": "50%"
+          },
+          {
+            "name": "Mike Shannon",
+            "share": "50%"
+          }
+        ],
+        "publishingStatus": "Underlying composition ownership is Mike Blake 50% / Mike Shannon 50%. Master owner: The Marveltonez. The work is recorded as unpublished with no current publishing agreement. PRS registration is established under the title Move Your Ass with Mike Blake 50% / Mike Shannon 50% shares.",
+        "masterControl": "Master owner: The Marveltonez. The governed current presentation is the original all-human 2007 demo / Full Demo nominated as the authoritative MP3; Engine 1 records that a higher-quality WAV or AIFF source is available.",
+        "clearanceStatus": "Engine 1 source pre-clearance: Yes — Composition and Master. The work is PRS-registered and no publishing agreement is recorded. This package does not infer opportunity-specific licensing clearance beyond those governed source facts."
+      },
+      "provenance": {
+        "disclosure": "No generative AI involvement is recorded for the authorised source. The composition, lyrics, melody, chords, structure, arrangement, performance and recording are human-originated; V01 is the resolved original all-human 2007 demo, with human mixing and mastering."
+      },
+      "considerations": {
+        "knownLimitations": "The authorised analytical source is the nominated stereo MP3 even though a higher-quality source is available. Exact instrument inventory, isolated vocal range/timbre and note-level chord/melody detail are withheld without stems or score-level evidence. Exact clean edit points are not established. No authorised clean-language alternate exists, and creating one would require deliberate rewriting of the principal title hook.",
+        "intendedRemediation": "Engine 1 records no planned remediation and no remediation required before pitching. Where a future opportunity requires clean language, alternate edit architecture or another production treatment, that adaptation should be separately created and validated against the actual use.",
+        "assessmentScope": "The explicit title hook and additional profanity are material usage and performer constraints. Clean-language adaptation would require deliberate composition-level rewriting. The lyric addresses a male partner but does not textually fix narrator gender. Current tempo, key and female lead are V01 presentation facts rather than proven immutable composition requirements."
+      },
+      "content": {
+        "audioUrl": "/catalogue/audio/MTZ-0026-V01.mp3",
+        "lyricsAvailable": true,
+        "lyrics": [
+          "VERSE",
+          "You’re a tramp and a roamer",
+          "I never should a oughta gotten mixed up rotten with you",
+          "You’re a two-bit charmer",
+          "The sort I didn’t wanna steal my heart and break it in two",
+          "",
+          "PRE-CHORUS",
+          "Take one look at me",
+          "That’s the last you’ll see of me",
+          "‘Cause it’s the last I’m seeing of you",
+          "",
+          "CHORUS",
+          "So move your ass honey out the door don’t want you no more",
+          "So move your ass honey disappear don’t want you ‘round here",
+          "Move your ass honey yeah you heard every goddamn word",
+          "So move your ass honey outta here",
+          "You better pack your bags",
+          "",
+          "VERSE",
+          "You’re a flash entertainer",
+          "The type who buys champagne I know you think the world revolves around you",
+          "Yeah you’re a real womaniser",
+          "I should have realised but now I’ve got the lowdown on you",
+          "",
+          "PRE-CHORUS",
+          "Take one look at me",
+          "That’s the last you’ll see of me",
+          "‘Cause it’s the last I’m seeing of you",
+          "",
+          "CHORUS",
+          "So move your ass honey out the door don’t want you no more",
+          "So move your ass honey disappear don’t want you ‘round here",
+          "Move your ass honey yeah you heard every goddamn word",
+          "So move your ass honey outta here",
+          "",
+          "BRIDGE",
+          "There’s no gettin’ back with me",
+          "Your sweet talk ain’t gonna be",
+          "Enough to get you through my door",
+          "Take one look at me",
+          "That’s the last you’ll see of me",
+          "Won’t take no shit from you no more",
+          "",
+          "CHORUS",
+          "So move your ass honey out the door don’t want you no more",
+          "So move your ass honey disappear don’t want you ‘round here",
+          "Move your ass honey yeah you heard every goddamn word",
+          "So move your ass honey outta here",
+          "Get your ass outta here",
+          "It’s time for you to go boy",
+          "you better pack your bags",
+          "",
+          "CHORUS",
+          "So move your ass honey out the door don’t want you no more",
+          "So move your ass honey disappear don’t want you ‘round here",
+          "Move your ass honey yeah you heard every goddamn word",
+          "So move your ass honey out of here",
+          "Move your ass honey out the door"
+        ],
+        "audio": {
+          "recordingId": "MTZ-0026-V01",
+          "deliveryMode": "PROTECTED_CATALOGUE_R2",
+          "url": "/catalogue/audio/MTZ-0026-V01.mp3",
+          "canonicalObjectKey": "MTZ-0026-V01.mp3"
+        }
+      },
+      "publication": {
+        "status": "APPROVED",
+        "sourceCatalogueStatus": "PUBLISHED"
+      }
     }
   ]
 }
