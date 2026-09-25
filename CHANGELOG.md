@@ -1,3 +1,20 @@
+## v12.6.3 — Sisters United + Move Your Ass Professional Publication — 25 September 2026
+
+- Added Sisters United `MTZ-0002-V02` and Move Your Ass `MTZ-0026-V01` as approved production records in the protected Professional Catalogue feed, using the current live Professional Export and governed lyrics.
+- Configured both records for `PROTECTED_CATALOGUE_R2` delivery through `/catalogue/audio/<recording-id>.mp3` because both songs remain Professional-only.
+- Expanded the protected-audio allow-list only to `MTZ-0002-V02` and `MTZ-0026-V01` alongside the existing Superstar entry.
+- Added concrete protected routes at `/catalogue/song/sisters-united/` and `/catalogue/song/move-your-ass/` following the proven Superstar route pattern.
+- Made no Public Catalogue changes and preserved Superstar, Blocked and Deleted, Just Sayin’, You’re My Boy, renderer/styling, filters, shortlist, enquiry flow, Cloudflare Access and unrelated site behaviour.
+
+Changed files:
+
+- modified: `catalogue/data/professional-catalogue.json`
+- modified: `functions/catalogue/audio/[[path]].js`
+- added: `catalogue/song/sisters-united/index.html`
+- added: `catalogue/song/move-your-ass/index.html`
+- modified: `README.md`
+- modified: `CHANGELOG.md`
+
 ## v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication — 25 September 2026
 
 - Added Blocked and Deleted `MTZ-0004-V02` and Just Sayin’ `MTZ-0007-V02` as approved production records in the protected Professional Catalogue feed, using the live approved Professional Export fields and governed lyrics.
