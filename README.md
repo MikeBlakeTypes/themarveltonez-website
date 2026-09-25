@@ -1,4 +1,14 @@
-# Marveltonez Website v12.6.0 — Catalogue Audio & Exposure Architecture
+# Marveltonez Website v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication
+
+
+## v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication — 25 September 2026
+
+- adds the approved Blocked and Deleted `MTZ-0004-V02` and Just Sayin’ `MTZ-0007-V02` records to the protected Professional Catalogue from the live Professional Export;
+- migrates only those two existing Public Catalogue audio references to their verified public canonical R2 objects while preserving all other public song content and ordering;
+- adds concrete protected Full Profile routes for both songs using the existing generic renderer;
+- preserves Superstar `MTZ-0014-V02`, You’re My Boy, the renderer, styling, filters, shortlist, enquiry flow, Cloudflare Access and all unrelated website behaviour.
+
+Rollback: revert the v12.6.2 pull request merge to restore the v12.6.1 website state; do not delete any R2 object as part of rollback.
 
 
 ## v12.6.0 — Catalogue Audio & Exposure Architecture — 15 September 2026
