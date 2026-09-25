@@ -1,4 +1,14 @@
-# Marveltonez Website v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication
+# Marveltonez Website v12.6.3 — Sisters United + Move Your Ass Professional Publication
+
+
+## v12.6.3 — Sisters United + Move Your Ass Professional Publication — 25 September 2026
+
+- adds the approved Sisters United `MTZ-0002-V02` and Move Your Ass `MTZ-0026-V01` records to the protected Professional Catalogue from the live Professional Export;
+- uses the existing private `PROFESSIONAL_AUDIO` delivery path for both Professional-only recordings and expands the protected-audio allow-list only for those two governed recording IDs;
+- adds concrete protected Full Profile routes for both songs using the existing generic renderer;
+- makes no Public Catalogue changes and preserves Superstar, Blocked and Deleted, Just Sayin’, You’re My Boy and all unrelated website behaviour.
+
+Rollback: revert the v12.6.3 pull request merge to restore the v12.6.2 website state; do not delete any R2 object as part of rollback.
 
 
 ## v12.6.2 — Blocked and Deleted + Just Sayin’ Professional Publication — 25 September 2026
