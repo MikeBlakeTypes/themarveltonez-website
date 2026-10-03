@@ -609,18 +609,18 @@
     const card = document.getElementById(targetId);
     if (!card || !card.classList.contains("catalogue-song-card")) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
         card.scrollIntoView({
-          behavior: reduceMotion ? "auto" : "smooth",
+          behavior: "auto",
           block: "center"
         });
-        card.classList.remove("is-direct-linked");
-        void card.offsetWidth;
-        card.classList.add("is-direct-linked");
-        window.setTimeout(() => card.classList.remove("is-direct-linked"), 5600);
+        window.requestAnimationFrame(() => {
+          card.classList.remove("is-direct-linked");
+          void card.offsetWidth;
+          card.classList.add("is-direct-linked");
+          window.setTimeout(() => card.classList.remove("is-direct-linked"), 5600);
+        });
       });
     });
   }
