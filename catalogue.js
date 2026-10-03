@@ -198,8 +198,8 @@
 
   function siteAssetUrl(value) {
     const url = String(value || "").trim();
-    if (!url || /^(?:[a-z][a-z0-9+.-]*:|\\/\\/|\\/)/i.test(url)) return url;
-    return `/${url.replace(/^\\.\\//, "")}`;
+    if (!url || url.startsWith("/") || /^[a-z][a-z0-9+.-]*:/i.test(url)) return url;
+    return `/${url.startsWith("./") ? url.slice(2) : url}`;
   }
 
   function publicAudioUrl(song) {
