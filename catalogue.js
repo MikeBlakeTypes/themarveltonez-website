@@ -730,7 +730,12 @@
           return firstOrder - secondOrder;
         });
 
-        grid.innerHTML = visibleSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
+        const requestedLimit = Number.parseInt(grid.dataset.catalogueLimit || "", 10);
+        const displayedSongs = Number.isFinite(requestedLimit) && requestedLimit > 0
+          ? visibleSongs.slice(0, requestedLimit)
+          : visibleSongs;
+
+        grid.innerHTML = displayedSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
 
         grid.querySelectorAll(".catalogue-song-card").forEach((card) => {
           const head = card.querySelector(".catalogue-song-card-head");
