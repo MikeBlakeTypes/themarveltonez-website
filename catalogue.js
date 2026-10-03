@@ -269,7 +269,7 @@
     const supplementaryBadges = renderSupplementaryBadges(song);
 
     return `
-      <article class="catalogue-song-card" data-song-id="${escapeHTML(song.id)}">
+      <article class="catalogue-song-card" id="song-${escapeHTML(song.id)}" data-song-id="${escapeHTML(song.id)}">
         <div class="catalogue-song-card-head">
           <div class="catalogue-song-badges">
             <span class="catalogue-song-status">${escapeHTML(badge)}</span>
@@ -565,7 +565,7 @@
   async function shareSongLink(button) {
     const slug = button.dataset.shareSong;
     if (!slug) return;
-    const url = `${window.location.origin}/song/${encodeURIComponent(slug)}/`;
+    const url = `${window.location.origin}/unreleased.html#song-${encodeURIComponent(slug)}`;
     try {
       await copyText(url);
       showShareConfirmation("Song link copied.");
@@ -594,6 +594,35 @@
     }
 
     throw lastError || new Error("Unable to load catalogue.");
+  }
+
+  function revealLinkedSong() {
+    if (!window.location.hash.startsWith("#song-")) return;
+
+    let targetId;
+    try {
+      targetId = decodeURIComponent(window.location.hash.slice(1));
+    } catch (_error) {
+      return;
+    }
+
+    const card = document.getElementById(targetId);
+    if (!card || !card.classList.contains("catalogue-song-card")) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        card.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "center"
+        });
+        card.classList.remove("is-direct-linked");
+        void card.offsetWidth;
+        card.classList.add("is-direct-linked");
+        window.setTimeout(() => card.classList.remove("is-direct-linked"), 5600);
+      });
+    });
   }
 
   function isInteractivePanelTarget(target) {
@@ -906,6 +935,8 @@
           }
         });
       });
+
+      revealLinkedSong();
     } catch (error) {
       console.error("Marveltonez catalogue:", error);
       grids.forEach((grid) => {
@@ -921,5 +952,6 @@
   }
 
   document.addEventListener("keydown", handleArtworkViewerEscape);
+  window.addEventListener("hashchange", revealLinkedSong);
   document.addEventListener("DOMContentLoaded", initialiseCatalogue);
 })();
