@@ -196,15 +196,22 @@
     if (symbol) symbol.textContent = isOpen ? "−" : "+";
   }
 
+  function siteAssetUrl(value) {
+    const url = String(value || "").trim();
+    if (!url || url.startsWith("/") || /^[a-z][a-z0-9+.-]*:/i.test(url)) return url;
+    return `/${url.startsWith("./") ? url.slice(2) : url}`;
+  }
+
   function publicAudioUrl(song) {
-    return song.audioDelivery?.url || song.audio || "";
+    return siteAssetUrl(song.audioDelivery?.url || song.audio || "");
   }
 
   function renderArtwork(song) {
     if (!song.artwork) return "";
 
-    const thumbnail = song.artworkThumbnail || song.artwork;
-    const thumbnailLarge = song.artworkThumbnailLarge || song.artwork;
+    const artwork = siteAssetUrl(song.artwork);
+    const thumbnail = siteAssetUrl(song.artworkThumbnail || song.artwork);
+    const thumbnailLarge = siteAssetUrl(song.artworkThumbnailLarge || song.artwork);
     const title = String(song.title || "this song");
     const flipHorizontal = ["just-sayin", "i-didnt-mean-to-turn-out-bad"].includes(song.id);
 
@@ -216,7 +223,7 @@
         aria-haspopup="dialog"
         aria-controls="catalogue-artwork-viewer"
         aria-expanded="false"
-        data-artwork-full="${escapeHTML(song.artwork)}"
+        data-artwork-full="${escapeHTML(artwork)}"
         data-song-title="${escapeHTML(title)}"
         data-artwork-flip="${flipHorizontal ? "horizontal" : "none"}"
       >
@@ -730,7 +737,12 @@
           return firstOrder - secondOrder;
         });
 
-        grid.innerHTML = visibleSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
+        const requestedLimit = Number.parseInt(grid.dataset.catalogueLimit || "", 10);
+        const displayedSongs = Number.isFinite(requestedLimit) && requestedLimit > 0
+          ? visibleSongs.slice(0, requestedLimit)
+          : visibleSongs;
+
+        grid.innerHTML = displayedSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
 
         grid.querySelectorAll(".catalogue-song-card").forEach((card) => {
           const head = card.querySelector(".catalogue-song-card-head");

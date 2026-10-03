@@ -983,3 +983,183 @@
 .catalogue-go-start-button svg{width:18px;height:18px}
 @media(max-width:520px){.catalogue-custom-player{gap:5px;padding:0 6px}.catalogue-player-time{font-size:10px}.catalogue-player-current{display:none}.catalogue-mute-toggle{flex-basis:28px;width:28px}.catalogue-go-start-button{flex-basis:38px;width:38px}}
 @media(prefers-reduced-motion:reduce){.catalogue-player-seek{scroll-behavior:auto}}
+
+
+/* Branch test — immediate listening showcase */
+.instant-listen-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 0 0, rgba(215, 25, 32, .18), transparent 30%),
+    linear-gradient(145deg, #151515, #080808 62%);
+}
+
+.instant-listen-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid rgba(215, 25, 32, .48);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  pointer-events: none;
+}
+
+.instant-listen-section--industry {
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid rgba(215, 25, 32, .58);
+}
+
+.instant-listen-intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.instant-listen-intro > div {
+  min-width: 0;
+}
+
+.instant-listen-intro .section-heading {
+  margin-bottom: 12px;
+}
+
+.instant-listen-intro .section-heading h2 {
+  font-size: clamp(38px, 4.6vw, 62px);
+  line-height: .92;
+}
+
+.instant-listen-intro p:not(.instant-listen-kicker) {
+  max-width: 760px;
+  margin: 0;
+  color: #d0d0d0;
+}
+
+.instant-listen-kicker {
+  margin: 0 0 7px;
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.instant-listen-all-link {
+  flex: 0 0 auto;
+  padding: 11px 0 5px;
+  border-bottom: 1px solid var(--red);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.instant-listen-all-link:hover,
+.instant-listen-all-link:focus-visible {
+  color: var(--red);
+}
+
+.instant-listen-all-link:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 5px;
+}
+
+.instant-listen-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.instant-listen-grid .catalogue-song-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-color: rgba(255, 255, 255, .15);
+  background: linear-gradient(180deg, #1b1b1b, #0b0b0b);
+}
+
+.instant-listen-grid .catalogue-song-card-head {
+  order: 1;
+}
+
+.instant-listen-grid .catalogue-song-lower,
+.instant-listen-grid .catalogue-song-action-artwork-row {
+  display: contents;
+}
+
+.instant-listen-grid .catalogue-song-artwork-button {
+  order: 2;
+  grid-column: auto;
+  align-self: auto;
+  width: 100%;
+  margin: 14px 0 4px;
+  aspect-ratio: 1 / 1;
+}
+
+.instant-listen-grid .catalogue-song-card > h3 {
+  order: 3;
+}
+
+.instant-listen-grid .catalogue-song-writers {
+  order: 4;
+}
+
+.instant-listen-grid .catalogue-song-description {
+  order: 5;
+  min-height: 66px;
+}
+
+.instant-listen-grid .catalogue-audio-transport {
+  order: 6;
+  margin-bottom: 0;
+}
+
+.instant-listen-grid .catalogue-song-meta,
+.instant-listen-grid .catalogue-profile,
+.instant-listen-grid .catalogue-song-actions,
+.instant-listen-grid .catalogue-lyrics-panel {
+  display: none !important;
+}
+
+.instant-listen-loading {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #aaa;
+}
+
+@media (max-width: 760px) {
+  .instant-listen-section--industry {
+    padding: 22px 18px;
+  }
+
+  .instant-listen-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .instant-listen-intro .section-heading h2 {
+    font-size: clamp(38px, 11vw, 50px);
+  }
+
+  .instant-listen-all-link {
+    font-size: 15px;
+  }
+
+  .instant-listen-grid .catalogue-song-description {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .instant-listen-grid .catalogue-song-card {
+    padding: 18px;
+  }
+}
