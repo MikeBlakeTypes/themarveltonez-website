@@ -1163,3 +1163,56 @@
     padding: 18px;
   }
 }
+
+/* Direct public song links: card first, then the play control. */
+@keyframes catalogue-direct-card-highlight {
+  0% {
+    border-color: rgba(239, 35, 45, 0.35);
+    box-shadow: 0 0 0 0 rgba(239, 35, 45, 0);
+  }
+  18%, 58% {
+    border-color: #ef232d;
+    box-shadow: 0 0 0 4px rgba(239, 35, 45, 0.2), 0 18px 48px rgba(0, 0, 0, 0.35);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 rgba(239, 35, 45, 0);
+  }
+}
+
+@keyframes catalogue-direct-play-highlight {
+  0%, 100% {
+    background: transparent;
+    box-shadow: 0 0 0 0 rgba(239, 35, 45, 0);
+    transform: scale(1);
+  }
+  35%, 65% {
+    background: #ef232d;
+    box-shadow: 0 0 0 7px rgba(239, 35, 45, 0.22);
+    transform: scale(1.12);
+  }
+}
+
+.catalogue-song-card.is-direct-linked {
+  animation: catalogue-direct-card-highlight 2.2s ease-out both;
+}
+
+.catalogue-song-card.is-direct-linked .catalogue-play-toggle {
+  animation: catalogue-direct-play-highlight 1.1s ease-in-out 1.7s 3;
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalogue-song-card.is-direct-linked {
+    animation: none;
+    border-color: #ef232d;
+    box-shadow: 0 0 0 4px rgba(239, 35, 45, 0.2);
+  }
+
+  .catalogue-song-card.is-direct-linked .catalogue-play-toggle {
+    animation: none;
+    background: #ef232d;
+    box-shadow: 0 0 0 5px rgba(239, 35, 45, 0.2);
+  }
+}
