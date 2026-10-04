@@ -1028,7 +1028,6 @@
 }
 
 .instant-listen-intro .section-heading h2 {
-  font-size: clamp(38px, 4.6vw, 62px);
   line-height: .92;
 }
 
@@ -1146,7 +1145,7 @@
   }
 
   .instant-listen-intro .section-heading h2 {
-    font-size: clamp(38px, 11vw, 50px);
+    font-size: 36px;
   }
 
   .instant-listen-all-link {
