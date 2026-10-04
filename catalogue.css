@@ -1162,3 +1162,43 @@
     padding: 18px;
   }
 }
+
+
+/* Direct song-link arrival cue */
+@keyframes catalogue-song-card-arrival {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, .14);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
+  }
+  35%, 65% {
+    border-color: rgba(215, 25, 32, .95);
+    box-shadow: 0 0 0 2px rgba(215, 25, 32, .18), 0 18px 50px rgba(215, 25, 32, .24);
+  }
+}
+
+@keyframes catalogue-play-arrival {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 5px rgba(215, 25, 32, .18), 0 0 24px rgba(215, 25, 32, .6);
+  }
+}
+
+.song-detail-page .catalogue-song-card--arrival {
+  animation: catalogue-song-card-arrival 1.15s ease-in-out 2;
+}
+
+.song-detail-page .catalogue-play-toggle--arrival {
+  animation: catalogue-play-arrival .62s ease-in-out 4;
+  border-color: var(--red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .song-detail-page .catalogue-song-card--arrival,
+  .song-detail-page .catalogue-play-toggle--arrival {
+    animation: none !important;
+  }
+}
