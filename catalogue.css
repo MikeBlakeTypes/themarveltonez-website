@@ -1179,11 +1179,13 @@
 @keyframes catalogue-play-icon-arrival {
   0%, 100% {
     transform: scale(1);
+    color: #fff;
     opacity: 1;
   }
   50% {
     transform: scale(1.45);
-    opacity: .72;
+    color: var(--red);
+    opacity: 1;
   }
 }
 
