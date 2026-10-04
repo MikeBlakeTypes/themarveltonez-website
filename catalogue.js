@@ -761,6 +761,21 @@
 
         grid.innerHTML = displayedSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
 
+        if (document.body.classList.contains("song-detail-page") && requestedSongId) {
+          const featuredCard = grid.querySelector(`.catalogue-song-card[data-song-id="${CSS.escape(requestedSongId)}"]`);
+          if (featuredCard) {
+            window.requestAnimationFrame(() => {
+              featuredCard.classList.add("catalogue-song-card--arrival");
+              const playButton = featuredCard.querySelector(".catalogue-play-toggle");
+              if (playButton) {
+                window.setTimeout(() => playButton.classList.add("catalogue-play-toggle--arrival"), 850);
+                window.setTimeout(() => playButton.classList.remove("catalogue-play-toggle--arrival"), 3400);
+              }
+              window.setTimeout(() => featuredCard.classList.remove("catalogue-song-card--arrival"), 2500);
+            });
+          }
+        }
+
         grid.querySelectorAll(".catalogue-song-card").forEach((card) => {
           const head = card.querySelector(".catalogue-song-card-head");
           const mainTitle = card.querySelector(":scope > h3");
