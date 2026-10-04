@@ -1176,14 +1176,14 @@
   }
 }
 
-@keyframes catalogue-play-arrival {
+@keyframes catalogue-play-icon-arrival {
   0%, 100% {
     transform: scale(1);
-    box-shadow: none;
+    opacity: 1;
   }
   50% {
-    transform: scale(1.12);
-    box-shadow: 0 0 0 5px rgba(215, 25, 32, .18), 0 0 24px rgba(215, 25, 32, .6);
+    transform: scale(1.45);
+    opacity: .72;
   }
 }
 
@@ -1192,8 +1192,13 @@
 }
 
 .song-detail-page .catalogue-play-toggle--arrival {
-  animation: catalogue-play-arrival .62s ease-in-out 4;
-  border-color: var(--red);
+  border-color: inherit;
+  box-shadow: none;
+}
+
+.song-detail-page .catalogue-play-toggle--arrival .catalogue-player-play-icon {
+  transform-origin: center;
+  animation: catalogue-play-icon-arrival .62s ease-in-out 4;
 }
 
 @media (prefers-reduced-motion: reduce) {
