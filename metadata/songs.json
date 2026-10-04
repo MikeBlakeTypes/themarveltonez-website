@@ -135,7 +135,7 @@
       },
       "explicit": true,
       "catalogueId": "MTZ-0008",
-      "publicDisplayOrder": 1,
+      "publicDisplayOrder": 5,
       "artworkThumbnail": "assets/images/song-artwork/put-your-shirt-back-on-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/put-your-shirt-back-on-800.webp",
       "audioDelivery": {
@@ -273,7 +273,7 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-0009",
-      "publicDisplayOrder": 2,
+      "publicDisplayOrder": 1,
       "artworkThumbnail": "assets/images/song-artwork/so-youre-dating-my-ex-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/so-youre-dating-my-ex-800.webp",
       "audioDelivery": {
@@ -680,7 +680,7 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-0004",
-      "publicDisplayOrder": 5,
+      "publicDisplayOrder": 6,
       "artworkThumbnail": "assets/images/song-artwork/blocked-and-deleted-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/blocked-and-deleted-800.webp",
       "audioDelivery": {
@@ -829,7 +829,7 @@
       },
       "explicit": false,
       "catalogueId": "MTZ-0006",
-      "publicDisplayOrder": 6,
+      "publicDisplayOrder": 2,
       "artworkThumbnail": "assets/images/song-artwork/happy-breakup-400.webp",
       "artworkThumbnailLarge": "assets/images/song-artwork/happy-breakup-800.webp",
       "audioDelivery": {
