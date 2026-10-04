@@ -729,18 +729,35 @@
       grids.forEach((grid) => {
         const category = grid.dataset.catalogueCategory || "unreleased";
         const requestedSongId = grid.dataset.songId || "";
+        const requestedSongIds = (grid.dataset.catalogueSongIds || "")
+          .split(",")
+          .map((songId) => songId.trim())
+          .filter(Boolean);
+
         const visibleSongs = catalogue.songs.filter(
           (song) => song.category === category && song.hidden !== true && (!requestedSongId || song.id === requestedSongId)
         ).sort((firstSong, secondSong) => {
+          if (requestedSongIds.length) {
+            const firstIndex = requestedSongIds.indexOf(firstSong.id);
+            const secondIndex = requestedSongIds.indexOf(secondSong.id);
+            const firstRequestedOrder = firstIndex === -1 ? Number.POSITIVE_INFINITY : firstIndex;
+            const secondRequestedOrder = secondIndex === -1 ? Number.POSITIVE_INFINITY : secondIndex;
+            if (firstRequestedOrder !== secondRequestedOrder) return firstRequestedOrder - secondRequestedOrder;
+          }
+
           const firstOrder = Number(firstSong.publicDisplayOrder);
           const secondOrder = Number(secondSong.publicDisplayOrder);
           return firstOrder - secondOrder;
         });
 
+        const selectedSongs = requestedSongIds.length
+          ? visibleSongs.filter((song) => requestedSongIds.includes(song.id))
+          : visibleSongs;
+
         const requestedLimit = Number.parseInt(grid.dataset.catalogueLimit || "", 10);
         const displayedSongs = Number.isFinite(requestedLimit) && requestedLimit > 0
-          ? visibleSongs.slice(0, requestedLimit)
-          : visibleSongs;
+          ? selectedSongs.slice(0, requestedLimit)
+          : selectedSongs;
 
         grid.innerHTML = displayedSongs.map((song) => renderSongCard(song, { singleSong: Boolean(requestedSongId) })).join("");
 
