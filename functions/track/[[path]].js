@@ -24,7 +24,7 @@ const FIXED_DESTINATIONS = {
   "navigation-industry": "/industry/",
   "industry-featured-demos": "/unreleased.html#featured-demos",
   "industry-catalogue-access": "/publisher.html",
-  "industry-contact": "mailto:mikeblake@themarveltonez.com?subject=Industry%20enquiry%20for%20Marveltonez&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20start%20a%20conversation%20with%20Marveltonez.%0A%0AName%3A%0ACompany%20/%20organisation%3A%0ARole%3A%0A%0AI%20am%20looking%20for%3A%0A%0ABest%20regards%2C"
+  "industry-contact": "/industry/#professional-contact"
 };
 
 const SONG_TITLES = {

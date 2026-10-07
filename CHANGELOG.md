@@ -1,3 +1,15 @@
+## v12.6.5 — Legacy Industry Contact Redirect Repair — 7 October 2026
+
+- Changed only the legacy `/track/industry-contact` fallback destination from the prepared `mailto:` URL to `/industry/#professional-contact` so direct crawler requests resolve through an ordinary HTTPS redirect instead of a non-web `mailto:` redirect.
+- Preserved the v12.6.4 public Professional Contact buttons, which continue to open the prepared industry-enquiry email directly.
+- Preserved the existing aggregate `industry-contact` D1 counter; background click-count requests still hit `/track/industry-contact` and are not routed through the visitor-facing mail action.
+- Made no changes to D1 schema, public contact-button markup, other tracking destinations, robots.txt, sitemap.xml, Cloudflare settings or unrelated site behaviour.
+
+Changed files:
+
+- modified: `functions/track/[[path]].js`
+- modified: `CHANGELOG.md`
+
 ## v12.6.4 — Public Industry Contact Crawl Fix — 7 October 2026
 
 - Removed crawler-visible `/track/industry-contact` destinations from the public Industry, Mike Blake and Mike Shannon pages after Google Search Console reported the tracking endpoint as a redirect error.
