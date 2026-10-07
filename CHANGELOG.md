@@ -1,3 +1,19 @@
+## v12.6.4 — Public Industry Contact Crawl Fix — 7 October 2026
+
+- Removed crawler-visible `/track/industry-contact` destinations from the public Industry, Mike Blake and Mike Shannon pages after Google Search Console reported the tracking endpoint as a redirect error.
+- Public Professional Contact actions now link directly to the existing prepared Marveltonez industry-enquiry `mailto:` destination.
+- Preserved the existing aggregate `industry-contact` D1 counter by recording the click separately in the background without routing the visitor through the tracking endpoint.
+- Updated the three affected public pages to load `industry.js?v=12.6.4`.
+- Made no changes to protected Professional Catalogue contact links, the existing `/track/industry-contact` function, D1 schema, robots.txt, sitemap.xml, Cloudflare settings or unrelated site behaviour.
+
+Changed files:
+
+- modified: `industry/index.html`
+- modified: `mike-blake/index.html`
+- modified: `mike-shannon/index.html`
+- modified: `industry.js`
+- modified: `CHANGELOG.md`
+
 ## v12.6.3 — Sisters United + Move Your Ass Professional Publication — 25 September 2026
 
 - Added Sisters United `MTZ-0002-V02` and Move Your Ass `MTZ-0026-V01` as approved production records in the protected Professional Catalogue feed, using the current live Professional Export and governed lyrics.

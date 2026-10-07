@@ -37,3 +37,14 @@
     if (window.innerWidth > 980) setMenu(false);
   });
 })();
+(function () {
+  document.querySelectorAll("[data-track-industry-contact]").forEach((link) => {
+    link.addEventListener("click", () => {
+      fetch("/track/industry-contact", {
+        method: "GET",
+        redirect: "manual",
+        keepalive: true
+      }).catch(() => {});
+    });
+  });
+})();
