@@ -1,3 +1,47 @@
+## v12.7.4 — Public Mail Tracking Crawl Repair — 13 October 2026
+
+- Replaced crawler-visible email/contact/enquiry `/track/...` links with their direct `mailto:` destinations across the public site and protected Professional Catalogue pages, preserving the existing prepared email content.
+- Added one shared background POST click-count mechanism in `site-common.js`, including delegated support for dynamically rendered song-enquiry links, while preserving the existing D1 `link_name` values.
+- Changed legacy GET/HEAD fallbacks for mail-style tracking routes to ordinary HTTPS website destinations; legacy song-enquiry URLs now fall back to their corresponding public `/song/<slug>/` pages.
+- Migrated the previously special `industry-contact` click handler onto the same shared background mechanism and restored protected Professional Catalogue contact actions to direct email behaviour.
+- Preserved every existing legacy `/track/...` address as a valid fallback so previously copied or cached tracking URLs do not become dead links.
+- Left Hub, Etsy and other web-destination tracking behaviour unchanged, and made no changes to D1 schema, lyrics, audio, song metadata, Professional Catalogue data, Cloudflare Access, `functions/sync/[[path]].js`, `robots.txt` or unrelated site behaviour.
+- Updated public/shared script cache references to `v12.7.4` where the changed JavaScript is consumed.
+
+Changed files:
+
+- modified: `index.html`
+- modified: `unreleased.html`
+- modified: `industry/index.html`
+- modified: `mike-blake/index.html`
+- modified: `mike-shannon/index.html`
+- modified: `publisher.html`
+- modified: `writers-cap.html`
+- modified: `writers-hoodie.html`
+- modified: `writers-mug.html`
+- modified: `writers-tshirt.html`
+- modified: `song/a-girl-like-me/index.html`
+- modified: `song/blocked-and-deleted/index.html`
+- modified: `song/doorstep/index.html`
+- modified: `song/happy-breakup/index.html`
+- modified: `song/i-didnt-mean-to-turn-out-bad/index.html`
+- modified: `song/just-sayin/index.html`
+- modified: `song/put-your-shirt-back-on/index.html`
+- modified: `song/so-youre-dating-my-ex/index.html`
+- modified: `song/youre-my-boy/index.html`
+- modified: `catalogue/index.html`
+- modified: `catalogue/song/index.html`
+- modified: `catalogue/song/blocked-and-deleted/index.html`
+- modified: `catalogue/song/just-sayin/index.html`
+- modified: `catalogue/song/move-your-ass/index.html`
+- modified: `catalogue/song/sisters-united/index.html`
+- modified: `catalogue/song/superstar/index.html`
+- modified: `catalogue.js`
+- modified: `site-common.js`
+- modified: `industry.js`
+- modified: `functions/track/[[path]].js`
+- modified: `CHANGELOG.md`
+
 ## v12.6.5 — Legacy Industry Contact Redirect Repair — 7 October 2026
 
 - Changed only the legacy `/track/industry-contact` fallback destination from the prepared `mailto:` URL to `/industry/#professional-contact` so direct crawler requests resolve through an ordinary HTTPS redirect instead of a non-web `mailto:` redirect.

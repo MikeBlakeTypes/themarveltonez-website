@@ -9,6 +9,17 @@
     "/metadata/songs.json"
   ];
 
+  const SONG_ENQUIRY_TITLES = {
+    "blocked-and-deleted": "Blocked and Deleted",
+    "put-your-shirt-back-on": "Put Your Shirt Back On",
+    "so-youre-dating-my-ex": "So You’re Dating My Ex",
+    "just-sayin": "Just Sayin’",
+    "i-didnt-mean-to-turn-out-bad": "I Didn’t Mean to Turn Out Bad",
+    "happy-breakup": "It’s a Happy Break-Up",
+    "doorstep": "Doorstep",
+    "a-girl-like-me": "A Girl Like Me",
+    "youre-my-boy": "You’re My Boy"
+  };
 
   const playedSongsThisPageSession = new Set();
   const countedCurrentStarts = new WeakMap();
@@ -241,6 +252,15 @@
       </button>`;
   }
 
+  function songEnquiryMailto(song) {
+    const title = SONG_ENQUIRY_TITLES[song.id] || String(song.title || "").trim();
+    const subject = encodeURIComponent(`Enquiry about “${title}”`);
+    const body = encodeURIComponent(
+      `Hi Mike and Mike,\n\nI am interested in your song “${title}”.\n\nName:\nCompany / role:\n\nMy enquiry is:\n\nBest regards,`
+    );
+    return `mailto:mikeblake@themarveltonez.com?subject=${subject}&body=${body}`;
+  }
+
   function renderActions(song) {
     const hasLyrics =
       song.lyrics &&
@@ -255,7 +275,7 @@
     return `
       <div class="catalogue-song-actions">
         ${lyricsAction}
-        <a class="catalogue-action catalogue-action-enquire" href="/track/song-enquiry/${encodeURIComponent(song.id)}">Enquire about this song</a>
+        <a class="catalogue-action catalogue-action-enquire" href="${escapeHTML(songEnquiryMailto(song))}" data-track-path="/track/song-enquiry/${encodeURIComponent(song.id)}">Enquire about this song</a>
         <button class="catalogue-action catalogue-action-share" type="button" data-share-song="${escapeHTML(song.id)}" data-share-title="${escapeHTML(song.title)}">Share song link</button>
       </div>`;
   }

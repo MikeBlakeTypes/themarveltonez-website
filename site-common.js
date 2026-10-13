@@ -1,4 +1,4 @@
-/** Marveltonez Website v12.0 — shared unobtrusive page behaviour. */
+/** Marveltonez Website v12.7.4 — shared unobtrusive page behaviour. */
 (() => {
   "use strict";
 
@@ -38,8 +38,45 @@
     });
   }
 
+  function recordTrackedPath(path) {
+    const endpoint = String(path || "").trim();
+    if (!endpoint.startsWith("/track/")) return;
+
+    try {
+      if (navigator.sendBeacon) {
+        const queued = navigator.sendBeacon(
+          endpoint,
+          new Blob([], { type: "text/plain;charset=UTF-8" })
+        );
+        if (queued) return;
+      }
+
+      fetch(endpoint, {
+        method: "POST",
+        keepalive: true,
+        credentials: "same-origin",
+        cache: "no-store"
+      }).catch(() => {});
+    } catch (error) {
+      // Analytics must never interrupt the visitor's chosen action.
+    }
+  }
+
+  function initialiseTrackedLinks() {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      const link = target && typeof target.closest === "function"
+        ? target.closest("a[data-track-path]")
+        : null;
+
+      if (!link) return;
+      recordTrackedPath(link.getAttribute("data-track-path"));
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initialiseCommonMenu();
     initialiseBackToTop();
+    initialiseTrackedLinks();
   });
 })();

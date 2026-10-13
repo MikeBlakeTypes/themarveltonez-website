@@ -4,12 +4,12 @@ const FIXED_DESTINATIONS = {
   "premium-cap": "https://www.etsy.com/listing/4541425553/marveltonez-premium-cap-embroidered",
   "writers-mug": "https://www.etsy.com/listing/4541405511/marveltonez-writers-mug-black-glossy-11",
   "studio-hoodie": "https://www.etsy.com/shop/TheMarveltonez?search_query=hoodie",
-  "publisher-access-request": "mailto:mikeblake@themarveltonez.com?subject=Request%20for%20Marveltonez%20Professional%20Catalogue%20Access&body=Hi%20Mike%20and%20Mike%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20secure%20Marveltonez%20Professional%20Catalogue.%0A%0AName:%0ACompany%20/%20organisation:%0ARole:%0AWebsite%20or%20professional%20profile:%0A%0AI%20am%20interested%20in%20accessing%20the%20catalogue%20for:%0A%0ABest%20regards%2C%0A%0A%0A%0A%0A%0A%0APlease%20note:%20access%20requests%20are%20approved%20manually%2C%20so%20there%20may%20be%20a%20short%20delay%20depending%20on%20time%20zone%20and%20time%20of%20day.%20Thanks%20for%20your%20patience.",
-  "homepage-contact-button": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
-  "homepage-get-in-touch": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
-  "footer-email": "mailto:mikeblake@themarveltonez.com?body=Hi%20Mike%20and%20Mike%2C%0A%0A",
-  "navigation-contact": "mailto:mikeblake@themarveltonez.com",
-  "general-contact": "mailto:mikeblake@themarveltonez.com",
+  "publisher-access-request": "/publisher.html#request-access-title",
+  "homepage-contact-button": "/#contact",
+  "homepage-get-in-touch": "/#contact",
+  "footer-email": "/#contact",
+  "navigation-contact": "/#contact",
+  "general-contact": "/#contact",
   "hub-featured": "/industry/",
   "hub-hear-the-songs": "/unreleased.html",
   "hub-songs-weve-written": "/#selected-releases",
@@ -27,6 +27,16 @@ const FIXED_DESTINATIONS = {
   "industry-contact": "/industry/#professional-contact"
 };
 
+const BACKGROUND_ONLY_LINKS = new Set([
+  "publisher-access-request",
+  "homepage-contact-button",
+  "homepage-get-in-touch",
+  "footer-email",
+  "navigation-contact",
+  "general-contact",
+  "industry-contact"
+]);
+
 const SONG_TITLES = {
   "blocked-and-deleted": "Blocked and Deleted",
   "put-your-shirt-back-on": "Put Your Shirt Back On",
@@ -40,15 +50,8 @@ const SONG_TITLES = {
 };
 
 function songEnquiryDestination(slug) {
-  const title = SONG_TITLES[slug];
-  if (!title) return null;
-
-  const subject = encodeURIComponent(`Enquiry about “${title}”`);
-  const body = encodeURIComponent(
-    `Hi Mike and Mike,\n\nI am interested in your song “${title}”.\n\nName:\nCompany / role:\n\nMy enquiry is:\n\nBest regards,`
-  );
-
-  return `mailto:mikeblake@themarveltonez.com?subject=${subject}&body=${body}`;
+  if (!SONG_TITLES[slug]) return null;
+  return `/song/${encodeURIComponent(slug)}/`;
 }
 
 function redirect(destination) {
@@ -61,41 +64,16 @@ function redirect(destination) {
   });
 }
 
-export async function onRequest(context) {
-  const { request, env, params } = context;
-  const method = request.method.toUpperCase();
+function noContent() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Cache-Control": "no-store, max-age=0"
+    }
+  });
+}
 
-  const pathParts = Array.isArray(params.path)
-    ? params.path
-    : String(params.path || "").split("/").filter(Boolean);
-
-  let linkName;
-  let destination;
-
-  if (pathParts.length === 1 && FIXED_DESTINATIONS[pathParts[0]]) {
-    linkName = pathParts[0];
-    destination = FIXED_DESTINATIONS[linkName];
-  } else if (pathParts.length === 2 && pathParts[0] === "song-enquiry") {
-    const slug = pathParts[1];
-    destination = songEnquiryDestination(slug);
-    if (destination) linkName = `song-enquiry-${slug}`;
-  }
-
-  if (!destination || !linkName) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  if (method === "HEAD") {
-    return redirect(destination);
-  }
-
-  if (method !== "GET") {
-    return new Response("Method not allowed", {
-      status: 405,
-      headers: { Allow: "GET, HEAD" }
-    });
-  }
-
+async function recordClick(env, linkName) {
   try {
     const clickDate = new Date().toISOString().slice(0, 10);
     await env.MARVELTONEZ_ANALYTICS.prepare(`
@@ -106,6 +84,56 @@ export async function onRequest(context) {
     `).bind(clickDate, linkName).run();
   } catch (error) {
     console.error("Outbound click count failed", error);
+  }
+}
+
+export async function onRequest(context) {
+  const { request, env, params } = context;
+  const method = request.method.toUpperCase();
+
+  const pathParts = Array.isArray(params.path)
+    ? params.path
+    : String(params.path || "").split("/").filter(Boolean);
+
+  let linkName;
+  let destination;
+  let backgroundOnly = false;
+
+  if (pathParts.length === 1 && FIXED_DESTINATIONS[pathParts[0]]) {
+    linkName = pathParts[0];
+    destination = FIXED_DESTINATIONS[linkName];
+    backgroundOnly = BACKGROUND_ONLY_LINKS.has(linkName);
+  } else if (pathParts.length === 2 && pathParts[0] === "song-enquiry") {
+    const slug = pathParts[1];
+    destination = songEnquiryDestination(slug);
+    if (destination) {
+      linkName = `song-enquiry-${slug}`;
+      backgroundOnly = true;
+    }
+  }
+
+  if (!destination || !linkName) {
+    return new Response("Not found", { status: 404 });
+  }
+
+  if (method === "HEAD") {
+    return redirect(destination);
+  }
+
+  if (method === "POST") {
+    await recordClick(env, linkName);
+    return noContent();
+  }
+
+  if (method !== "GET") {
+    return new Response("Method not allowed", {
+      status: 405,
+      headers: { Allow: "GET, HEAD, POST" }
+    });
+  }
+
+  if (!backgroundOnly) {
+    await recordClick(env, linkName);
   }
 
   return redirect(destination);
